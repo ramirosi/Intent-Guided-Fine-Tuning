@@ -21,4 +21,6 @@ Finally we provide a notebook for stage 2 (Step2_finetuning.ipynb) to imitate th
 
 NOTE: If you want to use your own LLM and embeddings models: change the function inside GIFA -> gpt_api.py and GIFA -> retrieval -> ada_fast.py
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs%20at%20your%20service.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs_at_your_service.ipynb)
+
+
