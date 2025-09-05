@@ -1,0 +1,671 @@
+prompt_id,step,prompt,parent_idx,parent_idxs,feedback,score_ami,score_nca,score_f1,ami_x_nca,true_clusters,predicted_clusters
+0,lamarckian,Categorize each statement into a predefined category label based on its intent or purpose.,,,,0.23308763478374375,0.6731670085628797,0.20674386920980925,0.15690690584036981,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[17.  0. 12. 12.  0.  0. 17.  0. 12.  0.  1. 17.  7. 17.  7.  0.  7.  0.
+  7.  0.  7. 14. 17. 12.  0. 18. 17. 12.  0.  6.  1.  1. 17.  0. 17.  7.
+  7.  0.  0.  0.  7.  1.  1.  1.  1. 16. 16. 16.  0.  0.  2.  2.  2.  0.
+  1. 17. 17. 12. 17. 12.  0.  0. 17.  1.  1.  1. 17. 17.  0.  7.  0.  7.
+  0.  7.  0.  1. 17. 17. 12. 12.  0.  7.  0.  7.  0.  1. 14.  7.  0.  7.
+  0.  7.  0.  7.  1.  1.  1. 17. 17.  0. 17.  0.  7.  0.  7.  0.  1. 17.
+ 17. 17.  7.  0.  7.  0.  7.  0.  7.  1.  1. 17. 17. 12. 12. 12. 17. 12.
+  0.  1. 17. 17. 12. 12. 12.  7.  4. 13.  0.  0. 17. 17.  7.  0. 17.  7.
+  0.  0. 17.  1.  1. 17.  0. 17.  7.  0.  7.  7.  0.  7.  0.  1. 14. 17.
+ 12. 12. 12.  0. 12.  0.  0. 17. 17. 12. 17. 12. 12.  0. 12.  0.  0.  5.
+ 11.  9.  9.  8. 10.  0.  0. 19. 16.  3.  2.  0.  0. 17.  0. 12.  7.  0.
+  0.  7.  0.  1. 14. 12.  0.  0.  0.  0.  0. 14.  7. 15.  2.  0.  0. 14.
+  0.  2.  7.  1.  7.  0.  1. 17. 17. 12.  7.  0.  0. 17. 17.  0.  7.  0.
+  7.  0.  1.]"
+1,lamarckian,"Classify each interaction as either a 'customer' request or 'assistant' response, and assign a specific label that describes the purpose or nature of the communication.",,,,0.3339564282181638,0.8861615245009075,0.2732824427480916,0.2959393375466859,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[ 87.  86.  87.  93.  91.  55.  93.  92.  91.  55.  45. 119.  66. 115.
+  71.  43.  71.   1. 105.  53.  68.  13.  12.  74.  14. 110. 112. 111.
+  52.   9.  45.  45. 117.  56. 102.  72. 126.  23.  42.  42.  69.  21.
+  45.  47.  45. 116. 125. 103. 104.   4.  67.   2.  17.  40.  45.  33.
+  28.  31.  30.  29.  32.  54.  10.  46.  47.  45.  97.  96.  99.  95.
+  94.  50.  49.  98.  54.  45.  36.  35.  73.  75.   6.  16.  54.  11.
+  54.  45. 122. 124. 101. 104.   2.  18.  40.  67.  21.  45.  45. 116.
+ 123. 100.  59. 132. 131.   5.  67.  42.  45. 121.  58. 121.  25.  42.
+  57.  22.  25.  42.  67.  45.  45.  87.  86.  87.  91.  91.  86.  93.
+  55.  45.  87.  86.  87.  91.  87.  93.  91.  91.  55.  55. 121.  58.
+ 108.  25.  57.  22.  42.  42.  67.  45.  45. 113.  60. 114.  61.   3.
+ 109.  70.   0.  51.  53.  45.  79.  78.  77.  75.  34.  76.  37.   8.
+  55.  87.  86.  85.  90.  89.  93.  91.  88.  54.  55.  83.  84.  81.
+  82.  80.   7.  52.   9. 128.  15. 130.  24.  40.  17. 120. 127. 106.
+  38. 129.  41.  20.  39.  44.  64.  63.  62.  65.  48.  26.  27. 116.
+  67. 125. 104.   2.  67. 116. 124. 101. 104.   2.  67.  45.  45.  35.
+  35.  35.  36.  54.  54. 118.  56.  19.  38.  42. 107.  42.  45.]"
+2,lamarckian,Categorize each statement based on its intent or purpose.,,,,0.2289113054864207,0.7846990860772622,0.21927083333333333,0.1796264922079473,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[36.  2. 36. 30.  2.  2. 19.  0. 31. 13.  6. 36. 20.  2. 36.  2. 20. 13.
+ 26. 13. 20. 32. 37. 28.  9.  4. 17. 29. 14. 18.  5.  6. 36. 36. 36. 20.
+ 36. 20. 13. 13. 20.  6.  6.  6.  6. 36. 36. 36. 20.  6. 35.  8.  8. 13.
+  6. 36. 36.  2. 36.  2. 31.  6. 18.  5.  6.  6. 36. 36.  2. 26.  2. 20.
+ 13. 26. 13. 13. 36. 36.  2.  2.  2. 19. 13. 19. 13.  6. 35. 20. 35. 20.
+ 35. 20.  6. 20.  6.  6.  6. 36. 36. 36. 36. 36. 20. 13. 20. 13.  6. 36.
+ 36. 36. 20. 13. 20. 36. 20. 13. 20.  6.  6. 36. 36.  2.  2. 19. 36. 30.
+ 13.  6. 36. 36.  2. 30.  2. 19. 13. 30. 13. 13. 36. 36. 26. 20. 36. 20.
+ 13. 13. 20.  6.  6. 36. 36. 26. 20.  2. 26. 20.  2. 26. 13.  6. 33. 36.
+ 26. 31. 25.  2. 18. 13.  6. 36. 36.  2. 36.  2. 31.  2. 31.  2.  6. 15.
+ 24. 22. 23. 21. 12.  3. 16. 35. 36. 26. 20. 13.  8. 36. 36.  2.  2. 20.
+ 13. 20. 13.  6. 34. 27.  1. 10. 18. 11.  7. 35. 20.  8. 20.  8.  8. 35.
+ 35.  8. 20.  6. 20.  6.  6. 36. 36. 26.  2. 13. 13. 36. 36.  2. 20. 13.
+ 20. 13.  6.]"
+3,lamarckian,Classify the customer and assistant statements into predefined categories based on their intent.,,,,0.43613248930648957,0.9046944854640347,0.3825779870512066,0.39456665800728324,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[ 87.  50.  38.  84.  19.   3.  63.   1.  34.  41.  16.  90. 102.  90.
+ 102.   7.  63.  17.  63.  41.  16.  12. 100.  79.  21.  46.  54.  83.
+  10.  56.  16.  16.  90. 102.  90.  17.  17.   7.   7.   7.  16.  16.
+  36.  16.  16. 104.  60.  76.  45.   6.  59.  29.  30.  41.  40. 112.
+  96.  73.  33.  18.  28.  41.  55.  16.  16.  16.  91. 103.  82.  39.
+   5.  58.  41.  74.  41.  16.  87.  50.  71.  63.   3.  63.  41.  71.
+  41.  16.  97.  99.  78.  25.  11.  25.  41.  55.  16.  36.  40.  92.
+  94.  69.  47. 111. 110.   9.  57.   2.  40. 101.  51. 108.  27.   7.
+  61.  31.  17.  41.  55.  36.  16.  87.  50.  71.   3.  63.  50.  71.
+  41.  16.  87.  50.  71.   3.  71.  63.  41.  71.  41.  16.  95.  23.
+  70.  17.  48.  22.   7.   7.  55.  16.  16.  90. 102.  81.  63.   7.
+  17.  64.   0.  86.  41.  16.  88.  99.  78.  80.  77.  41.  55.  41.
+  41.  66.  49.  65.  53.  67. 109.   1.  68.  41.  41.  44. 107. 106.
+  32. 113.  14.   8.  16. 105.  15.  85.  35.  41.   4.  90. 102.  81.
+   7.  17.   7.  17.   7.  16.  13.  72.  24.  41.  55.  37.  43.  89.
+  62.  98.  26.  41.  42.  89.  99.  78.  29.   5.  62.  41.  42.  93.
+  52.  75.  20.  41.  41.  90. 102.   7.  17.   7.  17.   7.  16.]"
+4,lamarckian,"Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, or ask_item_details.",,,,0.3245169467340175,0.3165461728422321,0.32213875386654883,0.10272459751109972,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[2. 1. 5. 1. 5. 6. 8. 0. 5. 6. 4. 2. 5. 2. 2. 6. 0. 1. 1. 1. 4. 2. 8. 7.
+ 6. 0. 3. 5. 1. 6. 4. 4. 2. 2. 2. 1. 1. 0. 6. 6. 4. 4. 4. 4. 4. 2. 8. 2.
+ 5. 0. 1. 1. 0. 6. 4. 2. 1. 7. 2. 1. 0. 6. 4. 4. 4. 4. 2. 8. 2. 5. 0. 7.
+ 6. 7. 6. 4. 2. 8. 7. 5. 0. 1. 6. 4. 6. 4. 7. 8. 7. 0. 1. 3. 6. 4. 4. 4.
+ 4. 2. 2. 7. 2. 5. 1. 1. 0. 6. 4. 7. 2. 7. 0. 6. 7. 1. 0. 6. 4. 4. 4. 8.
+ 8. 7. 6. 0. 3. 5. 6. 4. 2. 2. 7. 5. 7. 1. 0. 0. 6. 6. 7. 2. 7. 0. 2. 0.
+ 6. 6. 2. 4. 4. 2. 2. 7. 0. 0. 7. 1. 0. 7. 6. 4. 2. 8. 7. 5. 0. 6. 1. 6.
+ 4. 7. 2. 5. 2. 7. 1. 1. 0. 6. 4. 2. 7. 2. 7. 1. 5. 6. 4. 2. 2. 1. 0. 6.
+ 4. 2. 8. 7. 5. 0. 6. 0. 6. 4. 2. 0. 1. 6. 4. 4. 4. 2. 7. 1. 0. 6. 4. 8.
+ 5. 7. 5. 1. 0. 6. 4. 2. 1. 7. 0. 6. 4. 2. 5. 5. 0. 6. 5. 6. 4.]"
+5,feedback_0,"### Refined Intent Discovery Prompt
+
+Categorize each statement into one of the predefined category labels based on its intent or purpose. Use the guidelines and examples provided to ensure accurate classification:
+
+1. **Clarify Intent Definitions:**
+   - **Confirm Action**: Statements that verify a specific action. E.g., ""Is my order confirmed?""
+   - **Confirm Update**: Verifications about updates. E.g., ""Has my address been updated?""
+
+2. **Disambiguation Cues:**
+   - **Provide Instructions**: Focus on guiding actions. E.g., ""Please reset your password by clicking on the link.""
+   - **Provide Refund Timeline**: Focus on timeline information. E.g., ""You will receive your refund within 5-7 business days.""
+
+3. **Encourage Context Awareness:**
+   - Consider the context to differentiate intents. E.g., ""Thank you!"" might be an ""express_gratitude"" unless it is used to conclude a conversation, then it is ""close_conversation.""
+
+4. **Highlight Common False Merges:**
+   - Avoid merging distinct intents like ""Provide Promo Code"" (e.g., ""It was SAVE20"") and ""Provide Bill ID"" (e.g., ""Yes, it’s 99420"").
+
+5. **Reduce Over-Splitting:**
+   - Recognize shared intents in similar messages. E.g., ""Okay, thanks for letting me know"" and ""Perfect, I’ll try that now"" both fall under ""Acknowledge.""
+
+6. **Provide Examples of Correct Clustering:**
+   - Group similar messages correctly. E.g., ""Got it, thanks!"" and ""Understood, thank you!"" both fall under ""Acknowledge.""
+
+7. **Introduce Sub-categories if Necessary:**
+   - If needed, break down broad intents like ""Provide Instructions"" into more specific categories.
+
+8. **Incorporate Edge Cases:**
+   - For messages fitting multiple intents, prioritize based on context. E.g., if ""Thank you"" follows resolving an issue, it may serve as both gratitude and closure.
+
+9. **Explicitly State Multi-Intent Handling:**
+   - For messages conveying multiple intents, identify the primary one. E.g., ""Thanks, goodbye!"" prioritizes ""close_conversation.""
+
+10. **Reinforce Importance of Consistency:**
+    - Ensure consistent categorization. E.g., phrases like ""Glad to help!"" and ""Happy to help!"" should consistently fall under ""Close Conversation.""
+
+By following these guidelines, ensure the accurate and consistent clustering of customer service messages into the appropriate intent categories.",0,,,0.317008986963081,0.39144419171253475,0.28075184392100877,0.1240913266673727,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[15. 15. 13. 10. 13.  0. 15.  0. 13.  0.  1. 15. 15.  9. 15.  9.  7. 15.
+ 10.  0.  1. 14. 10. 10.  0.  3. 12. 12.  0.  1.  1.  1. 15. 15.  9.  7.
+ 15.  9.  0.  0.  1.  1.  1.  1.  1. 15. 15.  9. 13.  0.  6.  2.  2.  4.
+  1. 15. 15.  9. 15. 10. 13.  0.  1.  1.  1.  1. 15. 15. 11.  9.  0.  7.
+  4. 11.  4.  1. 15.  9.  2. 13.  0.  5.  4. 13.  4.  1. 15. 15.  9. 13.
+  2. 12.  0.  1.  1.  1.  1. 15. 15.  9.  3.  9. 10.  0. 10.  0.  1. 15.
+ 15.  9.  3.  0. 15.  2.  3.  4.  1.  1.  1. 13. 15.  8. 13. 13. 15. 12.
+  0.  1. 15. 15. 11. 13.  9.  5.  2. 13.  4.  1. 15. 15.  9.  3. 15.  9.
+  0.  0.  1.  1.  1. 15. 15.  9.  7.  0.  9.  7.  0. 11.  4.  1. 14. 15.
+  9.  9.  9.  0. 10.  0.  1. 15. 15. 13. 15. 13. 10.  0. 10.  0.  1. 14.
+ 10.  2.  3.  0. 10.  0.  1. 15. 10.  3.  0.  0.  3. 15. 15.  9.  9.  7.
+  0.  9.  4.  1. 14. 10.  0.  0. 10.  1.  1. 13.  6. 15.  2.  0.  1. 13.
+ 15.  9. 13.  0. 10.  0.  1. 15. 15. 13.  4.  4.  1. 15. 15.  9.  7.  0.
+  9.  0.  1.]"
+6,feedback_0,"Classify each interaction by first identifying whether it is a 'customer' request or an 'assistant' response. Then, assign a specific label that best describes the intent or purpose of the communication, taking into account the context, subtle differences in expression, and the distinct roles of customer and assistant. Be sure to differentiate between similar phrases based on their intended meaning, and maintain consistency in labeling intents related to closing conversations. Use specific examples to illustrate different intents for similar phrases, and include disambiguation cues for common scenarios that may lead to errors, such as differentiating between expressions of gratitude and acknowledgment, or thanking versus accepting a solution.",1,,,0.20052086204763353,0.799114966013584,0.18080409016964907,0.16023922186020922,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[32. 32. 22. 21. 22.  3. 32.  0. 26.  3. 28. 32. 32. 32. 19.  5. 19.  5.
+ 19. 28. 28. 31. 33. 23.  4.  8. 15. 25. 13. 17.  7. 28. 32. 32. 22. 19.
+ 34. 19.  5.  5. 17. 28. 28. 28. 28. 32. 32. 32. 19.  5. 19.  5. 19. 12.
+ 28. 32. 32. 22. 32. 22. 22. 12. 18.  7. 28. 28. 32. 32. 22. 22.  5. 19.
+  5. 22.  5. 28. 32. 32. 22. 22.  3. 19.  5. 19.  5. 28. 32. 19. 22. 19.
+  5. 19. 12. 29. 28. 28. 28. 32. 32. 22. 32. 22. 19.  5. 19.  5. 28. 32.
+ 32. 22.  5.  5. 19.  5. 22.  5. 19. 28. 28. 32. 32. 22. 22. 22. 32. 22.
+  3. 28. 32. 32. 22. 22. 22. 19.  0. 10. 12. 28. 32. 32. 22.  5. 32. 22.
+  5.  5. 19. 28. 28. 32. 32. 22. 19.  5. 19. 19.  5. 19.  5. 28. 30. 32.
+ 22.  3. 22. 12. 18. 12. 12. 32. 32. 22.  3. 22. 26.  0. 21. 12. 28.  1.
+ 24. 16.  9.  2. 20. 11. 14. 32. 32. 32. 19.  5.  5. 32. 32. 22.  5. 19.
+  5. 19.  5. 28. 30. 27.  6. 12. 18.  7.  7. 32. 19. 19. 19.  5.  5. 32.
+ 32. 22. 19.  5. 19.  5. 28. 32. 32. 22. 19.  5. 22. 32. 32. 22. 19.  5.
+ 22. 28. 28.]"
+7,feedback_0,"Categorize each statement based on its intent or purpose. 
+
+### Guidelines for Categorization:
+
+1. **Express Gratitude**: Use this category for statements that convey thanks or appreciation. For example, ""Okay, thanks for the advice."" and ""Awesome, appreciate the quick fix!""
+
+2. **Close Conversation**: Use this category for statements intended to end a conversation. For example, ""You’re very welcome!"" and ""Glad to help!""
+
+3. **Accept Solution**: Use this category for statements that indicate acceptance or agreement with a proposed solution. For example, ""Yes please, that would be great."" and ""That would be good.""
+
+4. **Report Issue**: Use this category for statements that describe a problem or issue. Consider the specifics of the issue, not just the greeting. For example, ""Hello, my delivery is late."" and ""Hello, one of the items I bought is expired.""
+
+5. **Acknowledge**: Use this category for statements that show understanding or recognition of information. For example, ""Oh, I didn’t realize."" and ""Okay, thanks for letting me know.""
+
+6. **Confirm Refund**: Use this category specifically for statements confirming a refund. For example, ""Refund has been processed.""
+
+7. **Confirm Action**: Use this category for statements that confirm any action has been completed. For example, ""Done. The points are now visible in your balance.""
+
+### Disambiguation Cues:
+
+- **Speaker Role**: Consider who is speaking (customer vs. assistant) to help determine the intent. For example, ""Okay, thanks for letting me know."" from a customer and ""Perfect, I’ll arrange for a new card to be sent to your address."" from an assistant should be categorized differently.
+
+- **Contextual Understanding**: Pay attention to the context behind the statements to determine the correct intent. For example, ""I’m really sorry about that. Can you tell me your order number?"" should be distinct from ""I see. What voucher code are you trying to use?""
+
+Apply these guidelines to ensure accurate and contextually relevant intent categorization.",2,,,0.31555289204476583,0.40579641697992636,0.2724026526101004,0.12805023295941947,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[6. 1. 6. 1. 1. 5. 0. 0. 3. 5. 2. 6. 1. 6. 1. 1. 0. 0. 3. 5. 2. 6. 6. 1.
+ 1. 3. 1. 1. 5. 2. 2. 2. 6. 1. 6. 3. 0. 3. 5. 5. 2. 2. 2. 2. 2. 6. 1. 6.
+ 1. 1. 0. 0. 3. 5. 2. 6. 3. 1. 3. 0. 3. 5. 2. 2. 2. 2. 6. 1. 1. 1. 1. 0.
+ 5. 3. 5. 2. 6. 1. 1. 1. 1. 0. 5. 2. 5. 2. 6. 1. 1. 1. 0. 3. 5. 2. 2. 2.
+ 2. 6. 1. 1. 1. 1. 0. 1. 0. 5. 2. 6. 1. 0. 3. 5. 3. 0. 4. 5. 2. 2. 2. 6.
+ 1. 3. 1. 3. 1. 1. 5. 2. 6. 1. 1. 1. 1. 0. 0. 3. 5. 2. 6. 0. 3. 1. 1. 1.
+ 5. 5. 2. 2. 2. 6. 1. 1. 3. 0. 4. 0. 0. 3. 5. 2. 6. 1. 1. 1. 1. 5. 3. 5.
+ 2. 6. 1. 6. 1. 1. 0. 0. 0. 5. 2. 6. 1. 6. 1. 0. 1. 5. 2. 6. 1. 0. 3. 5.
+ 2. 6. 1. 1. 1. 3. 5. 3. 5. 2. 6. 1. 1. 5. 1. 2. 2. 6. 0. 0. 3. 5. 2. 6.
+ 1. 1. 3. 1. 3. 5. 2. 6. 0. 0. 3. 5. 2. 6. 1. 1. 3. 5. 3. 5. 2.]"
+8,feedback_0,"Classify each customer and assistant statement into distinct intent categories based on their purpose. 
+
+1. **Clarify Intent Definitions**:
+   - ""close_conversation"": Indicates the conversation is ending.
+   - ""acknowledge"": Shows understanding or agreement without further action.
+   - ""confirm_action"": Verifies an action has been completed.
+   - ""confirm_voucher"": Specific confirmation of adding a voucher.
+
+2. **Examples for Ambiguous Cases**:
+   - Separate ""provide_new_address"" from ""provide_order_number"":
+     - Example: ""customer: Sure, it’s 12 Maple Street, Springfield."" vs. ""customer: It’s 78342.""
+
+3. **Contextual Cues**:
+   - Use context to guide intent, e.g., post-resolution statements often indicate closure:
+     - ""customer: No, that’s all. Have a nice day!"" (end_request) vs. ""customer: Okay, thanks for checking."" (acknowledge).
+
+4. **Consistency in Intent Assignment**:
+   - Consistently categorize similar phrases, such as variations of ""You’re welcome"" under ""close_conversation"":
+     - ""assistant: You’re very welcome! Have a great day."" 
+
+5. **Disambiguate Similar Actions**:
+   - Differentiate ""offer_solution"" from ""suggest_alternative"":
+     - Example: ""assistant: Sometimes banks decline transactions for security. Could you try again or use PayPal instead?"" (suggest_alternative) vs. ""assistant: Done. The points are now visible in your balance."" (confirm_action).
+
+6. **Instructions for Mixed Intent Statements**:
+   - Handle mixed intents by splitting or prioritizing them:
+     - Example: ""assistant: Here’s the new code: THANKYOU15. You can use it until next week."" (provide_new_code) vs. ""assistant: I’ll refund the extra charge immediately."" (offer_solution).
+
+7. **Speaker Role Importance**:
+   - Distinguish between customer and assistant roles:
+     - Example: ""customer: Yes please, that would help."" (accept_help) vs. ""assistant: Happy to help!"" (close_conversation).
+
+By following these guidelines, improve accuracy in classifying and clustering intents, reducing errors like false splits and merges.",3,,,0.4393767008223507,0.7970691960169649,0.382887189292543,0.3502136336730576,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[35. 34. 34. 42.  2.  2. 14.  1.  4.  2.  3. 34. 34.  2. 34.  2. 14.  0.
+ 14.  2.  3. 29. 37. 23.  6. 14. 40. 28.  2.  3.  3.  3. 34. 34.  2. 14.
+  4.  4.  2.  2.  3.  3.  3.  3.  3. 34. 34.  2.  4.  2. 34.  4.  4.  2.
+  3. 19. 36. 19. 33.  5.  4.  2.  3.  3.  3.  3. 34. 34. 26.  9.  2. 14.
+  0. 20.  2.  3. 34. 34. 18. 18.  2. 14.  2.  4.  2.  3. 30. 34. 23.  4.
+  2.  4.  2.  3.  3.  3.  3. 34. 34. 25. 34.  2. 43.  2. 14.  2.  3. 32.
+ 34. 24.  4.  2. 14.  0.  4.  2. 13.  3.  3. 34. 34. 23.  4. 14. 34. 18.
+  2.  3. 34. 34. 18. 18. 18. 14.  0.  4.  2.  3. 34. 34. 21.  4. 34.  4.
+  2.  2. 14.  3.  3. 34. 34.  2. 14.  2.  4. 14.  0. 11.  2.  3. 29. 37.
+ 23.  7. 16.  2. 14.  2.  3. 35. 34. 17. 39. 24. 42.  1. 14.  2.  3. 38.
+ 27. 12. 10.  2. 15.  2.  3. 41. 34.  8.  4.  2.  3. 34. 34. 23.  2. 14.
+  2.  4.  2.  3. 29. 14.  2.  2. 14.  3.  3. 34. 42.  4.  4.  2.  3. 34.
+ 34. 23.  4.  2. 42.  2.  3. 31. 34. 22.  4.  2.  3. 34. 34.  2. 14.  2.
+  4.  2.  3.]"
+9,feedback_0,"Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, ask_item_details, provide_order_number, provide_receipt_number, describe_issue, request_update_address, offer_additional_help, describe_error_message, suggest_alternative. Differentiate between intents that may appear similar by context or key phrases, and ensure unrelated topics are not falsely merged. Recognize when messages offer direct assistance versus alternative solutions, and use unified intent categories for expressions of gratitude or follow-up offers of help. Consider adding new intent categories if needed to capture nuanced messages.",4,,,0.41223903990080346,0.5004694667329791,0.3917350693461647,0.2063130524656704,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[ 6.  2.  6. 17.  1.  8.  9.  1.  4.  8.  4.  6.  5.  5. 17.  1.  9.  0.
+  1.  8.  9.  6. 15. 11.  8.  0.  3.  7.  8.  9.  4.  4.  6.  2.  6.  9.
+  1.  0.  8.  8.  9.  4.  4.  4.  4.  6.  2. 10.  7.  0.  9.  1.  0.  8.
+  4. 16.  9. 11.  2. 16.  0.  8.  9.  4.  4.  4.  6.  2. 11.  7.  8. 17.
+  1. 11.  8.  4.  6.  2. 11.  7.  0.  9.  8.  9.  8.  4. 16. 11. 11.  0.
+  1.  7.  8.  9.  4.  4.  4.  6.  2. 11.  2.  6. 17.  1.  9.  8.  4. 12.
+  2. 12.  0.  8.  9.  0. 12.  8.  9.  4.  4.  6. 14. 11.  6.  0.  3.  7.
+  8.  4.  6.  2. 11.  7.  6. 17.  1.  0.  8.  4. 16. 16. 11.  0.  2.  0.
+  8.  8.  9.  4.  4.  6.  2. 11.  0.  1.  0.  9.  1.  0.  8.  4.  6. 11.
+ 11.  7. 17.  8.  9.  8.  8.  6.  2.  5. 12. 12. 17.  1.  9.  8.  8.  6.
+ 17.  2. 11.  1.  9.  8.  4.  6.  2.  1.  0.  8.  4.  6. 13.  8.  7.  0.
+  8.  0.  8.  4.  6. 17.  1.  8.  9.  4.  4.  6. 17.  1.  9.  8.  8.  6.
+ 11. 11.  7.  1.  9.  8.  8. 16.  2. 11.  0.  8.  8.  6.  2.  6.  0.  8.
+  7.  8.  4.]"
+10,feedback_1,"### Enhanced Intent Discovery Prompt
+
+Categorize each statement into one of the predefined category labels based on its intent or purpose. Use the comprehensive guidelines and examples provided to ensure accurate and consistent classification:
+
+1. **Clarify Intent Definitions:**
+   - **Confirm Action**: Statements verifying a specific action. E.g., ""Is my order confirmed?""
+   - **Confirm Update**: Verifications about updates. E.g., ""Has my address been updated?""
+   - **Offer Solution**: Proposals to solve an issue, including manual actions. E.g., ""I'll manually add the points to your account now.""
+
+2. **Disambiguation Cues:**
+   - **Describe Error Message**: Focus on detailing errors. E.g., ""Yes, it says my password is incorrect.""
+   - **Report Problem**: General issue reporting. E.g., ""I'm having trouble logging in.""
+   - **Confirm Refund** vs. **Reassure Customer**: Distinguish by language. E.g., ""Refund has been processed"" vs. ""Your delivery should still arrive.""
+
+3. **Encourage Context Awareness:**
+   - Consider context to differentiate intents. E.g., ""Thank you!"" might be ""express_gratitude,"" but if used to conclude a conversation, categorize it as ""close_conversation.""
+
+4. **Highlight Common False Merges:**
+   - Avoid merging distinct intents. E.g., ""Report Overcharge"" (e.g., ""I've been charged twice"") vs. ""Report Payment Failure"" (e.g., ""My payment didn't go through"").
+
+5. **Reduce Over-Splitting:**
+   - Recognize shared intents in similar messages. E.g., ""Awesome, I appreciate it"" and ""That's helpful, thanks!"" both fall under ""express_gratitude.""
+
+6. **Provide Examples of Correct Clustering:**
+   - Group similar messages correctly. E.g., ""Got it, thanks!"" and ""Understood, thank you!"" both fall under ""Acknowledge.""
+   - Consistent categorization for ""Accept Solution"" with examples like ""Yes please, that would be great"" and ""That would be good.""
+
+7. **Introduce Sub-categories if Necessary:**
+   - Break down broad categories if needed. E.g., differentiate ""Reset Password Instructions"" from ""Account Update Instructions.""
+
+8. **Incorporate Edge Cases:**
+   - Handle messages fitting multiple intents by context. E.g., ""Hello! Sorry to hear that. Can you tell me what exactly is going wrong?"" might be both ""ask_clarification"" and ""ask_error_details.""
+
+9. **Explicitly State Multi-Intent Handling:**
+   - Clarify handling of multi-intent messages, ensuring primary intent is identified. E.g., ""Thanks, goodbye!"" prioritizes ""close_conversation.""
+
+10. **Reinforce Importance of Consistency:**
+    - Emphasize consistent categorization. E.g., ""Glad to help!"" and ""Happy to help!"" should consistently fall under ""Close Conversation.""
+    - Regularly review and update intent definitions and examples to maintain consistency as new language patterns emerge.
+
+By integrating these refined guidelines, ensure precise and consistent clustering of customer service messages into the appropriate intent categories.",0,,,0.38375759847747914,0.4408019114316584,0.3928266438941076,0.1691610829352957,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[16.  3. 16. 12.  7. 13. 12.  0. 13. 10.  6. 16.  3.  9.  2. 11. 12.  0.
+ 14. 10.  6. 16.  2. 13.  1. 12.  4. 13. 10. 12.  6.  6. 16.  2.  9. 12.
+  0.  7. 10. 10. 12.  6.  6.  6.  6. 16.  2.  7. 15.  1. 12.  0. 12. 10.
+  6. 16.  2. 13.  2. 13.  8. 10.  6.  1.  6.  6. 16.  2.  7. 13.  8. 12.
+  0. 13. 10.  6. 16.  3. 13. 13.  1. 12. 10. 13. 10.  6. 16.  2.  8. 12.
+  0.  8. 10.  2.  6.  6.  6. 16.  2. 13.  5.  8. 12.  0. 12. 10.  6.  8.
+  2.  8. 12. 10. 12.  0.  8. 10.  6.  6.  6. 16.  3. 13. 13. 12.  3. 13.
+ 10.  6. 16.  3. 13. 13. 13. 12.  0.  8. 10.  6. 16.  2.  8.  8.  2. 15.
+ 10. 10. 12.  6.  6. 16.  2. 13. 12.  0.  8. 12.  0.  8. 10.  6. 16.  2.
+ 13. 13. 15.  1. 12. 10.  6. 16.  3.  9.  2. 13. 12.  7. 12. 10. 10. 16.
+ 14.  7.  7.  0. 12.  1.  6.  5.  2.  8. 12. 10. 15. 16.  2. 13. 11. 12.
+  0.  8. 10.  6. 16. 13.  1.  1.  2.  6.  6. 16. 12.  0. 12. 10. 10. 16.
+  2. 13.  8.  1. 12. 10.  6. 16.  2. 13.  8. 10.  6. 16.  2.  8. 12. 10.
+  8. 10.  6.]"
+11,feedback_1,"Classify each interaction by first identifying whether it is a 'customer' request or an 'assistant' response. Then, assign a specific label that best describes the intent or purpose of the communication, carefully considering the context, subtle differences in expression, and the distinct roles of customer and assistant. Pay close attention to differentiating similar intents: For example, distinguish 'express_gratitude' from 'acknowledge_and_thank', and 'offer_solution' from 'offer_compensation'. Ensure consistency in labeling conversation-ending phrases like 'close_conversation', and differentiate between providing an 'order_number' versus a 'receipt_number'. For messages with multiple actions, identify each intent separately. Clearly differentiate between reporting problems and confirming actions taken, and analyze context to accurately assign intents. Use examples for complex scenarios to guide accurate intent selection and avoid false merges or splits.",1,,,0.4069875854048032,0.7771706716526481,0.3718185171523423,0.31629881510334035,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[48. 48. 44. 22.  6.  3. 25.  3. 28. 18.  7. 45.  4. 45. 28.  4. 28.  8.
+ 28. 18.  7. 41. 52. 34.  5. 28. 20. 37. 18. 23.  7.  7. 45.  2.  4. 28.
+  8.  8. 18. 18. 29.  7.  7.  7.  7. 49. 49. 49.  8.  3. 28.  8.  8. 18.
+  7. 46. 50. 32. 15. 56. 10. 18. 23. 16.  7.  7. 45. 49. 31. 17.  4. 28.
+ 18. 31. 18.  7. 43. 48. 34. 28.  3. 26.  3.  8. 18.  7. 45. 28. 34.  3.
+  8.  8. 18. 28.  7.  7.  7. 45. 49. 31.  3. 31. 28.  8. 27. 18.  7. 49.
+ 49.  8.  8. 18. 27.  8.  8. 18. 27.  7.  7. 48. 34.  3. 12. 28. 55. 37.
+ 18.  7. 43. 48. 39. 12. 13. 28.  0.  8. 18.  3.  8. 49. 31.  8. 49.  8.
+ 18. 18. 27.  7.  7. 45. 18. 31. 28.  4.  8. 26. 18.  8. 18.  7. 40. 52.
+ 34.  3. 38. 18. 23. 18. 18. 44. 48. 30. 53. 35. 25.  6. 22. 18.  3. 42.
+ 28. 21. 14.  1. 24.  3. 18. 49. 49.  8.  8.  3.  3. 45. 54. 36.  4.  8.
+ 18.  8. 18.  3. 40. 38.  9. 18. 23.  7. 19. 45. 28.  8.  8. 18.  3. 45.
+ 28. 34.  8.  3. 28. 18. 18. 47. 51. 33. 11. 18.  3. 45.  4.  8. 28. 18.
+  8. 18.  7.]"
+12,feedback_1,"Categorize each statement based on its intent or purpose.
+
+### Guidelines for Categorization:
+
+1. **Express Gratitude**: Use this category for statements that convey thanks or appreciation. For example, ""Okay, thanks for the advice."" and ""Awesome, appreciate the quick fix!""
+
+2. **Close Conversation**: Use this category for statements intended to end a conversation. For example, ""You’re very welcome!"" and ""Glad to help!""
+
+3. **Accept Solution**: Use this category for customer statements indicating acceptance or agreement with a proposed solution. For example, ""Yes please, that would be great."" and ""That would be good.""
+
+4. **Offer Solution**: Use this category for assistant statements proposing a solution. For example, ""Would you like me to request a replacement card for you?"" and ""I’ll refund the extra charge immediately.""
+
+5. **Report Issue**: Use this category for statements that describe a problem or issue. Consider the specifics of the issue, not just the greeting. For example, ""Hello, my delivery is late."" and ""Hello, one of the items I bought is expired.""
+
+6. **Acknowledge**: Use this category for statements that show understanding or recognition of information. For example, ""Oh, I didn’t realize."" and ""Okay, thanks for letting me know.""
+
+7. **Confirm Refund**: Use this category specifically for statements confirming a refund. For example, ""Refund has been processed.""
+
+8. **Confirm Action**: Use this category for statements that confirm any action has been completed. For example, ""Done. The points are now visible in your balance.""
+
+9. **Offer Compensation**: Use this category for assistant statements offering compensation. For example, ""Would you like a voucher for the inconvenience as well?""
+
+10. **Provide Information**: Use this category for statements offering informational responses. For example, ""Refunds are usually processed within 3–5 business days.""
+
+11. **Provide Promo Code**: Use this category for statements providing a promotional code. For example, ""It’s FREEDELIVERY.""
+
+12. **Provide Order Number**: Use this category for statements providing an order number. For example, ""Your order number is 12345.""
+
+### Disambiguation Cues:
+
+- **Speaker Role**: Differentiate between customer and assistant statements to determine the intent. For example, categorize a customer's ""Yes, please"" as ""Accept Compensation"" and an assistant's ""I’ll issue a refund right away"" as ""Offer Solution.""
+
+- **Contextual Understanding**: Pay attention to the context to accurately determine intent. For example, distinguish between an assistant confirming a refund timeline and acknowledging a system glitch.
+
+- **Multi-intent Scenarios**: Identify the primary intent in complex statements. For example, ""I’ll issue a refund right away and also notify the store"" should be categorized primarily under ""Offer Solution.""
+
+Apply these guidelines to ensure accurate and contextually relevant intent categorization.",2,,,0.4076904043782978,0.49305191472622156,0.3747995418098511,0.20101253449422726,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[11.  8. 11.  8. 11.  1.  7.  0.  7.  5.  2. 11.  1.  8.  8.  1.  7.  0.
+  8.  5.  2. 11.  9.  9.  1.  7.  8.  8.  5.  7.  2.  2. 11.  8. 11.  7.
+  0.  3.  5.  5.  2.  2.  2.  2.  2. 11.  8.  8.  8.  1.  7.  0.  3.  5.
+  2. 11.  8.  8.  8.  0.  3.  5.  2.  2.  2.  2. 11.  8.  8.  8.  1.  7.
+  0. 10.  5.  2. 11.  8.  9.  8.  1.  6.  5.  2.  5.  2. 11.  7.  9.  1.
+  0.  3.  5.  2.  2.  2.  2. 11.  8.  8.  1.  1.  7.  0.  7.  5.  2. 11.
+  8.  0.  3.  5.  7.  0.  3.  5.  7.  2.  2. 11.  7.  9.  1.  7.  8.  8.
+  5.  2. 11.  8. 10.  8.  1.  7.  0.  3.  5.  2. 11.  8.  0.  3. 11.  8.
+  5.  5.  2.  2.  2. 11.  1.  8.  7.  0.  4.  6.  0.  3.  5.  2. 11.  8.
+  9.  1.  8.  1.  7.  5.  2. 11.  8.  1.  8.  8.  7.  0.  8.  5.  2. 11.
+  8.  8.  8.  1.  8.  5.  2. 11.  7.  0.  3.  5.  2. 11.  8.  9.  8.  7.
+  5.  3.  5.  2. 11.  8.  1.  5.  1.  2.  2. 11.  7.  0.  3.  5.  2. 11.
+  7.  9.  8.  1.  7.  5.  2. 11.  8.  0.  3.  5.  2. 11.  8.  1.  7.  5.
+  8.  5.  2.]"
+13,feedback_1,"Classify each customer and assistant statement into distinct intent categories based on their purpose, ensuring clear differentiation and consistent categorization.
+
+1. **Clarify Intent Definitions**:
+   - ""close_conversation"": Indicates the conversation is ending, consistently categorized with phrases like ""You’re welcome.""
+   - ""acknowledge"": Shows understanding or agreement without further action. Example: ""Oh, I didn’t realize.""
+   - ""express_gratitude"": Shows appreciation. Example: ""Much appreciated!""
+   - ""confirm_action"": Verifies an action has been completed.
+   - ""offer_solution"": Proposes a resolution to an issue, distinct from confirming an action.
+   - ""suggest_troubleshooting"": Proposes a solution, focusing on resolving issues.
+   - ""ask_error_details"": Gathers information to understand an issue.
+
+2. **Examples for Ambiguous Cases**:
+   - Differentiate ""provide_new_address"" from ""provide_order_number"":
+     - Example: ""customer: Sure, it’s 12 Maple Street, Springfield."" (provide_new_address) vs. ""customer: It’s 78342."" (provide_order_number).
+
+3. **Contextual Cues**:
+   - Use context to resolve ambiguity, e.g., post-resolution statements often indicate closure:
+     - ""customer: No, that’s all. Have a nice day!"" (close_conversation) vs. ""customer: Okay, thanks for checking."" (acknowledge).
+
+4. **Consistency in Intent Assignment**:
+   - Ensure consistent categorization for similar phrases, such as variations of ""You’re welcome"" under ""close_conversation.""
+
+5. **Handling Mixed Intents**:
+   - Manage mixed intents by splitting them or prioritizing the primary intent:
+     - Example: ""assistant: Here’s the new code: THANKYOU15. You can use it until next week."" (provide_new_code) vs. ""assistant: I’ll refund the extra charge immediately."" (offer_solution).
+
+6. **Role-Specific Instructions**:
+   - Highlight the speaker's role in intent classification:
+     - Example: ""customer: Yes please, that would help."" (accept_help) vs. ""assistant: Happy to help!"" (close_conversation).
+
+7. **Clarification for Ambiguous Statements**:
+   - Clarify how to categorize similar statements serving different purposes:
+     - ""suggest_troubleshooting"" involves proposing a solution, while ""ask_error_details"" focuses on information gathering.
+
+8. **Encourage Specificity**:
+   - Encourage specific and concise classifications by focusing on the core purpose of the message rather than secondary details.
+
+By following these refined guidelines, ensure accurate intent classification and improved clustering performance, reducing errors like false splits and merges.",3,,,0.3936522598632206,0.7056000678935799,0.31956912028725315,0.27776106128594963,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[ 3.  3.  1. 19.  1.  1.  8.  0.  6.  7.  5.  3.  3.  1. 19.  1.  8.  0.
+ 19.  7.  5.  3.  3. 17.  1.  8.  3.  6.  7.  5.  5.  5.  3.  3. 16.  8.
+  6.  6.  7.  7.  5.  5.  5.  5.  5.  3.  3. 15.  6.  1.  8.  0.  6.  7.
+  5.  8.  3. 10.  3.  6.  6.  7.  5.  5.  5.  5.  3.  3. 17.  1.  1.  8.
+  0. 11.  7.  5.  3.  3. 17.  1.  1.  8.  7.  5.  7.  5.  3.  3. 17.  8.
+  6.  6.  7.  5.  5.  5.  5.  3.  3.  9.  3.  1. 19.  6.  8.  1.  5.  3.
+  3. 13.  6.  1.  5.  6.  6.  7.  5.  5.  5.  3. 17.  1.  8.  3.  6.  1.
+  5.  5.  3.  3. 17.  8.  1.  8.  0.  6.  7.  5.  3.  3. 12.  6.  3.  6.
+  7.  7.  5.  5.  5.  3.  1. 17.  8.  1.  6.  8.  0. 11.  7.  5.  3.  3.
+ 17.  6.  6.  1.  8.  7.  5.  3.  3.  1.  3.  1. 19.  6. 19.  1.  5.  4.
+ 19.  2.  6.  1. 19.  1.  5. 18.  6.  6.  6.  7.  5.  3.  3. 17.  1.  6.
+  7.  6.  7.  5.  3. 19.  1.  6.  8.  5.  5.  3.  8.  0.  6.  7.  5.  3.
+  3. 17.  6.  1. 19.  7.  5.  3.  3. 14.  6.  7.  5.  3.  3.  1.  8.  7.
+  6.  7.  5.]"
+14,feedback_1,"Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, ask_item_details, provide_order_number, provide_receipt_number, describe_issue, report_voucher_issue, report_payment_failure, request_update_address, offer_additional_help, describe_error_message, suggest_alternative, offer_solution, offer_alternative_updates. 
+
+Guidelines:
+1. **Differentiate Similar Intents**: For ""accept_solution"" vs. ""express_gratitude,"" recognize acceptance phrases like ""that works"" or ""that would be great,"" and gratitude phrases like ""thank you"" or ""thanks.""
+
+2. **Disambiguate Closing Conversations**: Identify ""close_conversation"" with phrases like ""have a good day"" or ""goodbye,"" distinguishing them from gratitude or acknowledgment.
+
+3. **Differentiate Problem Descriptions**: Use keywords to differentiate ""report_voucher_issue"" (e.g., ""voucher isn’t applying"") from ""report_payment_failure"" (e.g., ""payment failed"").
+
+4. **Offer Solution vs. Alternative**: Recognize ""offer_solution"" with phrases indicating direct resolutions, while ""offer_alternative_updates"" involves additional options, such as ""request a replacement"" vs. ""send updates by SMS.""
+
+5. **Enhance Contextual Understanding**: Use context clues to discern intent, such as identifying order numbers vs. item details.
+
+6. **Unified Intent Categories**: Use a unified category for similar expressions, such as combining slight variations of gratitude or help offers under one intent.
+
+7. **Encourage Intent Expansion**: Add new categories if existing ones don’t capture message nuances.
+
+8. **Incorporate More Examples**: Provide examples for each intent to clarify distinctions, especially for frequently confused pairs like ""explain_delay"" vs. ""explain_issue"" or ""acknowledge"" vs. ""accept_solution.""",4,,,0.41553386885133886,0.5885301575092997,0.3536723163841808,0.24455421328552715,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[ 7.  2.  7. 24.  1.  9. 12.  0. 12.  9.  5.  7.  6.  6.  2.  1. 12.  0.
+ 12.  9. 10.  7. 15. 15.  9. 12.  3. 12.  0. 10.  5.  5.  7.  2. 15. 12.
+  0. 12.  9.  9. 10.  5.  5.  5.  5.  7.  2. 15.  8.  0. 12.  0. 12.  9.
+  5. 22. 12. 13.  4. 23.  0.  9. 10.  5.  5.  5. 19.  2. 15.  8.  0. 12.
+  0. 16.  9.  5.  7.  2. 15.  8.  9. 12.  9. 10.  9.  5.  7.  2. 15. 12.
+  1. 12.  9. 10.  5.  5.  5.  7.  2. 14.  9.  1. 12.  1. 10.  9.  5. 16.
+  2. 16. 12.  9. 12.  0. 12.  9. 10.  5.  5.  7. 20. 15.  9. 12.  3.  8.
+  9.  5. 19.  2. 15.  8. 15. 12.  1. 12.  9.  9. 22.  2. 15.  0.  2. 12.
+  9.  9. 10.  5.  5.  7.  2. 15. 12.  0. 12. 12.  0. 12.  9.  5.  7. 21.
+ 15.  8. 12.  9. 11.  9.  9. 18.  2.  6.  2. 16. 24.  1. 12.  9.  9.  7.
+ 12.  3. 12.  1. 24.  9.  5.  7.  2. 15. 12.  9.  5.  7. 17. 17.  8. 12.
+  0. 12.  9. 10.  7. 12.  1.  0. 10.  5.  5.  7. 12.  0. 12.  9.  9.  7.
+  2. 15.  8.  1. 12.  9.  9. 22.  2. 15. 12.  0.  9.  7.  2.  7. 12.  9.
+  8.  9.  5.]"

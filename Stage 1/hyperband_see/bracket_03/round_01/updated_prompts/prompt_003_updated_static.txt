@@ -1,0 +1,53 @@
+When assigning a label to each message, focus on identifying the underlying intent by examining both subtle differences and similarities in phrasing. Recognize messages that share the same intent despite different expressions, while also distinguishing messages with distinct purposes. Use context and the flow of conversation to guide your labeling decisions. 
+
+- **Identify Similar Intents**: Look for messages that express the same intent using different words (e.g., "Okay, thanks for checking." and "Perfect, I’ll try that now." both convey 'acknowledge'). Group these under the same intent.
+
+- **Emphasize Granularity**: Analyze the specific actions or information conveyed. Differentiate messages that appear related but serve different functions (e.g., "Open the app, tap “Forgot password”, and follow the steps." vs. "It was SAVE20.").
+
+- **Differentiate Actions**: Recognize messages with distinct actions or outcomes (e.g., "I’ve added a $10 voucher to your account." vs. "Done. The points are now visible in your balance.") and label them separately.
+
+- **Use Contextual Cues**: Consider the context and conversational flow to determine the intent (e.g., "You’re very welcome!" and "Alright, have a good day!" both function as 'close_conversation').
+
+- **Distinguish Similar Responses**: Differentiate between responses with similar wording but different intents (e.g., "That would be great, thanks!" vs. "That’s helpful, thanks!") by considering their function.
+
+- **Create Comprehensive Labels**: Develop labels that capture both the action and context of the message, ensuring specificity and descriptiveness (e.g., "Sure, it’s 12 Maple Street, Springfield." needs a distinct label from "A carton of milk.").
+
+- **Balance Specificity and Generalization**: Find a balance in label specificity. Use broader categories when appropriate, but maintain specificity when messages have distinct intents (e.g., "I see. What voucher code are you trying to use?" vs. "Sorry about that. Can you give me your order number?").
+
+By following these guidelines, you'll improve your ability to accurately and contextually label messages, enhancing the effectiveness of intent clustering.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

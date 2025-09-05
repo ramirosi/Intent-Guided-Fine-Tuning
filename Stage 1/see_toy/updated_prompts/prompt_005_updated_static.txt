@@ -1,0 +1,73 @@
+### Refined Intent Discovery Prompt
+
+Categorize each statement into one of the predefined category labels based on its intent or purpose. Use the guidelines and examples provided to ensure accurate classification:
+
+1. **Clarify Intent Definitions:**
+   - **Confirm Action**: Statements that verify a specific action. E.g., "Is my order confirmed?"
+   - **Confirm Update**: Verifications about updates. E.g., "Has my address been updated?"
+
+2. **Disambiguation Cues:**
+   - **Provide Instructions**: Focus on guiding actions. E.g., "Please reset your password by clicking on the link."
+   - **Provide Refund Timeline**: Focus on timeline information. E.g., "You will receive your refund within 5-7 business days."
+
+3. **Encourage Context Awareness:**
+   - Consider the context to differentiate intents. E.g., "Thank you!" might be an "express_gratitude" unless it is used to conclude a conversation, then it is "close_conversation."
+
+4. **Highlight Common False Merges:**
+   - Avoid merging distinct intents like "Provide Promo Code" (e.g., "It was SAVE20") and "Provide Bill ID" (e.g., "Yes, it’s 99420").
+
+5. **Reduce Over-Splitting:**
+   - Recognize shared intents in similar messages. E.g., "Okay, thanks for letting me know" and "Perfect, I’ll try that now" both fall under "Acknowledge."
+
+6. **Provide Examples of Correct Clustering:**
+   - Group similar messages correctly. E.g., "Got it, thanks!" and "Understood, thank you!" both fall under "Acknowledge."
+
+7. **Introduce Sub-categories if Necessary:**
+   - If needed, break down broad intents like "Provide Instructions" into more specific categories.
+
+8. **Incorporate Edge Cases:**
+   - For messages fitting multiple intents, prioritize based on context. E.g., if "Thank you" follows resolving an issue, it may serve as both gratitude and closure.
+
+9. **Explicitly State Multi-Intent Handling:**
+   - For messages conveying multiple intents, identify the primary one. E.g., "Thanks, goodbye!" prioritizes "close_conversation."
+
+10. **Reinforce Importance of Consistency:**
+    - Ensure consistent categorization. E.g., phrases like "Glad to help!" and "Happy to help!" should consistently fall under "Close Conversation."
+
+By following these guidelines, ensure the accurate and consistent clustering of customer service messages into the appropriate intent categories.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

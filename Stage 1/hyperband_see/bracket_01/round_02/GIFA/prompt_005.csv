@@ -1,0 +1,76 @@
+index,intent,count,messages
+0,request_password_reset,0,"customer: Hello, I forgot my account password."
+1,provide_password_reset_instructions,1,assistant: No worries. You can reset it by tapping “Forgot password” on the login screen.
+2,inquire_reset_email_confirmation,2,customer: Will I get a reset email?
+3,confirm_reset_email_instructions,3,"assistant: Yes, you’ll receive an email with a link to create a new password."
+4,acknowledge_reset_attempt,4,"customer: Perfect, I’ll try that now."
+5,provide_additional_reset_instructions,5,"assistant: If you don’t see the email, please check your spam folder."
+6,express_gratitude,6,"customer: Got it, thanks."
+7,close_conversation,7,assistant: Glad I could help!
+0,report_issue,0,"customer: Hi, I was charged twice for the same order."
+1,request_order_number,1,assistant: I’m really sorry about that! Can you share the order number with me?
+2,provide_order_number,2,"customer: Yes, it’s 58291."
+3,acknowledge_issue,3,assistant: Thanks for that. I see two payments for the same order indeed.
+4,confirm_refund,4,assistant: I’ll make sure one of the charges is refunded to your account.
+5,inquire_refund_duration,5,"customer: Great, how long will the refund take?"
+6,provide_refund_duration,6,assistant: Refunds are usually processed within 3–5 business days.
+7,express_gratitude,7,"customer: Okay, that works. Thank you for helping me."
+8,offer_help_and_inquire_further_assistance,8,assistant: Of course! Happy to help. Is there anything else I can do for you today?
+9,close_conversation,9,"customer: No, that’s all. Have a nice day!"
+10,close_conversation,10,assistant: You too! Take care.
+0,report_issue,0,"customer: Hi, the app language switched to Dutch, but I want English."
+1,provide_solution,1,assistant: Understood. You can change it in Settings → Language → English.
+2,acknowledge_instruction,2,"customer: Okay, let me check."
+3,confirm_solution,3,"customer: Yes, that worked. Thanks!"
+4,inquire_further_assistance,4,assistant: Great to hear! Anything else I can help with?
+5,confirm_conversation_closure,5,"customer: No, that’s all."
+6,close_conversation,6,"assistant: Alright, have a good day!"
+0,report_issue,0,"customer: Hi, I can’t track my order in the app."
+1,inquire_order_number,1,assistant: Sorry about that. Can you give me your order number?
+2,provide_order_number,2,customer: It’s 67221.
+3,acknowledge_information,3,"assistant: Thank you. I see the order is on its way, but the tracking system is delayed."
+4,provide_solution,4,assistant: Your delivery should still arrive within the scheduled slot.
+5,express_gratitude,5,"customer: Okay, thanks for checking."
+6,offer_updates,6,assistant: I’ll send you updates by SMS until it arrives.
+7,express_gratitude,7,"customer: That’s helpful, thanks!"
+8,confirm_conversation_closure,8,assistant: You’re very welcome!
+0,update_delivery_address,0,"customer: Hello, I want to update my delivery address."
+1,inquire_new_address,1,assistant: Of course. Could you provide me with the new address?
+2,provide_new_address,2,"customer: Sure, it’s 12 Maple Street, Springfield."
+3,inquire_address_update_scope,3,assistant: Got it. Do you want to apply this change just for the next delivery or for all future orders?
+4,confirm_address_update_scope,4,customer: Please for all future orders.
+5,confirm_profile_update,5,"assistant: Done, your profile has been updated."
+6,express_gratitude,6,"customer: Perfect, thank you for the help."
+7,offer_further_assistance,7,assistant: Happy to help! Anything else I can do for you today?
+8,close_conversation,8,"customer: No, that’s everything."
+9,close_conversation,9,assistant: Great. Have a wonderful day!
+0,report_payment_issue,0,"customer: Hi, my payment failed when I tried to check out."
+1,inquire_error_message,1,assistant: I see. Did you receive any error message?
+2,confirm_error_message,2,"customer: Yes, it said “transaction declined.”"
+3,inquire_payment_method,3,assistant: Thanks for sharing. Was this with a credit card or PayPal?
+4,confirm_payment_method,4,customer: With a credit card.
+5,suggest_alternative_payment_method,5,assistant: Sometimes banks decline transactions for security. Could you try again or use PayPal instead?
+6,confirm_alternative_payment_method,6,customer: I’ll try PayPal.
+7,suggest_contact_bank,7,"assistant: Great. If the card still fails later, contact your bank for details."
+8,express_gratitude,8,"customer: Okay, thanks for the advice."
+9,close_conversation,9,assistant: You’re welcome!
+0,report_loyalty_card_issue,0,"customer: Hi, I'm having trouble with my loyalty card."
+1,inquire_issue_details,1,assistant: Hello! Sorry to hear that. Can you tell me what exactly is going wrong?
+2,describe_issue,2,customer: The card isn't being recognized at checkout.
+3,suggest_troubleshooting,3,"assistant: I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?"
+4,confirm_troubleshooting_attempt,4,"customer: Yes, I tried both. Still doesn't work."
+5,acknowledge_troubleshooting_attempt,5,assistant: Thanks for checking that. It’s possible the card is damaged.
+6,offer_replacement_card,6,assistant: Would you like me to request a replacement card for you?
+7,accept_replacement_offer,7,"customer: Yes please, that would be great."
+8,confirm_replacement_processing,8,"assistant: Perfect, I’ll arrange for a new card to be sent to your address. It usually takes 3–5 business days."
+9,express_gratitude,9,"customer: Awesome, thanks for the quick help!"
+10,close_conversation,10,assistant: You’re very welcome! Have a great day.
+0,report_loyalty_card_issue,0,"customer: Hi, I think I was overcharged on my last bill."
+1,inquire_issue_details,1,assistant: I’m sorry to hear that. Can you share the bill number or order ID?
+2,provide_order_number,2,"customer: Yes, it’s 99420."
+3,acknowledge_troubleshooting_attempt,3,assistant: Thanks. I checked and you were indeed charged twice for delivery.
+4,confirm_troubleshooting_attempt,4,assistant: I’ll refund the extra charge immediately.
+5,inquire_issue_details,5,"customer: Great, when will I see the refund?"
+6,provide_information,6,assistant: Refunds usually show within 2–3 business days.
+7,express_gratitude,7,"customer: Okay, thanks for the quick check."
+8,close_conversation,8,assistant: Happy to help! Have a nice day.

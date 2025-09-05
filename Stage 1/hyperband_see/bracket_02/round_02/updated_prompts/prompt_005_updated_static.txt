@@ -1,0 +1,57 @@
+Assign a classification label to each customer support interaction based on the context or action taken.
+
+1. **Clarify Intent Boundaries:** Clearly define and differentiate between intents with similar functions. For instance, distinguish between `acknowledge` ("Okay, let me check.") and `express_gratitude` ("Appreciate the help!") to avoid confusion and ensure precise clustering.
+
+2. **Address Compound Intent Handling:** Identify and label multiple intents within a single message. For example, in "No worries, resetting usually solves this problem. Would you like me to guide you through it?", recognize both `offer_solution` and `offer_assistance`.
+
+3. **Emphasize Consistency in Intent Labels:** Ensure that similar messages consistently lead to the same intent label. For example, both "Appreciate the help!" and "Got it, thanks." should be labeled as `express_gratitude`.
+
+4. **Include Instructions for Contextual Nuances:** Capture subtle contextual differences to enhance precision in intent classification. Distinguish between `report_problem` ("Hi, I'm having trouble with my loyalty card.") and `report_login_issue` ("Hi, I can’t log in to the app anymore.").
+
+5. **Refine Instructions for Similar Phrases:** Group similar phrases under the same intent to prevent false splits. Ensure that "Much appreciated!" and "Thanks, that works." are categorized under `express_gratitude`.
+
+6. **Suggest Contextual Clarity for Intent Differentiation:** Use contextual cues to differentiate overlapping intents. For instance, clearly separate `request_update_address` from `report_forgot_password` to avoid misclassification.
+
+7. **Re-evaluate and Define Intent Categories Clearly:** Provide distinct definitions for overlapping intent categories to enhance classification accuracy. For example, differentiate between `provide_refund_timeline` and `explain_reason` for refund-related messages.
+
+8. **Encourage Detailed Intent Recognition:** Recognize and label distinct intents within similar actions. Distinguish between "I’ll refund the extra charge immediately" (`confirm_solution`) and "I’ll make sure one of the charges is refunded" (`offer_solution`).
+
+9. **Incorporate Disambiguation Cues:** Add cues or examples to help distinguish often-confused intents. Differentiate between `offer_additional_help` ("Great to hear! Anything else I can help with?") and `offer_solution` ("Would you like me to issue you a different voucher?") using scenario-based examples.
+
+By applying these guidelines, achieve accurate and well-structured clustering of customer service messages based on their true intents.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,27 @@
+In the conversation between a customer and an assistant, identify the intent or action associated with each statement or query. Focus on recognizing when different phrasings convey similar intents, differentiating between closely related intents, and using consistent terminology for intent labeling. Here are some refined guidelines and examples to help you:
+
+1. **Enhance Recognition of Similar Phrasings for Consistent Intents:**
+   - Consistently label expressions of gratitude such as "Okay, thanks for the advice," "Got it, thanks," and "That’s helpful, thanks!" as (intent: express_gratitude).
+
+2. **Differentiate Closely Related Intents:**
+   - Emphasize recognizing specific actions or agreements to differentiate intents like "provide_payment_method" and "agree_to_try." For example, distinguish "With a credit card" from "I’ll try PayPal."
+
+3. **Clarify Intent Boundaries for Endings and Closures:**
+   - Reinforce the difference between "end_request" and "close_conversation," distinguishing messages like "No, that’s all. Have a nice day!" from "Great. Have a wonderful day!"
+
+4. **Use Consistent Terminology for Similar Actions:**
+   - Standardize intent labels like "I’ll refund the extra charge immediately" and "I’ll make sure one of the charges is refunded to your account" as (intent: offer_solution).
+
+5. **Encourage Contextual Understanding:**
+   - Highlight the importance of context to differentiate similar intents like "offer_additional_help" and "offer_alternative_updates."
+
+6. **Standardize Language for Common Requests:**
+   - Use consistent intent labeling for requests such as "request_order_number" by recognizing similar phrasing.
+
+7. **Reinforce Consistency in Closing Statements:**
+   - Ensure that intents like "close_conversation" are consistently applied to varied phrasings like "You’re very welcome!" and "Alright, have a good day!"
+
+8. **Disambiguate Errors and Solutions:**
+   - Clarify the separation between describing an error and agreeing to a solution, as seen in messages like "Yes, it said 'transaction declined'" and "I’ll try PayPal."
+
+By focusing on these areas, the intent discovery process can produce more accurate and meaningful clusters, reducing instances of both false splits and merges.

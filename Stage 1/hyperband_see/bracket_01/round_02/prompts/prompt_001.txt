@@ -1,0 +1,15 @@
+Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent.
+
+- **Clarify Intent Boundaries:** Stress the importance of distinguishing between expressions that indicate closing a conversation, such as "You’re very welcome!" and "Glad I could help!" and standalone gratitude expressions like "Thank you for helping me," unless part of a closing dialogue.
+
+- **Disambiguate Similar Intents:** Provide examples to differentiate similar intents like gratitude and confirmation. For instance, "Yes, that worked. Thanks!" should be categorized as both "confirm_solution" and "express_gratitude," while "That’s helpful, thanks!" should be primarily labeled as "express_gratitude."
+
+- **Encourage Intent Consistency:** Emphasize consistency when clustering acknowledgments. Use context to decide if phrases like "Okay, thanks for checking." and "Okay, let me check." should be grouped together or separately, depending on the specific action each acknowledgment implies.
+
+- **Highlight Intent Variability:** Illustrate when multiple intents are present in a single message. For example, "Of course! Happy to help. Is there anything else I can do for you today?" should encompass both "offer_help" and "inquire_further_assistance."
+
+- **Provide More Contextual Cues:** Encourage using the surrounding conversation context to accurately determine intents. For example, "Yes, it’s 58291." and "It’s 67221." should be classified under "provide_order_number" based on the preceding request for this information.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to prevent false merges. Use examples like "That’s helpful, thanks!" and "Yes, that worked. Thanks!" to demonstrate when gratitude should be treated as a distinct intent.
+
+By adhering to these guidelines, ensure accurate and coherent classification of intents, reducing the likelihood of false splits and merges.

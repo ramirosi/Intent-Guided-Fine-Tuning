@@ -1,0 +1,51 @@
+Identify distinct customer service intents within conversation excerpts. Ensure accurate clustering by considering the following:
+
+1. **Clarify Intent Boundaries:** Group similar expressions under a single intent, such as "close_conversation," with examples like "You too! Take care." and "Alright, have a good day!"
+
+2. **Distinguish Subtle Differences:** Differentiate between similar intents by recognizing nuances, such as "confirm_issue" (e.g., "Thanks for that. I see two payments for the same order indeed.") versus "acknowledge" (e.g., "Okay, thanks for checking.").
+
+3. **Encourage Contextual Understanding:** Consider the context in which a message is sent. For example, distinguish between requesting information ("Can you share the order number with me?") and confirming a solution ("Yes, that worked. Thanks!").
+
+4. **Standardize Intent Definitions:** Use consistent definitions for each intent, such as "express_gratitude," with examples like "Okay, that works. Thank you for helping me." and "Perfect, thank you for the help."
+
+5. **Address Ambiguity in Phrasing:** Recognize solution-related intents despite varied phrasing, such as "Would you like me to request a replacement card for you?" and "I’ll refund the extra charge immediately."
+
+6. **Use Disambiguation Cues:** Distinguish between similar closing phrases using context and speaker roles, such as "Have a great day." (closing conversation) versus "No, that’s all. Have a nice day!" (ending a request).
+
+7. **Promote Intent Specificity:** Encourage granular categorization by identifying sub-intents under broader categories, ensuring clarity between intents like "confirm_issue" and "confirm_update" with appropriate examples.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

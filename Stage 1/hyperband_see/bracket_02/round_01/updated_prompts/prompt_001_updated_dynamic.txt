@@ -1,0 +1,22 @@
+Classify the given text into one of the predefined categories based on its intended outcome. 
+
+**Guidelines:**
+1. **Clarifying Similar Intent Categories:**
+   - Use contextual cues to differentiate similar intents. For example, phrases like "You're welcome!" and "Alright, have a good day!" should be grouped under "close_conversation," whereas "Thank you" belongs to "express_gratitude."
+   
+2. **Avoiding False Merges:**
+   - Focus on the distinct action or response expected. For instance, "Done, your profile has been updated" should be categorized as "confirm_update," while "Thanks. I checked and you were indeed charged twice for delivery" falls under "confirm_overcharge."
+
+3. **Enhancing Disambiguation Cues:**
+   - Look for keywords indicating a question (e.g., "Could you," "Can you") versus a statement (e.g., "You can," "It is possible") to differentiate intents like "ask_new_address" and "provide_guidance."
+
+4. **Variety of Examples:**
+   - Recognize that different phrasings can map to the same intent. For example, "Have a wonderful day!" and "Glad I could help!" both belong to "close_conversation."
+
+5. **Encouraging Contextual Understanding:**
+   - Consider the context and the action or reassurance being communicated. For example, "Yes, you’ll receive an email" should be "confirm_process," while "If you don’t see the email" should be "give_tip."
+
+6. **Refining Action-Based Instructions:**
+   - Identify the primary action or request. For example, "Got it. Do you want to apply this change" is a request for confirmation, while "Hi, I can’t track my order" indicates a request for assistance.
+
+By following these guidelines, classify the text accurately into its corresponding intent category.

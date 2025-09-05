@@ -1,0 +1,65 @@
+### Enhanced Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Provide clear guidelines on merging intents that serve similar functions. For example, combine "acknowledge_and_thank" with "express_gratitude" unless there are explicit reasons to keep them separate. Use examples such as "customer: Okay, I’ll do that now. Thanks for your support!" and "customer: Perfect, thank you for the help." to illustrate this consolidation.
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Reinforce consistent tagging across similar phrases to avoid false splits. For instance, "Yes please, that would be great." and "Perfect, thank you." should both be tagged as "accept_solution." Use these phrases to demonstrate the importance of consistency.
+
+3. **Emphasize the Role of Context**:
+   - Highlight how conversation context can alter intent interpretation. For example, "Okay, let me check." can imply "acknowledge" or "accept_solution" depending on preceding messages. Use examples like "customer: That would be good." and "customer: Oh, I didn’t realize." to show context's impact on intent.
+
+4. **Clarify Intent Granularity**:
+   - Avoid overly granular distinctions unless necessary for business objectives. Illustrate this by addressing errors such as tagging "provide_refund_timeline" and "provide_instructions" separately without clear differentiation.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Use examples to show how context alters intent, preventing false merges. For instance, differentiate "customer: Awesome, appreciate the help!" from "customer: Perfect, thank you." as "express_gratitude" and "accept_solution" respectively.
+
+6. **Group Intents by Underlying Goal**:
+   - Focus on grouping intents by their overarching goal. For example, all phrases related to closing should fall under "close_conversation," regardless of specific wording. Use examples like "No, that’s all. Have a nice day!" to emphasize this point.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Offer strategies for resolving ambiguities, such as analyzing the conversation stage or prior interactions. For example, differentiate between "end_request" and "close_conversation" based on whether further action is implied.
+
+8. **Integrate More Varied Examples**:
+   - Include a wider range of examples to cover common pitfalls. For instance, differentiate "report_billing_issue" from "report_overcharge" with scenarios like "customer: I think I was overcharged on my last bill." vs. "customer: Hi, my payment failed when I tried to check out."
+
+By incorporating these guidelines, you will enhance the accuracy and coherence of message clustering, thereby improving the quality of customer service interactions.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

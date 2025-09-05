@@ -1,0 +1,55 @@
+Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent.
+
+- **Emphasize Contextual Understanding:** Evaluate the role of each message in the conversation to correctly identify its intent. For example, in a billing issue context, "I’ll make sure one of the charges is refunded to your account" should be understood as "offer_solution."
+
+- **Refine Instructions for Distinguishing Closing Statements:** Differentiate between expressions that close a conversation and those that offer gratitude. For instance, "Great. Have a wonderful day!" should be categorized as "close_conversation," while "No, that’s everything" should be recognized as "end_request."
+
+- **Improve Differentiation of Similar Intents:** Provide clear examples to distinguish similar intents, such as "provide_refund_timeline" versus general refund information. Statements like "Refunds are usually processed within 3–5 business days" should fall under "provide_refund_timeline."
+
+- **Incorporate Examples for Disambiguating Instructions and Solutions:** Use examples like "I’ll refund the extra charge immediately" for "offer_solution" and "You can reset it by tapping 'Forgot password' on the login screen" for "provide_instructions."
+
+- **Highlight the Need for Consistent Acknowledgment Clustering:** Use context to decide whether acknowledgment phrases like "Okay, thanks for checking" and "Perfect, I’ll try that now" should be combined into a single intent or kept separate.
+
+- **Address Multi-Intent Messages Clearly:** Illustrate how to handle messages with multiple intents. For example, "Would you like me to request a replacement card for you?" should be recognized as "offer_solution" and potentially involve other intents depending on the broader query.
+
+- **Provide Clear Guidelines for Intent Variability:** Recognize when multiple intents exist within a single message and classify them accurately without false merges.
+
+- **Include Examples of Gratitude as a Distinct Intent:** Demonstrate situations where gratitude should be a standalone intent, such as "That’s helpful, thanks!" to prevent incorrect merges with other intents.
+
+By implementing these guidelines, ensure accurate and coherent classification of intents, reducing the likelihood of false splits and merges.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

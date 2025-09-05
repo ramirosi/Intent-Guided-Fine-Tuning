@@ -1,0 +1,9 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message.
+
+- **Evaluate each message thoroughly in context.** Use existing intent labels unless a message introduces a completely new and distinct issue.
+- **Clarify intent labels for acknowledgment and gratitude:** Distinguish between `acknowledge` and `express_gratitude`. For example, "Okay, thanks for letting me know." and "Okay, I’ll wait for it." should both be labeled as `acknowledge`.
+- **Disambiguate between similar customer issues:** Specify intents for similar issues, such as `report_login_issue` for "Hi, I can’t log in to the app anymore." and `report_billing_issue` for "Hi, I was charged twice for the same order."
+- **Refine instructions on contextual differentiation:** Emphasize context in distinguishing intents like `provide_instructions` and `explain_delay`. For instance, "Understood. You can change it in Settings → Language → English." is `provide_instructions`, while "Thanks. The invoice is being generated and should arrive in your email within 24 hours." is `explain_delay`.
+- **Address overlapping and sequential actions:** Handle messages with multiple actions by labeling them distinctly. Differentiate `confirm_cancellable` from `offer_solution`, such as "Thanks. The order is still being prepared, so I can cancel it right now." as `confirm_cancellable`.
+- **Consistency in common intents:** Reinforce consistency by differentiating `close_conversation` from other intents like `offer_additional_help`. For example, "Great. Have a wonderful day!" should be labeled as `close_conversation`.
+- **Provide examples for end request and acceptance:** Include examples distinguishing `end_request` from simple acknowledgments, such as "No, that’s all. Have a nice day!" as `end_request`.

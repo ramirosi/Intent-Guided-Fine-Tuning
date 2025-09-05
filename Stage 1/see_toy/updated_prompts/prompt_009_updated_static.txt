@@ -1,0 +1,37 @@
+Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, ask_item_details, provide_order_number, provide_receipt_number, describe_issue, request_update_address, offer_additional_help, describe_error_message, suggest_alternative. Differentiate between intents that may appear similar by context or key phrases, and ensure unrelated topics are not falsely merged. Recognize when messages offer direct assistance versus alternative solutions, and use unified intent categories for expressions of gratitude or follow-up offers of help. Consider adding new intent categories if needed to capture nuanced messages.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,27 @@
+In the conversation between a customer and an assistant, identify the intent or action associated with each statement or query. Focus on recognizing when different phrasings convey similar intents, differentiating between closely related intents, and using consistent terminology for intent labeling. Here are some refined guidelines and examples to help you:
+
+1. **Clarify Intent Boundaries:**
+   - Example: Differentiate "assistant: Thanks for that. I see two payments for the same order indeed." (intent: confirm_issue) from "customer: Okay, thanks for checking." (intent: acknowledge).
+
+2. **Avoid False Merges:**
+   - Example: Distinguish "customer: That’s helpful, thanks!" (intent: express_gratitude) from "customer: Yes, that worked. Thanks!" (intent: confirm_solution).
+
+3. **Standardize Instructional Language:**
+   - Example: Separate "assistant: If you don’t see the email, please check your spam folder." (intent: give_tip) from "assistant: I’ll send you updates by SMS until it arrives." (intent: offer_alternative_updates).
+
+4. **Consistent Recognition of Similar Intents:**
+   - Example: Ensure consistency in labeling "assistant: You’re very welcome!" and "assistant: Glad I could help!" as (intent: close_conversation).
+
+5. **Refine Request Differentiation:**
+   - Example: Use consistent labeling for "assistant: I’m really sorry about that! Can you share the order number with me?" and "assistant: Sorry about that. Can you give me your order number?" as (intent: request_order_number).
+
+6. **Disambiguate Similar Yet Distinct Intents:**
+   - Example: Differentiate "assistant: Of course! Happy to help. Is there anything else I can do for you today?" (intent: offer_additional_help) from "assistant: I’ll send you updates by SMS until it arrives." (intent: offer_alternative_updates).
+
+7. **Encourage Contextual Understanding:**
+   - Example: Understand context to differentiate "offer_additional_help" from "give_tip," ensuring accurate capture of message purposes.
+
+8. **Reinforce Intent Consistency:**
+   - Example: Maintain consistent labeling for intents such as "close_conversation," even with slight phrasings like "assistant: You’re very welcome!" and "assistant: Alright, have a good day!"
+
+By focusing on these guidelines, ensure that intent discovery results in accurate and meaningful clusters, minimizing false splits and merges.

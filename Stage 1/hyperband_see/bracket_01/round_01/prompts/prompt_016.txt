@@ -1,0 +1,19 @@
+Classify the given customer or assistant statement into the appropriate intent category. Consider the conversational context and use the following guidelines:
+
+1. **express_gratitude**: Recognize expressions of thanks or appreciation without implying conversation closure, such as "Thank you for helping me" or "That’s helpful, thanks!"
+
+2. **acknowledge**: Use this for responses that indicate understanding or agreement, without further questioning, including phrases like "Okay, thanks for checking." and "Okay, let me check."
+
+3. **provide_instructions**: Group statements that offer detailed step-by-step guidance, such as "You can reset it by tapping 'Forgot password'" and "You can change it in Settings."
+
+4. **give_tip**: Identify suggestions or advice not directly instructing the user on a specific action, e.g., "If you don’t see the email, please check your spam folder."
+
+5. **confirm_process**: Define this category for confirming a process will occur, without providing additional instructions, such as "Your refund is being processed."
+
+6. **ask_followup**: Classify customer inquiries seeking additional details, beyond mere acknowledgment, like "Will I get a reset email?"
+
+7. **close_conversation**: Use this for messages that explicitly indicate the end of an interaction, whether or not they contain gratitude, like "You’re very welcome!" and "Alright, have a good day!"
+
+8. **resolve_issue**: Consolidate statements related to solutions and timelines for resolving issues, such as "The refund will be processed in 3-5 days" and "We can offer you a replacement."
+
+Ensure you analyze the conversational context to accurately classify each statement, considering the role the message plays in the dialogue sequence (e.g., initiating, responding, closing). Refer to examples to prevent errors like false splits and merges.

@@ -1,0 +1,23 @@
+Classify the given text into one of the predefined categories based on its intended outcome. 
+
+**Guidelines:**
+
+1. **Clarifying Similar Intent Categories:**
+   - Differentiate between intents with distinct purposes using contextual cues. For example, "Would you like me to request a replacement card for you?" and "I’ll make sure one of the charges is refunded to your account." should be categorized under "offer_solution" as they both involve problem-solving actions.
+
+2. **Avoiding False Merges:**
+   - Identify unique actions to prevent incorrect merging of intents. For instance, "Done, your profile has been updated" is "confirm_update," while "I’ll try PayPal" involves "agree_to_try," reflecting different intents.
+
+3. **Enhancing Disambiguation Cues:**
+   - Use specific keywords or phrases to distinguish inquiries from guidance. For example, "Your delivery should still arrive within the scheduled slot" is "reassure_customer," while "Understood. You can change it in Settings → Language → English" is "provide_instructions."
+
+4. **Variety of Examples:**
+   - Group expressions with similar sentiments under the same intent. For instance, "Of course! Happy to help. Is there anything else I can do for you today?" and "Great to hear! Anything else I can help with?" should be categorized as "offer_additional_help."
+
+5. **Encouraging Contextual Understanding:**
+   - Recognize the context and intent behind each message. For example, "Refunds are usually processed within 3–5 business days" should be "provide_refund_timeline," while "Your delivery should still arrive within the scheduled slot" should be "reassure_customer."
+
+6. **Refining Action-Based Instructions:**
+   - Focus on the primary action or request in the message. For example, "Hi, I'm having trouble with my loyalty card" is a "report_problem," and "Hi, I can’t track my order in the app" is a "report_tracking_issue."
+
+By following these guidelines, classify the text accurately into its corresponding intent category.

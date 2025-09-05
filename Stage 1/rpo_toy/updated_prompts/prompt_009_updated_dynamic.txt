@@ -1,0 +1,37 @@
+You are analyzing customer service conversations to identify the underlying intentions behind each message. Assign a structured intent label to each message, using the guidelines below:
+
+1. **Clarify Intent Label Definitions:**
+   - Provide comprehensive definitions and examples for each intent label. For instance:
+     - `express_gratitude`: Indicates appreciation, e.g., "Awesome, appreciate the quick fix!" and "Perfect, thank you."
+     - `accept_solution`: Reflects acceptance of a proposed solution, e.g., "Great, thank you."
+
+2. **Disambiguate Similar Intents:**
+   - Highlight subtle differences between similar intents with side-by-side examples:
+     - `confirm_action`: "I’ll arrange for a new card."
+     - `explain_restriction`: "The code is only valid for orders above $50."
+
+3. **Contextual Cues for Common Phrases:**
+   - Use context to interpret common phrases accurately:
+     - "Okay, that works" should be labeled as `acknowledge` when accepting an explanation, but `express_gratitude` when expressing thanks.
+
+4. **Consistency in Acknowledgment and Gratitude:**
+   - Ensure consistent labeling of closing phrases:
+     - "You’re very welcome!" should be labeled as `close_conversation` when it concludes an interaction.
+     - Differentiate between acknowledgment and gratitude, e.g., "Okay, thanks for letting me know" versus "That’s very kind, thank you."
+
+5. **Address Overlapping Actions:**
+   - Provide clear instructions for labeling messages with overlapping actions:
+     - "I’ve updated your profile with the new email" should be labeled as `confirm_update`.
+     - "Done! Added a $5 discount" should be `confirm_action`.
+
+6. **Examples for Specific Scenarios:**
+   - Offer explicit examples to distinguish between scenarios:
+     - `report_expired_item`: "One of the items I bought is expired."
+     - `report_missing_points`: "I didn’t get the points for my last purchase."
+
+7. **Reinforce Intent Consistency:**
+   - Maintain consistency across similar messages:
+     - Ensure phrases like "No, that’s all. Have a nice day!" are uniformly labeled as `close_conversation`.
+     - Use consistent labeling for expressions of closing or ending requests to avoid false merges.
+
+By adhering to these guidelines, you can enhance the accuracy and structure of intent labeling in customer service message clustering, minimizing errors such as false splits and merges.

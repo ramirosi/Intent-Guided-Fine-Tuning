@@ -1,0 +1,27 @@
+In the conversation between a customer and an assistant, accurately identify the intent or action associated with each statement or query. Focus on recognizing when different phrasings convey similar intents, clearly distinguishing between closely related intents, and using consistent terminology for intent labeling. Here are refined guidelines and examples to assist you:
+
+1. **Consistent Recognition for Acknowledgment:**
+   - Ensure that acknowledgment expressions like "Perfect, I’ll try that now," "Okay, let me check," and "Okay, thanks for checking" are consistently labeled as (intent: acknowledge).
+
+2. **Differentiate Information Requests and Solution Offers:**
+   - Clearly differentiate intents such as "ask_clarification" and "request_bill_id" from "offer_solution." For example, distinguish "Can you tell me what exactly is going wrong?" from "I’ll refund the extra charge immediately."
+
+3. **Refine Problem Reporting vs. Update Requests:**
+   - Precisely differentiate intents like "report_billing_issue" from "request_update_address." For instance, distinguish "Hi, I was charged twice for the same order" from "Hello, I want to update my delivery address."
+
+4. **Standardize Intent Labeling for Similar Actions:**
+   - Recognize similar phrasing for actions like "offer_solution," such as "Would you like me to request a replacement card for you?" and "I’ll make sure one of the charges is refunded to your account."
+
+5. **Clarify Boundaries for Similar Requests:**
+   - Reinforce differentiation between similar intents like "report_billing_issue" and "report_payment_failure" with clear examples, such as "Hi, I was charged twice for the same order" versus "Hi, my payment failed when I tried to check out."
+
+6. **Disambiguate Confirming Actions vs. Reassuring Customers:**
+   - Highlight the difference between "confirm_action" and "reassure_customer." For example, differentiate "Perfect, I’ll arrange for a new card to be sent to your address" from "Your delivery should still arrive within the scheduled slot."
+
+7. **Standardize Language for Gratitude and Closures:**
+   - Consistently apply intent labels like "close_conversation" to varied phrasings such as "You’re very welcome!" and "Glad I could help!"
+
+8. **Encourage Contextual Understanding for Similar Intents:**
+   - Emphasize context to distinguish similar intents like "offer_solution" and "explain_issue." For instance, contrast "I’ll refund the extra charge immediately" with "Thank you. I see the order is on its way, but the tracking system is delayed."
+
+By focusing on these areas, the intent discovery process can produce more accurate and meaningful clusters, reducing instances of both false splits and merges.

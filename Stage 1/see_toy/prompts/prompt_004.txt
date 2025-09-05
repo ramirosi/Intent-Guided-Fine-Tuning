@@ -1,0 +1,1 @@
+Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, or ask_item_details.

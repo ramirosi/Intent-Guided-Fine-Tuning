@@ -1,0 +1,66 @@
+Classify each statement as either "customer" or "assistant" and provide a corresponding intent label. 
+
+### Intent Definitions:
+
+1. **Provide Instructions**: Offering detailed steps or guidance to accomplish a task.
+   - Example: "To reset your password, click on 'Forgot Password' and follow the prompts."
+
+2. **Close Conversation**: Indicating the end of an interaction, often with farewell or concluding remarks.
+   - Example: "You too! Take care."
+
+3. **Offer Additional Help**: Asking if further assistance is needed or offering more information.
+   - Example: "Is there anything else I can assist you with?"
+
+4. **Acknowledge**: Confirming understanding or agreement, often with neutral responses.
+   - Example: "Okay, let me check."
+
+5. **Express Gratitude**: Showing appreciation or thanks for assistance or information.
+   - Example: "That’s helpful, thanks!"
+
+### Labeling Guidelines:
+
+- Ensure consistency in labeling similar phrases. For instance, "You’re very welcome!" and "Glad I could help!" should both be labeled as "close_conversation."
+- Use context to determine intent. Acknowledge phrases are often neutral confirmations, while gratitude phrases express thanks.
+- Avoid false splits by referring to these examples and definitions to distinguish between intents.
+
+### Actionable Steps for Improvement:
+
+- Continuously refine intent definitions and examples by reviewing ambiguous cases.
+- Cross-reference with other examples to ensure accurate intent classification.
+- Incorporate a review step to prevent false merges of distinct intents.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

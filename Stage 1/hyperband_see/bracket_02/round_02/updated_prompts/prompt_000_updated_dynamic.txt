@@ -1,0 +1,17 @@
+Identify distinct customer service intents within conversation excerpts by considering the following guidelines to ensure accurate clustering:
+
+1. **Emphasize Consistent Grouping for Similar Expressions:** Use clear examples to illustrate the need for grouping similar expressions under a single intent to avoid false splits. For instance, ensure phrases like "Alright, have a good day!" and "Happy to help!" are consistently categorized under "close_conversation."
+
+2. **Highlight Subtle Differences in Similar Intents:** Provide detailed examples to distinguish closely related intents. Differentiate between "ask_voucher_code" and "ask_order_number" with specific language cues such as "What voucher code are you trying to use?" versus "Can you give me your order number?"
+
+3. **Enhance Contextual Understanding:** Reinforce the importance of understanding the conversation context to correctly identify intents. Recognize intents like "diagnose_issue" versus "offer_compensation" by understanding the broader service context.
+
+4. **Standardize and Clarify Intent Definitions:** Provide clear and consistent examples for each intent to prevent confusion. Ensure phrases like "Okay, thanks for checking" are always classified as "acknowledge."
+
+5. **Address Ambiguity in Solution-Related Intents:** Offer guidance on identifying solution-related intents, ensuring different phrasings are recognized under the same intent. For example, both "I’ll refund the extra charge immediately" and "I’ll manually add the points to your account now" should be categorized under "offer_solution."
+
+6. **Use Disambiguation Cues for Closing Phrases:** Encourage the use of context and speaker roles to distinguish similar closing phrases and intents. Differentiate between "close_conversation" and "end_request" by examining the speaker and context.
+
+7. **Promote Intent Specificity with Granular Categorization:** Highlight the need for more granular categorization, especially in broader intent categories. Provide examples of sub-intents, such as distinguishing "express_gratitude" from "acknowledge_and_thank."
+
+By applying these guidelines, achieve more accurate and nuanced clustering of customer service messages.

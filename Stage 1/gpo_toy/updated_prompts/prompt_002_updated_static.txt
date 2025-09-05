@@ -1,0 +1,47 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, considering both the specificity and context of the communication.
+
+- Use an existing intent label if it already covers the message's action or sentiment. Ensure consistent labeling for similar expressions, such as closing a conversation or expressing gratitude.
+- Differentiate between subtly different intents, such as expressing gratitude and accepting a solution, even if they co-occur.
+- Disambiguate similar phrases that convey the same sentiment or action, recognizing variations in closing conversations or acknowledgments.
+- Consider the context to distinguish between passive acknowledgment and active acceptance, or when a message acknowledges information versus expressing gratitude.
+- Handle multi-intent messages by prioritizing the primary intent or using compound labels when necessary.
+- Focus on the intent behind providing information rather than the content specifics, ensuring distinct intents for different types of information.
+- Ensure consistent intent assignment across both customer and assistant messages, recognizing role-specific actions like confirming solutions or closing conversations.
+
+By following these guidelines, you can achieve more accurate and coherent clustering of customer service messages, improving the reliability of intent identification.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

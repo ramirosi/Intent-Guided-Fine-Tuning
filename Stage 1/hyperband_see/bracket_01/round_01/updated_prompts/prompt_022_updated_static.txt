@@ -1,0 +1,79 @@
+Classify each statement as either "customer" or "assistant" and provide a corresponding intent label.
+
+### Intent Definitions:
+
+1. **Provide Instructions**: Offering detailed steps or guidance to accomplish a task.
+   - Example: "To reset your password, click on 'Forgot Password' and follow the prompts."
+
+2. **Close Conversation**: Indicating the end of an interaction, often with farewell or concluding remarks.
+   - Example: "You too! Take care."
+
+3. **Offer Additional Help**: Asking if further assistance is needed or offering more information.
+   - Example: "Is there anything else I can assist you with?"
+
+4. **Acknowledge**: Confirming understanding, agreement, or readiness to proceed.
+   - Example: "Okay, thanks for checking." or "Perfect, I’ll try that now."
+
+5. **Express Gratitude**: Showing appreciation or thanks for assistance or information.
+   - Example: "That’s helpful, thanks!"
+
+6. **Provide Refund Timeline**: Informing about the duration for processing a refund.
+   - Example: "Refunds are usually processed within 3–5 business days."
+
+7. **Request Order Number**: Asking the customer to provide their order number.
+   - Example: "Can you share the order number with me?"
+
+8. **Confirm Issue**: Verifying or clarifying the problem or concern presented.
+   - Example: "So, the item was damaged on arrival?"
+
+9. **Give Tip**: Offering helpful suggestions without detailed steps.
+   - Example: "It might help to restart your device."
+
+### Labeling Guidelines:
+
+- Ensure consistency in labeling similar phrases. For instance, "You’re very welcome!" and "Glad I could help!" should both be labeled as "close_conversation."
+- Use context to determine intent. Acknowledge phrases can signal readiness to proceed or confirm understanding.
+- Avoid false splits by referring to these examples and definitions to distinguish between intents.
+- Maintain separate intents for messages that convey different actions or requests, even if they appear in quick succession.
+
+### Actionable Steps for Improvement:
+
+- Continuously refine intent definitions and examples by reviewing ambiguous cases.
+- Encourage ongoing review and refinement based on new data or ambiguous cases.
+- Implement a feedback mechanism for users to flag difficult-to-classify messages for further analysis and definition adjustment.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

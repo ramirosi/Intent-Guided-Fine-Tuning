@@ -1,0 +1,1 @@
+Categorize each statement into a predefined category label based on its intent or purpose.

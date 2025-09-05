@@ -1,0 +1,229 @@
+prompt_id,step,prompt,parent_idx,parent_idxs,feedback,score_ami,score_nca,score_f1,ami_x_nca,true_clusters,predicted_clusters
+0,warm_start,"### Improved Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Combine similar intents to avoid unnecessary complexity. For example, merge ""request_order_number"" and ""ask_order_number"" into a single ""order_number_request"" intent unless distinct purposes are required by business needs. Reinforce this with examples like ""assistant: Great. Have a wonderful day!"" and ""assistant: Glad I could help!"" both falling under ""close_conversation.""
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Tag similar phrases consistently. For instance, ""You’re welcome!"" and ""Glad I could help!"" should both be tagged as ""close_conversation"" to prevent false splits. Provide additional examples to reinforce this consistency.
+
+3. **Emphasize the Role of Context**:
+   - Use conversation context to differentiate between intents. For example, ""customer: Okay, thanks for checking."" could mean ""acknowledge"" or ""express_gratitude"" depending on previous dialogue. Highlight how context determines intent, as seen in examples like ""No, that’s all. Have a nice day!"" for ""close_conversation"" versus ""No, that’s all"" for ""end_request.""
+
+4. **Clarify Intent Granularity**:
+   - Assess when detailed distinctions between intents are necessary. Avoid overly granular differences like ""provide_refund_timeline"" vs. ""provide_instructions"" unless they serve distinct business objectives.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Provide examples to demonstrate how similar messages can have different intents due to context. For example, ""customer: Hi, I think I was overcharged on my last bill."" vs. ""customer: Hi, my payment failed when I tried to check out."" should be distinctly tagged as ""report_overcharge"" and ""report_payment_failure.""
+
+6. **Group Intents by Underlying Goal**:
+   - Reinforce the grouping of intents based on their goals. Highlight that all closure-related phrases should consistently be tagged as ""close_conversation,"" regardless of their wording.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Provide strategies for resolving ambiguities, such as assessing the stage of the conversation or prior interactions, to differentiate between intents like ""end_request"" and ""close_conversation.""
+
+8. **Integrate More Varied Examples**:
+   - Add additional examples, especially from common pitfalls, to ensure correct categorization. Differentiate between intents like ""report_billing_issue"" and ""report_overcharge"" with illustrative scenarios.
+
+By incorporating these guidelines, you will enhance the accuracy and coherence of message clustering, thereby improving the quality of customer service interactions.",,,,0.6402509353401891,0.9224816129660419,0.6461538461538462,0.5906197155356346,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[64. 74. 63. 56. 14.  4. 27. 12. 53. 17.  5. 62. 19.  7. 83. 18. 36.  0.
+ 39. 17. 25. 65. 29. 43.  2. 51. 80. 52. 17. 21.  5.  5.  5. 70. 75. 41.
+  6. 82. 10. 17. 21. 16.  5. 68. 79. 48. 49.  2. 26. 17. 42. 17.  5. 60.
+ 76. 43. 44.  2. 23. 17.  5. 17.  5. 65. 76. 43.  9. 52. 80. 52. 17.  5.
+ 69. 81. 57. 58.  8. 22. 71. 35. 17. 17. 61. 78. 47. 32.  2. 11. 24.  1.
+ 15. 17.  5. 59. 76. 43. 39. 39. 17. 21. 17.  5. 66. 73. 38. 77. 46. 45.
+  3. 34. 17.  5. 31. 55. 30. 54.  2. 33. 17.  5. 67. 20. 50. 40. 28. 17.
+ 13. 17.  5. 59. 39.  2. 17. 21. 16.  5. 72. 72. 37. 37. 17.  5. 67. 20.
+ 13. 28. 17. 40. 17.  5.]"
+1,warm_start,"Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Emphasize the importance of context when grouping expressions that indicate closing a conversation, such as ""You’re very welcome!"" and ""Glad I could help!"" Distinguish these from expressions of gratitude like ""Thank you for helping me,"" which should stand alone unless they are part of a closing sequence.
+
+- **Disambiguate Similar Intents:** Provide clear examples that differentiate between similar intents, such as gratitude and confirmation. For instance, ""Yes, that worked. Thanks!"" should be categorized as both ""confirm_solution"" and ""express_gratitude,"" while ""That’s helpful, thanks!"" should primarily be seen as ""express_gratitude.""
+
+- **Encourage Intent Consistency:** Ensure consistency when grouping acknowledgments. Context should guide whether phrases like ""Okay, thanks for checking."" and ""Okay, let me check."" are grouped together or separately. The specific action associated with each acknowledgment should be the deciding factor.
+
+- **Highlight Intent Variability:** Recognize and illustrate when multiple intents exist within a single message. For example, a message like ""Of course! Happy to help. Is there anything else I can do for you today?"" encompasses both ""offer_help"" and ""inquire_further_assistance,"" and should be categorized accordingly.
+
+- **Provide More Contextual Cues:** Use the surrounding conversation context to determine intents accurately. For example, both ""Yes, it’s 58291."" and ""It’s 67221."" should be classified under ""provide_order_number,"" guided by the preceding request for this information.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to prevent false merges. Use examples like ""That’s helpful, thanks!"" and ""Yes, that worked. Thanks!"" to demonstrate when gratitude should be treated as a distinct intent.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, minimizing instances of false splits and merges.",,,,0.3989429219702807,0.7985149308618041,0.4351145038167939,0.3185618797549048,"[73.  7. 32. 84. 21. 33. 48.  2. 20. 39. 19. 69.  8. 31. 84. 40. 44.  1.
+ 51.  4. 47. 63. 79. 56. 23. 48. 16. 60. 39. 42. 34. 19. 19. 82. 11. 53.
+ 18. 80. 28. 39. 42. 34. 19. 74. 15. 58. 37.  3. 46.  2. 54. 39. 19. 68.
+ 13. 56. 35.  3. 45. 39. 22. 39. 19. 71. 77. 49. 25. 48. 16. 60. 39. 19.
+ 76. 17. 61. 38. 24. 48.  2. 20. 39. 19. 65. 10. 52. 48.  2. 27. 45.  0.
+ 29. 39. 19. 75. 13. 56. 36. 62.  3. 43. 39. 19. 72.  8. 31. 14. 57. 83.
+  5. 50. 39. 19. 66. 51.  9. 26.  3. 41. 39. 19. 70. 81. 59. 23. 48.  2.
+ 20. 39. 19. 67. 51.  3. 42. 34. 19. 78. 12. 55. 28. 39. 19. 64.  6. 30.
+ 48.  2. 20. 39. 19.]","[35. 37. 35. 39.  5.  0. 23.  5.  5. 13.  4. 35. 37.  1. 37.  1. 24. 10.
+ 27. 13.  4. 35. 38. 30.  1. 14. 19. 33. 13. 23.  4.  4.  4. 40. 37. 28.
+ 20.  9. 11. 13. 23.  4.  4. 35. 37. 27. 27.  1. 24. 13. 27. 13.  4. 35.
+ 37. 30. 27. 12. 22. 13.  3. 13.  4. 35. 37. 30.  5.  5. 37. 27. 13.  4.
+ 35. 37. 27. 27.  5. 21.  5.  5. 13.  4. 35. 37. 27. 24.  1. 27. 24. 37.
+ 27. 13.  4. 35. 16. 30.  1. 34. 13. 23. 13.  4. 35. 37.  7. 37. 32. 39.
+  5. 26. 13.  4. 18. 31. 15.  8.  2. 25. 13.  4. 35. 37. 30.  1. 24. 13.
+ 10. 13.  4. 35. 34.  1. 16.  4.  4. 36. 17. 29.  6. 13. 13. 35. 37.  1.
+ 24. 13. 27. 13.  4.]"
+2,feedback_0,"### Enhanced Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Provide clear guidelines on merging intents that serve similar functions. For example, combine ""acknowledge_and_thank"" with ""express_gratitude"" unless there are explicit reasons to keep them separate. Use examples such as ""customer: Okay, I’ll do that now. Thanks for your support!"" and ""customer: Perfect, thank you for the help."" to illustrate this consolidation.
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Reinforce consistent tagging across similar phrases to avoid false splits. For instance, ""Yes please, that would be great."" and ""Perfect, thank you."" should both be tagged as ""accept_solution."" Use these phrases to demonstrate the importance of consistency.
+
+3. **Emphasize the Role of Context**:
+   - Highlight how conversation context can alter intent interpretation. For example, ""Okay, let me check."" can imply ""acknowledge"" or ""accept_solution"" depending on preceding messages. Use examples like ""customer: That would be good."" and ""customer: Oh, I didn’t realize."" to show context's impact on intent.
+
+4. **Clarify Intent Granularity**:
+   - Avoid overly granular distinctions unless necessary for business objectives. Illustrate this by addressing errors such as tagging ""provide_refund_timeline"" and ""provide_instructions"" separately without clear differentiation.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Use examples to show how context alters intent, preventing false merges. For instance, differentiate ""customer: Awesome, appreciate the help!"" from ""customer: Perfect, thank you."" as ""express_gratitude"" and ""accept_solution"" respectively.
+
+6. **Group Intents by Underlying Goal**:
+   - Focus on grouping intents by their overarching goal. For example, all phrases related to closing should fall under ""close_conversation,"" regardless of specific wording. Use examples like ""No, that’s all. Have a nice day!"" to emphasize this point.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Offer strategies for resolving ambiguities, such as analyzing the conversation stage or prior interactions. For example, differentiate between ""end_request"" and ""close_conversation"" based on whether further action is implied.
+
+8. **Integrate More Varied Examples**:
+   - Include a wider range of examples to cover common pitfalls. For instance, differentiate ""report_billing_issue"" from ""report_overcharge"" with scenarios like ""customer: I think I was overcharged on my last bill."" vs. ""customer: Hi, my payment failed when I tried to check out.""
+
+By incorporating these guidelines, you will enhance the accuracy and coherence of message clustering, thereby improving the quality of customer service interactions.",0,,,0.3180827175924228,0.7218621463737009,0.24802867383512545,0.22961187324564608,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[17. 24. 17. 10.  2. 11. 24.  0. 11.  5.  3. 21. 24. 11. 24. 11.  8.  0.
+ 12.  5.  3. 17. 25. 13.  4. 15. 27. 15.  0.  7.  3.  2.  3. 24. 24. 11.
+ 24. 11.  2.  5. 24.  3.  3. 22. 24. 11. 11.  1.  8.  0. 11.  5.  3. 18.
+ 24. 11. 11.  2.  8.  5. 11.  5.  3. 20. 24. 11. 11. 14. 24. 15.  5.  3.
+ 18. 24. 11. 11. 11.  8.  0. 16.  5.  5. 21. 24. 11.  8.  0. 11.  8.  0.
+ 11.  5.  3. 23. 24. 11. 11. 11.  5. 12.  5.  5. 17. 24. 11. 24. 11. 10.
+  0. 11.  2.  2. 26. 12.  6.  4.  0.  9.  2.  3. 21. 24. 11. 11.  8.  0.
+ 11.  5.  3. 19. 12.  1.  5.  7.  3.  3. 24.  8. 11.  5.  5.  3. 21. 24.
+ 11.  8.  0. 11.  5.  3.]"
+3,feedback_0,"Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Distinguish between expressions used to close a conversation, such as ""You’re very welcome!"" and ""Glad I could help!"", and expressions of gratitude, like ""Thank you for helping me"". Categorize them as ""close_conversation"" and ""express_gratitude"" respectively, unless they appear in a closing sequence. For example, ""Perfect, thank you for the help"" should be ""close_conversation"".
+
+- **Disambiguate Similar Intents:** Provide specific examples to differentiate between similar intents, like gratitude and confirmation. For instance, ""Yes, that worked. Thanks!"" should be split into ""confirm_solution"" and ""express_gratitude"", while ""That’s helpful, thanks!"" should be categorized as ""express_gratitude"".
+
+- **Encourage Intent Consistency:** Use context to consistently categorize acknowledgments. Determine if phrases like ""Okay, thanks for checking."" and ""Okay, let me check."" fall under ""acknowledge"" or if they indicate another action, ensuring consistency based on their context.
+
+- **Highlight Intent Variability:** Identify multiple intents within a single message, such as ""Of course! Happy to help. Is there anything else I can do for you today?"", which includes ""offer_help"" and ""inquire_further_assistance"". Categorize each intent to avoid oversimplification.
+
+- **Provide More Contextual Cues:** Leverage surrounding conversation context for accurate intent classification. For example, classify ""Yes, it’s 58291."" and ""It’s 67221."" as ""provide_order_number"" if they respond to a request for an order number.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to avoid false merges. Treat expressions of gratitude, like ""That’s helpful, thanks!"", as distinct intents unless they serve a dual purpose.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, minimizing instances of false splits and merges.",1,,,0.37686762151140946,0.681635416368167,0.40107913669064754,0.2568863181046104,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[26. 11.  8. 31.  3.  0. 17.  7. 19.  9.  1. 26. 13.  7. 13.  0. 18.  7.
+ 18.  0.  1. 26. 14. 23.  0. 25. 27. 21.  9. 17.  1.  1.  1. 26. 28. 22.
+ 10. 30.  2.  1. 16.  1.  1. 26. 13. 21. 21.  0. 18.  9. 21.  9.  1. 26.
+ 13. 23. 21.  0. 21.  9.  1.  9.  1. 26. 11. 23.  0.  7. 13. 21.  9.  1.
+ 26. 13. 21. 21. 21. 12.  7. 21.  9.  1. 26. 13. 21.  9.  0. 18. 12.  7.
+ 21.  9.  1. 26. 29. 23. 25. 25.  0. 25.  9.  1. 26. 11.  4. 15.  6. 31.
+  3. 19.  9.  1. 26. 25. 14.  5.  0. 20.  9.  1. 26. 13. 24.  0. 18.  9.
+  7.  9.  1. 26. 25.  0.  7. 12.  1.  1. 26. 13. 21. 21.  9.  1. 26. 13.
+  7. 18.  9. 18.  1.  1.]"
+4,feedback_1,"### Enhanced Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Provide clear guidelines on when to merge intents and when to keep them distinct. Combine intents that express similar functions, such as gratitude or closure, unless the context significantly changes their meaning. For example, merge ""Glad I could help!"" and ""Happy to help!"" under ""close_conversation"".
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Reinforce consistent tagging across similar phrases by using specific examples. For instance, ""Okay, thanks for the quick check."" and ""Got it, thanks."" should both be tagged as ""express_gratitude"". Highlight these to stress the importance of uniformity in tagging similar expressions.
+
+3. **Emphasize the Role of Context**:
+   - Clearly illustrate how context can change intent interpretation. For example, ""Yes, it’s 58291."" could mean ""provide_order_number"" if followed by order-related queries. Use such examples to show how preceding messages can shift intent, preventing errors like false merges.
+
+4. **Clarify Intent Granularity**:
+   - Avoid overly granular distinctions that do not serve a clear business purpose. For example, differentiate between ""provide_item_details"" and ""describe_error_message"" only when necessary. Ensure clarity in examples like ""Yes, it says my password is incorrect."" versus ""A carton of milk."" to prevent incorrect merges.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Use examples to illustrate how seemingly similar intents may require separation. For example, do not merge ""Yes, it’s 58291."" and ""It’s FREEDELIVERY."" as they represent ""provide_order_number"" and ""provide_voucher_code"" respectively.
+
+6. **Group Intents by Underlying Goal**:
+   - Focus on grouping intents by their ultimate goal, such as merging all closing phrases under ""close_conversation"". This prevents false splits seen in examples like ""You too! Take care."" and ""You’re very welcome!"", which should be unified under a single intent.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Offer practical strategies for resolving ambiguities, such as considering the conversation stage or examining previous interactions. For example, differentiate intents like ""confirm_refund"" and ""provide_payment_method"" based on context, seen in ""Refund has been processed."" versus ""With a credit card.""
+
+8. **Integrate More Varied Examples**:
+   - Include a broader range of examples that capture common pitfalls. Differentiate between ""report_billing_issue"" and ""report_overcharge"" using scenarios such as ""I think I was overcharged on my last bill."" to ensure comprehensive coverage of potential errors.
+
+By incorporating these guidelines, you will enhance the accuracy and coherence of message clustering, thereby improving the quality of customer service interactions.",0,,,0.6268253842488088,0.9031630258115054,0.6115288220551379,0.5661255106936137,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[56. 63. 56. 78. 11. 19. 30.  6.  8. 19.  7. 55. 22. 17. 23. 20. 29. 64.
+ 41. 19.  7. 57. 68. 38.  5. 14. 24. 46. 19.  7.  7.  7.  7. 80. 66. 36.
+ 72. 75. 16. 19. 25.  7.  7. 60. 70. 43. 34.  4. 28. 19. 44. 19.  7. 52.
+ 68. 38. 40. 19. 27. 19. 39. 19.  7. 51. 67. 38.  9. 14. 24. 46. 19.  7.
+ 61. 73. 48. 12. 12. 26.  0. 32. 19.  7. 53. 65. 35. 14.  4. 14. 31.  1.
+ 49. 19.  7. 50. 68. 38. 47. 47. 19. 25. 19.  7. 58. 63. 33. 69. 42. 76.
+  6. 77. 19.  7. 54. 41. 21. 13.  3. 79. 19.  7. 59. 71. 45. 18. 74. 19.
+ 15. 19.  7. 50. 47.  2. 19. 25.  7.  7. 62. 62. 37. 10. 19.  7. 59. 74.
+ 18. 15. 19. 15. 19.  7.]"
+5,feedback_1,"Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Distinguish between expressions used to close a conversation, such as ""You’re very welcome!"" and ""Glad I could help!"", and expressions of gratitude, like ""Thank you for helping me"". Categorize them as ""close_conversation"" and ""express_gratitude"" respectively, unless they follow a gratitude expression in a closing sequence. For example, ""Perfect, thank you for the help"" should be ""express_gratitude"" unless used to conclude the exchange.
+
+- **Disambiguate Similar Intents:** Provide specific examples to differentiate between similar intents, like gratitude and confirmation. For instance, ""Yes, that worked. Thanks!"" should be split into ""confirm_solution"" and ""express_gratitude"", while ""That’s helpful, thanks!"" should be categorized as ""express_gratitude"".
+
+- **Encourage Intent Consistency:** Use context to consistently categorize acknowledgments. Determine if phrases like ""Okay, thanks for checking."" are acknowledgments or indicate another action, ensuring consistency based on their context and surrounding conversation.
+
+- **Highlight Intent Variability:** Identify multiple intents within a single message, such as ""Of course! Happy to help. Is there anything else I can do for you today?"", which includes ""offer_help"" and ""inquire_further_assistance"". Categorize each intent to avoid oversimplification.
+
+- **Provide More Contextual Cues:** Leverage surrounding conversation context for accurate intent classification. For example, classify ""Yes, it’s 58291."" as ""provide_order_number"" only if it responds to a request for an order number. Ensure that context is considered in scenarios where intent might be ambiguous.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to avoid false merges. Treat expressions of gratitude, like ""That’s helpful, thanks!"", as distinct intents unless they are part of a dual-purpose exchange.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, minimizing instances of false splits and merges.",1,,,0.4376941079486332,0.7372108438517107,0.4864341085271318,0.3226728426697336,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[12. 12. 25. 19.  5.  0. 20. 10. 20. 10.  4. 34. 35. 24. 35.  0. 19.  8.
+ 19. 10.  4. 34. 36. 26.  2. 21. 15. 30. 10. 18.  4.  4.  4. 20. 12. 24.
+ 14. 28.  0. 10. 18.  4.  4. 34. 35. 24. 23.  0. 19. 10. 24. 10.  4. 12.
+ 36. 26.  6.  0. 19. 10.  8. 10.  4. 12. 12. 26.  0. 19. 12. 20. 10.  4.
+ 12. 33.  0. 12.  6. 19.  8. 19. 10.  4. 34. 35. 24. 19.  0. 24. 19.  8.
+ 24. 10.  4. 34. 11. 26.  0. 31. 10. 20. 10.  4. 12. 12.  0. 12. 28. 20.
+  0. 20. 10.  4. 13. 27. 16.  7.  1. 22. 10.  4. 34. 35. 29.  0. 19. 10.
+  8. 10.  4. 34. 31.  3.  8. 11.  4.  4. 37. 17. 32.  9. 10.  4. 34. 35.
+  0. 19. 10. 19. 10.  4.]"

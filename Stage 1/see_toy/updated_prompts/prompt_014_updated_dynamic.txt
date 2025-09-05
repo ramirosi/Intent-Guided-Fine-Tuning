@@ -1,0 +1,18 @@
+Classify each statement into one of the following categories: agree_to_try, request_bill_id, accept_solution, close_conversation, express_gratitude, ask_refund_timeline, explain_delay, provide_payment_method, ask_item_details, provide_order_number, provide_receipt_number, describe_issue, report_voucher_issue, report_payment_failure, request_update_address, offer_additional_help, describe_error_message, suggest_alternative, offer_solution, offer_alternative_updates. 
+
+Guidelines:
+1. **Differentiate Similar Intents**: For "accept_solution" vs. "express_gratitude," recognize acceptance phrases like "that works" or "that would be great," and gratitude phrases like "thank you" or "thanks."
+
+2. **Disambiguate Closing Conversations**: Identify "close_conversation" with phrases like "have a good day" or "goodbye," distinguishing them from gratitude or acknowledgment.
+
+3. **Differentiate Problem Descriptions**: Use keywords to differentiate "report_voucher_issue" (e.g., "voucher isn’t applying") from "report_payment_failure" (e.g., "payment failed").
+
+4. **Offer Solution vs. Alternative**: Recognize "offer_solution" with phrases indicating direct resolutions, while "offer_alternative_updates" involves additional options, such as "request a replacement" vs. "send updates by SMS."
+
+5. **Enhance Contextual Understanding**: Use context clues to discern intent, such as identifying order numbers vs. item details.
+
+6. **Unified Intent Categories**: Use a unified category for similar expressions, such as combining slight variations of gratitude or help offers under one intent.
+
+7. **Encourage Intent Expansion**: Add new categories if existing ones don’t capture message nuances.
+
+8. **Incorporate More Examples**: Provide examples for each intent to clarify distinctions, especially for frequently confused pairs like "explain_delay" vs. "explain_issue" or "acknowledge" vs. "accept_solution."

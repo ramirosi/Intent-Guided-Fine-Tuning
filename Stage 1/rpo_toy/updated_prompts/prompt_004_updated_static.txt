@@ -1,0 +1,45 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message.
+
+- Evaluate each message thoroughly in context. Use existing intent labels unless a message introduces a completely new and distinct issue.
+- Clarify intent labels for common phrases: For example, expressions of gratitude like "Awesome, thanks for the quick help!" and "Okay, that works. Thank you for helping me." should both have the intent label `express_gratitude`.
+- Disambiguate similar intents: For instance, "No, that’s it." should be labeled as `end_request`, while "You’re welcome! Have a nice day." should be labeled as `close_conversation`.
+- Emphasize contextual cues: Use context to differentiate intents such as `ask_error_details` and `ask_wrong_item_details`. For example, "Are you getting an error message when you try to log in?" is `ask_error_details`, while "Could you tell me which product you received instead?" is `ask_wrong_item_details`.
+- Handle overlapping and sequential actions: For messages like "Perfect, thank you." following a confirmation, label it as `express_gratitude` rather than merging it with `provide_confirmation`.
+- Incorporate examples for common scenarios: Distinguish between intents like `confirm_action` and `offer_solution`. For example, "Please go ahead." should be labeled as `confirm_action`.
+- Encourage consistency in labeling: Maintain consistency in labeling similar messages, especially for common intents like `express_gratitude` and `close_conversation`.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

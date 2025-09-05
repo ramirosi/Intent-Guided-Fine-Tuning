@@ -1,0 +1,53 @@
+Identify distinct customer service intents within conversation excerpts by considering the following guidelines to ensure accurate clustering:
+
+1. **Clarify Intent Boundaries:** Emphasize grouping similar expressions under a single intent, such as "close_conversation," to avoid false splits. For example, phrases like "You’re very welcome! Have a great day." and "You too! Take care." should consistently be categorized together.
+
+2. **Distinguish Subtle Differences:** Highlight specific language cues to differentiate between similar intents. For instance, distinguish "ask_clarification" ("Can you tell me what exactly is going wrong?") from "request_order_number" ("Can you share the order number with me?").
+
+3. **Encourage Contextual Understanding:** Understand the context to accurately identify intents, especially in troubleshooting scenarios. For example, recognize "I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?" as "suggest_troubleshooting."
+
+4. **Standardize Intent Definitions:** Provide consistent examples to support each intent, such as using phrases like "Okay, that works. Thank you for helping me," for "express_gratitude," to maintain clarity.
+
+5. **Address Ambiguity in Phrasing:** Offer guidance on identifying solution-related intents, regardless of phrasing differences. For example, both "I’ll refund the extra charge immediately" and "Would you like me to request a replacement card for you?" should be categorized under the same solution-related intent.
+
+6. **Use Disambiguation Cues:** Include cues for distinguishing similar closing phrases, using context and speaker roles to aid in clarification. For example, "Have a great day" can serve as a closing remark or end a service request, depending on context.
+
+7. **Promote Intent Specificity:** Highlight the need for granular categorization by providing examples of sub-intents within broader categories, such as separating "confirm_attempted_solution" from "express_gratitude."
+
+By applying these guidelines, achieve more accurate and nuanced clustering of customer service messages.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,65 @@
+Classify each statement into a relevant category label based on its intent or content.
+
+### Guidelines:
+
+1. **Clarify Intent Definitions:**
+   - Clearly define each intent with examples. Use "close_conversation" for statements intended to end an interaction, such as "Have a great day!" and "Glad I could help!" Differentiate from "express_gratitude," which includes expressions like "Thank you for the help."
+
+2. **Disambiguate Similar Intents:**
+   - Create distinct categories for intents that are contextually different. For example, "request_order_number" involves asking for an order number, such as "Can you share the order number with me?" while "ask_order_number" might be used in different contexts.
+
+3. **Encourage Consistency in Grouping:**
+   - Group similar expressions under the same intent consistently. For instance, all expressions of gratitude, including "Perfect, thank you for the help," should be categorized as "express_gratitude."
+
+4. **Highlight Contextual Cues:**
+   - Use contextual cues to differentiate between similar intents. For example, distinguish "provide_instructions" ("You can reset it by tapping 'Forgot password' on the login screen.") from "suggest_troubleshooting" by the nature of the message.
+
+5. **Refine Instructions for Specificity:**
+   - Provide clear criteria for when to split or merge intents. For instance, differentiate "confirm_solution" ("Yes, that worked. Thanks!") from "express_gratitude" based on the action or confirmation involved.
+
+6. **Provide Examples with Clear Boundaries:**
+   - Include examples to clearly delineate intents. For instance, distinguish "report_payment_failure" ("My payment failed when I tried to check out.") from "ask_error_details" ("Did you receive any error message?") with context on the inquiry.
+
+7. **Improve Categorization for Multi-Part Interactions:**
+   - Address multi-part interactions by distinguishing intents like "accept_solution" ("Yes please, that would be great.") from "request_permanent_change" ("Please for all future orders.") to ensure clarity.
+
+8. **Encourage Contextual Understanding:**
+   - Train the model to understand the conversation flow to accurately assign intents. For example, differentiate "describe_issue" ("The card isn't being recognized at checkout.") from "request_permanent_change" by analyzing the surrounding context.
+
+By following these guidelines, improve the accuracy and structure of intent classification, ensuring a refined understanding and categorization of conversation statements.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

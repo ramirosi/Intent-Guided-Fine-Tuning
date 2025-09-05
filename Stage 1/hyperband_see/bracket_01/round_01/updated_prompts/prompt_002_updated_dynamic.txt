@@ -1,0 +1,29 @@
+### Enhanced Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions**:
+   - Clearly distinguish between intents such as "request_order_number" (where a customer is explicitly asking for their order number) and "ask_order_number" (where a customer might be inquiring if they need to provide their order number).
+
+2. **Emphasize Consistency in Similar Phrases**:
+   - Recognize that similar phrases often share the same intent. For example, phrases like "You too! Take care." and "Alright, have a good day!" should both be tagged as "close_conversation." Maintain consistency across similar expressions.
+
+3. **Provide Examples for False Splits**:
+   - Understand that different phrases can convey the same intent. For instance, "Perfect, I’ll try that now." and "Okay, let me check." should both be categorized under the "acknowledge" intent.
+
+4. **Encourage Use of Context**:
+   - Use contextual cues to distinguish between intents. For example, the intent behind "No, that’s all. Have a nice day!" (likely "close_conversation") differs from "No, that’s all" (possibly "end_request") based on conversation context.
+
+5. **Refine Instructions for Intent Granularity**:
+   - Aim for a balanced level of granularity. Avoid overly detailed distinctions like "request_order_number" vs. "ask_order_number" unless necessary for specific business goals.
+
+6. **Incorporate More Examples of False Merges**:
+   - Use examples such as "Sorry about that. Can you give me your order number?" to illustrate how similar queries can reflect different intents, such as "apology" versus "request_order_number," depending on context and phrasing.
+
+7. **Highlight the Importance of Intent Grouping**:
+   - Group intents based on the underlying goal of the message. For instance, all forms of closing statements should be under "close_conversation."
+
+8. **Introduce Disambiguation Strategies**:
+   - Implement strategies for resolving ambiguities, such as considering the conversation's stage, to differentiate between intents like "end_request" and "close_conversation."
+
+By following these guidelines, you will create more accurate and coherent clusters of customer service messages, enhancing the effectiveness of the chat responses.

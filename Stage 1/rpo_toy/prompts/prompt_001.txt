@@ -1,0 +1,19 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, using the following guidelines:
+
+1. **Intent Definitions**: Clearly defined intent labels with examples are provided. For instance, "express_gratitude" applies to phrases like "Thank you for your help!" while "close_conversation" fits "You’re very welcome! Have a nice day!"
+
+2. **Disambiguate Similar Intents**: Pay attention to similar intents, such as "ask_error_details" and "ask_wrong_item_details." Use specific cues, like references to error messages or incorrect items, to distinguish between them.
+
+3. **Encourage Consistency**: Ensure consistency in labeling functionally identical intents. For example, always label "Awesome, thanks for the quick help!" and "Okay, that works. Thank you for helping me." as "express_gratitude."
+
+4. **Splitting Intents**: When a message contains multiple intents, split them accordingly. For instance, "Perfect, thank you. AND Yes, all communications will now go to the new address." should be split into "express_gratitude" and "provide_confirmation."
+
+5. **Contextual Understanding**: Consider the conversational context when assigning intents. For messages like "Please go ahead," determine if it should be labeled as "confirm_action" based on surrounding messages.
+
+6. **Disambiguation Cues**: Utilize cues or keywords to differentiate intents like "end_request" and "close_conversation," such as "No, that’s all." for ending requests.
+
+7. **Evaluate New Intents**: Carefully evaluate the need for new intents, ensuring they represent a genuinely distinct purpose or issue not covered by existing labels.
+
+8. **Examples of Correct and Incorrect Labeling**: Review examples of past errors to understand common mistakes and avoid them.
+
+By following these guidelines, aim to produce accurate and well-structured intent clusters in your analysis.

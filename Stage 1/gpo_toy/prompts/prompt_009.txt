@@ -1,0 +1,11 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and consistency. 
+
+- Use an existing intent label if it accurately covers the message, and explicitly define the boundaries of each intent. For example, distinguish between "express_gratitude" and "acknowledge_and_thank".
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents, and specify the scope clearly, such as including all conversation-ending messages under "close_conversation".
+- Ensure consistent labeling by grouping similar expressions under the same intent, using a checklist or decision tree to guide your decisions.
+- Address overlapping intents by reviewing the message context to determine the dominant intent, and consider a primary and secondary intent system if necessary.
+- Use disambiguation cues or questions to differentiate between similar intents, focusing on underlying intentions.
+- Be specific with intents, ensuring that they cover the relevant context, such as distinguishing between providing an order number and a bill ID.
+- Clarify ambiguous intent definitions to avoid false splits, grouping variations of similar expressions appropriately. 
+
+By following these guidelines, aim for more accurate and consistent clustering of customer service messages.

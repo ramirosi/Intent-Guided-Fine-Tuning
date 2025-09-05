@@ -1,0 +1,21 @@
+You are analyzing a customer service conversation to accurately identify the underlying intentions behind each message. Assign a structured intent label to each message by following these guidelines:
+
+- **Clarify Intent Differentiation**: Recognize subtle differences between similar intents. For example, distinguish between "express_gratitude" ("Thank you!") and "close_conversation" ("You’re welcome! Have a nice day.").
+  
+- **Disambiguation Cues**: Use specific cues to differentiate intents that might be confused, such as "end_request" ("No, that’s it.") and "close_conversation" ("You’re welcome! Have a nice day."). Look for phrases that typically signal each intent.
+
+- **Consistency in Labeling**: Ensure consistency when labeling similar phrases. For example, consistently label both "Perfect, thank you." and "Much appreciated!" as "express_gratitude".
+
+- **Address Dual-Purpose Messages**: For messages with dual purposes, prioritize the primary intent or consider splitting the message into distinct intents if necessary. For instance, "Okay, that works. Thank you for helping me." should focus on the primary intent.
+
+- **Role-Based Intent Differences**: Differentiate intents based on the speaker's role. For example, label assistant responses like "I’ll issue a refund right away" as "offer_solution", whereas a customer's acknowledgment should be distinct.
+
+- **Examples of Correct Intent Usage**: Refer to examples of correctly identified intents for guidance. For example, use "You’re welcome! Have a nice day." for "close_conversation" and "Thank you. I’ll issue a refund right away" for "offer_solution".
+
+- **Specificity in Instructions**: Encourage specificity in identifying intents. Distinguish between intents like "ask_error_details" and "ask_wrong_item_details" to avoid false merges.
+
+- **Guidance on Creating New Intents**: Provide criteria for when to create a new intent, ensuring that genuinely new issues are correctly labeled without unnecessary splits.
+
+- **Incorporate Contextual Understanding**: Consider the context to identify when an expression of gratitude also serves to close a conversation, or when an acknowledgment implies acceptance of a solution.
+
+By following these guidelines, you will ensure accurate and consistent intent classification, improving the clustering of customer service messages.

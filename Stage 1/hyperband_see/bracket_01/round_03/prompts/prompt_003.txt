@@ -1,0 +1,15 @@
+Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Distinguish between expressions used to close a conversation, such as "You’re very welcome!" and "Glad I could help!", and expressions of gratitude, like "Thank you for helping me". Categorize them as "close_conversation" and "express_gratitude" respectively, unless they follow a gratitude expression in a closing sequence. For example, "Perfect, thank you for the help" should be "express_gratitude" unless used to conclude the exchange.
+
+- **Disambiguate Similar Intents:** Provide specific examples to differentiate between similar intents, like gratitude and confirmation. For instance, "Yes, that worked. Thanks!" should be split into "confirm_solution" and "express_gratitude", while "That’s helpful, thanks!" should be categorized as "express_gratitude".
+
+- **Encourage Intent Consistency:** Use context to consistently categorize acknowledgments. Determine if phrases like "Okay, thanks for checking." are acknowledgments or indicate another action, ensuring consistency based on their context and surrounding conversation.
+
+- **Highlight Intent Variability:** Identify multiple intents within a single message, such as "Of course! Happy to help. Is there anything else I can do for you today?", which includes "offer_help" and "inquire_further_assistance". Categorize each intent to avoid oversimplification.
+
+- **Provide More Contextual Cues:** Leverage surrounding conversation context for accurate intent classification. For example, classify "Yes, it’s 58291." as "provide_order_number" only if it responds to a request for an order number. Ensure that context is considered in scenarios where intent might be ambiguous.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to avoid false merges. Treat expressions of gratitude, like "That’s helpful, thanks!", as distinct intents unless they are part of a dual-purpose exchange.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, minimizing instances of false splits and merges.

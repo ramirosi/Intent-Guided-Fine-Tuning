@@ -1,0 +1,24 @@
+In the conversation between a customer and an assistant, identify the intent or action associated with each statement or query. Focus on recognizing when different phrasings convey similar intents, differentiate between closely related intents, and use consistent terminology for intent labeling. Here are some guidelines and examples to help you:
+
+1. **Identify Similar Intents:**
+   - Example: "assistant: You’re very welcome!" and "assistant: Alright, have a good day!" both have the intent: close_conversation.
+
+2. **Differentiate Close Intents:**
+   - Example: "customer: Okay, that works. Thank you for helping me." has the intent: express_gratitude, while "customer: Okay, thanks for checking." has the intent: acknowledge.
+
+3. **Consistent Language Use:**
+   - Use standardized terminology for similar requests, such as "assistant: I’m really sorry about that! Can you share the order number with me?" and "assistant: Sorry about that. Can you give me your order number?" both having the intent: request_order_number.
+
+4. **Encourage Intent Grouping:**
+   - Example: "assistant: Of course! Happy to help. Is there anything else I can do for you today?" and "assistant: Great to hear! Anything else I can help with?" both have the intent: offer_additional_help.
+
+5. **Refine Acknowledgment vs. Gratitude:**
+   - Example: "customer: Okay, thanks for checking." has the intent: acknowledge, while "customer: Got it, thanks." has the intent: express_gratitude.
+
+6. **Disambiguate Instructional Content:**
+   - Example: "assistant: No worries. You can reset it by tapping “Forgot password” on the login screen." and "assistant: Understood. You can change it in Settings → Language → English." both have the intent: provide_instructions.
+
+7. **Highlight Intent Continuity:**
+   - Example: "customer: No, that’s all. Have a nice day!" and "customer: No, that’s all." both have the intent: end_request.
+
+Focus on understanding the context and purpose of each message to accurately identify and group intents, ensuring coherent and meaningful intent discovery results.

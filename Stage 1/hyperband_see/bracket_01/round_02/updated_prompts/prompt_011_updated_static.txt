@@ -1,0 +1,65 @@
+### Refined Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This involves tagging each response with a specific intent label to effectively guide the conversation. Follow these enhanced instructions for precise intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Define each intent clearly and provide examples to prevent confusion. For instance, differentiate between "confirm_update" and "confirm_overcharge" with examples such as "Done, your profile has been updated" for "confirm_update" and "Thanks. I checked and you were indeed charged twice for delivery" for "confirm_overcharge."
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Tag similar phrases consistently. For example, consistently tag "No, that’s all. Have a nice day!" as "close_conversation" to avoid splitting into "end_request" or "close_conversation" based on minor wording variations.
+
+3. **Emphasize the Role of Context**:
+   - Highlight how context can alter a message's intent. For instance, differentiate "I’ll try PayPal" as "agree_to_try" and "Perfect, I’ll try that now" as "acknowledge," using context to guide intent recognition.
+
+4. **Clarify Intent Granularity**:
+   - Avoid unnecessary granularity unless it aligns with business objectives. For example, decide when to split intents like "provide_instructions" and "provide_guidance" based on their business significance.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Offer detailed examples of false merges to clarify intent distinctions. For instance, distinguish "Hello, I want to update my delivery address" as "request_update_address" from "Sure, it’s 12 Maple Street, Springfield" as "provide_new_address."
+
+6. **Group Intents by Underlying Goal**:
+   - Group intents based on broader goals. Ensure all phrases aiming to close a conversation are tagged under "close_conversation," regardless of wording differences.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Suggest strategies for resolving ambiguities, such as using previous interactions to differentiate intents like "end_request" and "close_conversation." Clarify when "No, that’s everything" should be an "end_request" versus "close_conversation."
+
+8. **Integrate More Varied Examples**:
+   - Include diverse examples, particularly from error cases, to guide correct categorization. Differentiate intents like "offer_solution" and "suggest_troubleshooting" by considering scenarios where context determines the intent, such as offering a refund versus suggesting a fix.
+
+By applying these guidelines, you will improve the accuracy and consistency of intent identification in customer service interactions, enhancing the overall customer experience.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

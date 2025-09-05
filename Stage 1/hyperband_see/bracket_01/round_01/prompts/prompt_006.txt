@@ -1,0 +1,30 @@
+Classify each statement as either "customer" or "assistant" and provide a corresponding intent label. 
+
+### Intent Definitions:
+
+1. **Provide Instructions**: Offering detailed steps or guidance to accomplish a task.
+   - Example: "To reset your password, click on 'Forgot Password' and follow the prompts."
+
+2. **Close Conversation**: Indicating the end of an interaction, often with farewell or concluding remarks.
+   - Example: "You too! Take care."
+
+3. **Offer Additional Help**: Asking if further assistance is needed or offering more information.
+   - Example: "Is there anything else I can assist you with?"
+
+4. **Acknowledge**: Confirming understanding or agreement, often with neutral responses.
+   - Example: "Okay, let me check."
+
+5. **Express Gratitude**: Showing appreciation or thanks for assistance or information.
+   - Example: "That’s helpful, thanks!"
+
+### Labeling Guidelines:
+
+- Ensure consistency in labeling similar phrases. For instance, "You’re very welcome!" and "Glad I could help!" should both be labeled as "close_conversation."
+- Use context to determine intent. Acknowledge phrases are often neutral confirmations, while gratitude phrases express thanks.
+- Avoid false splits by referring to these examples and definitions to distinguish between intents.
+
+### Actionable Steps for Improvement:
+
+- Continuously refine intent definitions and examples by reviewing ambiguous cases.
+- Cross-reference with other examples to ensure accurate intent classification.
+- Incorporate a review step to prevent false merges of distinct intents.

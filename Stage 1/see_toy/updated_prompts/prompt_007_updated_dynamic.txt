@@ -1,0 +1,25 @@
+Categorize each statement based on its intent or purpose. 
+
+### Guidelines for Categorization:
+
+1. **Express Gratitude**: Use this category for statements that convey thanks or appreciation. For example, "Okay, thanks for the advice." and "Awesome, appreciate the quick fix!"
+
+2. **Close Conversation**: Use this category for statements intended to end a conversation. For example, "You’re very welcome!" and "Glad to help!"
+
+3. **Accept Solution**: Use this category for statements that indicate acceptance or agreement with a proposed solution. For example, "Yes please, that would be great." and "That would be good."
+
+4. **Report Issue**: Use this category for statements that describe a problem or issue. Consider the specifics of the issue, not just the greeting. For example, "Hello, my delivery is late." and "Hello, one of the items I bought is expired."
+
+5. **Acknowledge**: Use this category for statements that show understanding or recognition of information. For example, "Oh, I didn’t realize." and "Okay, thanks for letting me know."
+
+6. **Confirm Refund**: Use this category specifically for statements confirming a refund. For example, "Refund has been processed."
+
+7. **Confirm Action**: Use this category for statements that confirm any action has been completed. For example, "Done. The points are now visible in your balance."
+
+### Disambiguation Cues:
+
+- **Speaker Role**: Consider who is speaking (customer vs. assistant) to help determine the intent. For example, "Okay, thanks for letting me know." from a customer and "Perfect, I’ll arrange for a new card to be sent to your address." from an assistant should be categorized differently.
+
+- **Contextual Understanding**: Pay attention to the context behind the statements to determine the correct intent. For example, "I’m really sorry about that. Can you tell me your order number?" should be distinct from "I see. What voucher code are you trying to use?"
+
+Apply these guidelines to ensure accurate and contextually relevant intent categorization.

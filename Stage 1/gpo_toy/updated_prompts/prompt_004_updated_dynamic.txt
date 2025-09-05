@@ -1,0 +1,17 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and consistency based on the following guidelines:
+
+- **Gratitude vs. Acceptance**: Differentiate between expressions of gratitude and acceptance. Use `express_gratitude` for messages purely expressing thanks, and `accept_solution` for messages acknowledging receipt or acceptance of a solution. Look for cues such as "thank you" vs. "okay, that works."
+
+- **Closing Statements**: Identify various forms of closing statements that indicate the end of a conversation. Use `close_conversation` for messages such as "Have a nice day," "Glad I could help," or any similar variations.
+
+- **Service-Related Details**: Distinguish messages providing service-related details, like order numbers or bill IDs, with `provide_order_number`. Ensure consistency across similar messages by looking for numeric identifiers.
+
+- **Contextual Understanding**: Apply a contextual approach to intent labeling. For instance, use `acknowledge` for messages like "Okay, thanks for letting me know," and "Okay, let me check," focusing on the conversational flow.
+
+- **Examples for Subtle Differences**: Utilize examples to understand subtle differences in intent. For instance, "Awesome, I appreciate it," and "Perfect, thanks for the quick help," should both be labeled as `express_gratitude`.
+
+- **Intent Consistency**: Maintain consistency in labeling similar expressions of intent, regardless of minor phrasing differences. For example, label both "Happy to assist! Have a good evening." and "You’re very welcome." as `close_conversation`.
+
+- **Existing vs. New Intents**: Use an existing intent label if it covers the message. Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+By following these structured guidelines, the clustering of customer service messages will be more accurate and well-organized, reducing errors in intent identification.

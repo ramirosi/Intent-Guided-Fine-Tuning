@@ -1,0 +1,67 @@
+Categorize each interaction based on its intent or action with the following guidelines:
+
+1. **Clarify Intent Boundaries**: Ensure similar expressions are consistently categorized under the same intent:
+   - "close_conversation": Use for expressions that conclude the interaction (e.g., "Glad I could help!", "You’re very welcome!", "Take care!", "Thank you for reaching out!")
+
+2. **Disambiguate Gratitude and Solution Confirmation**: Differentiate between gratitude and solution confirmation, even if they appear together:
+   - "confirm_solution": Focus on verifying the solution worked (e.g., "Yes, that worked.")
+   - "express_gratitude": Focus on thankfulness (e.g., "Thanks for your help!")
+
+3. **Utilize Contextual Cues for Assistants**: Identify the primary purpose of assistant messages through context:
+   - "provide_refund_timeline": Specific information about refund timing (e.g., "Your refund will be processed in 3-5 days.")
+   - "reassure_customer": General reassurance without specific timelines (e.g., "We’re here to help with any issues.")
+
+4. **Maintain Consistent Categorization**: Ensure distinct intents remain separate:
+   - "ask_order_number": Direct request for order details (e.g., "Can you provide your order number?")
+   - "reassure_customer": Comforting messages (e.g., "Don't worry, we’ll sort this out.")
+
+5. **Expand Closing Intent Examples**: Include a variety of closing phrases under "close_conversation":
+   - Examples: "Have a great day!", "Talk to you soon!", "You're welcome, anytime!"
+
+6. **Differentiate Between Requests and Instructions**: Clarify distinctions between requests and inquiries:
+   - "request_order_number": Direct request (e.g., "Please give me your order number.")
+   - "ask_order_number": More general inquiry (e.g., "Could I have your order number?")
+
+7. **Illustrate Overlapping Intents**: Provide scenarios where intents transition:
+   - Example: From "offer_additional_help" to "close_conversation" as the dialogue wraps up.
+
+8. **Prioritize Message Purpose**: Focus on the main intent when gratitude and confirmation coexist:
+   - "confirm_solution": When the main purpose is verifying success (e.g., "Yes, that's fixed. Thanks!")
+
+9. **Promote Iterative Review**: Regularly revisit and refine intent categories to enhance clarity and reduce errors as new patterns emerge.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

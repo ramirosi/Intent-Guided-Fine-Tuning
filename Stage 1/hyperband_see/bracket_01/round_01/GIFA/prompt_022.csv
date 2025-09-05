@@ -1,0 +1,36 @@
+index,intent,count,messages
+0,confirm_issue,0,"customer: Hello, I forgot my account password."
+1,provide_instructions,1,assistant: No worries. You can reset it by tapping “Forgot password” on the login screen.
+2,confirm_issue,2,customer: Will I get a reset email?
+3,provide_instructions,3,"assistant: Yes, you’ll receive an email with a link to create a new password."
+4,acknowledge,4,"customer: Perfect, I’ll try that now."
+5,give_tip,5,"assistant: If you don’t see the email, please check your spam folder."
+6,express_gratitude,6,"customer: Got it, thanks."
+7,close_conversation,7,assistant: Glad I could help!
+0,confirm_issue,0,"customer: Hi, I was charged twice for the same order."
+1,request_order_number,1,assistant: I’m really sorry about that! Can you share the order number with me?
+2,acknowledge,2,"customer: Yes, it’s 58291."
+3,acknowledge,3,assistant: Thanks for that. I see two payments for the same order indeed.
+4,provide_instructions,4,assistant: I’ll make sure one of the charges is refunded to your account.
+5,provide_refund_timeline,5,"customer: Great, how long will the refund take?"
+6,provide_refund_timeline,6,assistant: Refunds are usually processed within 3–5 business days.
+7,express_gratitude,7,"customer: Okay, that works. Thank you for helping me."
+8,offer_additional_help,8,assistant: Of course! Happy to help. Is there anything else I can do for you today?
+9,close_conversation,9,"customer: No, that’s all. Have a nice day!"
+10,close_conversation,10,assistant: You too! Take care.
+0,confirm_issue,0,"customer: Hi, the app language switched to Dutch, but I want English."
+1,provide_instructions,1,assistant: Understood. You can change it in Settings → Language → English.
+2,acknowledge,2,"customer: Okay, let me check."
+3,express_gratitude,3,"customer: Yes, that worked. Thanks!"
+4,offer_additional_help,4,assistant: Great to hear! Anything else I can help with?
+5,close_conversation,5,"customer: No, that’s all."
+6,close_conversation,6,"assistant: Alright, have a good day!"
+0,confirm_issue,0,"customer: Hi, I can’t track my order in the app."
+1,request_order_number,1,assistant: Sorry about that. Can you give me your order number?
+2,acknowledge,2,customer: It’s 67221.
+3,acknowledge,3,"assistant: Thank you. I see the order is on its way, but the tracking system is delayed."
+4,provide_instructions,4,assistant: Your delivery should still arrive within the scheduled slot.
+5,acknowledge,5,"customer: Okay, thanks for checking."
+6,offer_additional_help,6,assistant: I’ll send you updates by SMS until it arrives.
+7,express_gratitude,7,"customer: That’s helpful, thanks!"
+8,close_conversation,8,assistant: You’re very welcome!

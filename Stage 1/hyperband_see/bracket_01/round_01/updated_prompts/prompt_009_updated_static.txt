@@ -1,0 +1,67 @@
+Categorize each interaction based on its intent or action with the following guidelines:
+
+1. **Clarify Similar Intents**: Differentiate between similar intents by focusing on subtle differences:
+   - "acknowledge": Expressions of understanding or receipt (e.g., "Okay, got it.")
+   - "express_gratitude": Expressions of thankfulness (e.g., "Thank you so much!")
+
+2. **Provide Examples for Disambiguation**: Use examples to distinguish intents:
+   - "Okay, thanks for checking." (acknowledge)
+   - "That’s helpful, thanks!" (express_gratitude)
+
+3. **Emphasize Contextual Cues**: Use contextual clues to distinguish intents, especially in assistant messages:
+   - "close_conversation": When the conversation is ending (e.g., "Take care!")
+   - "offer_additional_help": When further assistance is offered (e.g., "Is there anything else I can do for you?")
+
+4. **Reinforce Intent Consistency**: Maintain consistent categorization for similar intents to avoid splits:
+   - "Glad I could help!" and "You’re very welcome!" should consistently be categorized under "express_gratitude."
+
+5. **Highlight Specificity in Instructions**: Be specific when categorizing requests or instructions:
+   - "request_order_number": Specific request for the order number (e.g., "Can you share the order number with me?")
+   - "ask_order_number": General inquiry for the order number (e.g., "Can you give me your order number?")
+
+6. **Encourage Flexibility in Interpretation**: Allow flexibility for variations in phrasing to ensure accurate categorization:
+   - "request_order_number" and "ask_order_number" may accommodate slight variations in phrasing while maintaining their distinct categories.
+
+7. **Include Common Closing Phrases**: Group common closing phrases under "close_conversation" for consistent classification:
+   - Examples include "Thank you for reaching out!" and "Have a great day!"
+
+8. **Provide More Contextual Scenarios**: Expand on typical conversation flows to illustrate how intents may transition or overlap:
+   - For example, moving from "offer_additional_help" to "close_conversation" as the interaction concludes.
+
+9. **Encourage Review and Iteration**: Periodically review and iterate on intent categorization to refine distinctions and improve clustering accuracy over time.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,32 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and accuracy in distinguishing and categorizing intents.
+
+### Guidelines for Intent Labeling:
+
+1. **Clarify Intent Boundaries:**
+   - Determine criteria for splitting versus merging intents within a single message. Consider the context and role differentiation (customer vs. assistant) to avoid false splits and false merges.
+   - Example: "Message: assistant: You’re very welcome. Anything else you’d like me to check? AND assistant: Happy to help. Anything else you’d like today?" should have the same intent: offer_additional_help.
+
+2. **Differentiate Similar Intents:**
+   - Provide guidance on distinguishing between intents that appear similar but are contextually different. Highlight subtle differences in actions or outcomes using examples.
+   - Example: "Message: assistant: No worries, resetting usually solves this problem. Would you like me to guide you through it? AND assistant: Happy to help. Anything else you’d like today?" should have separate intents: offer_assistance AND offer_additional_help.
+
+3. **Standardize Intent Labels:**
+   - Emphasize the use of a standardized list of intent labels and ensure consistent application across similar messages to reduce false splits.
+   - Example: "Message: customer: It’s 78342. AND customer: Yes, it’s 45911." should have the same intent: provide_order_number.
+
+4. **Address Overlapping Intent Stages:**
+   - Provide examples and guidelines for handling messages that span multiple conversation stages, such as transitioning from providing a solution to closing the conversation.
+   - Example: "Message: assistant: You’re welcome! Have a nice day. AND assistant: Happy to help!" should have the same intent: close_conversation.
+
+5. **Role-Specific Cues and Contextual Analysis:**
+   - Consider the speaker's role and broader conversational context when assigning intents. This helps reduce errors like false merges due to misinterpretation of the speaker’s role.
+   - Example: "Message: customer: Great, how long will the refund take? AND customer: Great, when will I see the refund?" should have the same intent: ask_refund_timeline.
+
+6. **Incorporate Common Error Examples:**
+   - Include examples of common errors, such as false merges and splits, to illustrate why certain messages should be grouped or separated. This aids in improving accuracy.
+   - Example: "Message: customer: Okay, I’ll do that now. Thanks for your support! AND customer: Great, thanks a lot." should have separate intents: acknowledge_and_thank AND express_gratitude.
+
+7. **Encourage Thorough Contextual Analysis:**
+   - Emphasize the need for comprehensive analysis of the entire conversation, including preceding and following messages, to ensure accurate and consistent intent labeling.
+
+By implementing these guidelines, you can effectively guide users in accurately identifying and clustering intents, thereby improving the quality of the analysis process.

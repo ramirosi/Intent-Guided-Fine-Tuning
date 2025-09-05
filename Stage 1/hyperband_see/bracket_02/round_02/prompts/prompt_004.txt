@@ -1,0 +1,19 @@
+Identify distinct customer service intents within conversation excerpts by considering the following guidelines to ensure accurate clustering:
+
+1. **Emphasize Consistent Grouping for Similar Expressions:** Illustrate the need for grouping similar expressions under a single intent with examples. For instance, categorize phrases like "Alright, have a good day!" and "Happy to help!" consistently under "close_conversation."
+
+2. **Clarify Intent Distinctions with Examples:** Use specific examples to highlight subtle differences between closely related intents. Differentiate "ask_voucher_code" from "ask_order_number" with cues such as "What voucher code are you trying to use?" versus "Can you give me your order number?"
+
+3. **Enhance Contextual Understanding:** Stress the importance of understanding the broader conversation context to accurately identify intents. For example, distinguish "diagnose_issue" from "offer_compensation" by recognizing the specific service context.
+
+4. **Standardize and Clarify Intent Definitions:** Provide clear examples to ensure consistent intent classification. Phrases like "Okay, thanks for checking" should always be classified under "acknowledge," while "Perfect, thank you" should be under "express_gratitude."
+
+5. **Address Ambiguity in Solution-Related Intents:** Guide the recognition of solution-related intents by categorizing different phrasings under the same intent. For instance, "I’ll refund the extra charge immediately" and "Understood. You can change it in Settings → Language → English" should fall under "offer_solution."
+
+6. **Use Disambiguation Cues for Closing Phrases:** Encourage the use of speaker roles and context to distinguish similar closing phrases. Differentiate "close_conversation" from "end_request" by identifying whether the speaker is the customer or assistant and examining the conversation context.
+
+7. **Promote Intent Specificity with Granular Categorization:** Highlight the need for granular categorization within broader intents. Distinguish "express_gratitude" from "acknowledge_and_thank" by recognizing when gratitude is expressed standalone versus when it accompanies acknowledgment of a solution.
+
+8. **Encourage Use of Speaker Context:** Stress the importance of identifying the speaker (customer or assistant) to accurately classify intents, particularly in mixed dialogues. This helps avoid errors like merging intents that belong to different roles, such as "describe_issue" and "confirm_overcharge."
+
+By applying these guidelines, achieve more accurate and nuanced clustering of customer service messages for improved intent discovery and reduced errors.

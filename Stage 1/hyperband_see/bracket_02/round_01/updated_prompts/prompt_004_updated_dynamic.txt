@@ -1,0 +1,15 @@
+Determine the true intent or purpose of each interaction between a customer and an assistant by analyzing both the wording and context. 
+
+1. **Clarify Intent Boundaries**: Group messages with the same underlying purpose, regardless of phrasing differences. For example, both "Glad I could help!" and "Happy to help! Have a nice day." share the "close_conversation" intent. Focus on the core purpose behind the wording.
+
+2. **Differentiate Similar Actions**: Examine the specific content and action described to identify distinct intents, even for similar messages. Differentiate between intents like "ask_clarification" and "request_bill_id" by determining if the goal is to clarify a general issue or request specific information.
+
+3. **Address Common Ambiguities**: Recognize phrases that, despite different wording, share the same intent. For instance, "Okay, let me check." and "Perfect, I’ll try that now." both indicate "acknowledge" and should be grouped under this intent.
+
+4. **Include Contextual Cues**: Use contextual clues to understand broader intents, such as concluding an interaction or offering further help. For example, "Have a wonderful day!" and "Take care!" both indicate a "close_conversation" intent.
+
+5. **Highlight Intent Complexity**: Break down complex interactions into multiple intents. For example, "Sorry about that. Can you give me your order number?" should be separated into "apologize" and "ask_order_number" to reflect different conversation stages.
+
+6. **Encourage Specificity in Intent Identification**: Focus on specific details that separate intents, even if they seem related. Distinguish between "confirm_update" and "provide_order_number" by identifying the specific action or information being confirmed or provided.
+
+By following these guidelines, accurately categorize each interaction to enhance clustering accuracy in customer service messages.

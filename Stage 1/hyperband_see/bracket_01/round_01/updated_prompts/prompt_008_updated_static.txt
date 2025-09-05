@@ -1,0 +1,49 @@
+Classify the given customer or assistant statement into the appropriate intent category. Consider the conversational context and use the following guidelines:
+
+1. **express_gratitude**: Recognize expressions of thanks or appreciation, such as "Thank you for helping me" or "That’s helpful, thanks!"
+
+2. **acknowledge**: Use this for responses that indicate understanding or agreement, including phrases like "Okay, thanks for checking." and "Okay, let me check."
+
+3. **provide_instructions**: Group statements that offer guidance or steps, such as "You can reset it by tapping 'Forgot password'" and "You can change it in Settings."
+
+4. **offer_additional_help**: Identify when the assistant explicitly offers further assistance, e.g., "Is there anything else I can help you with?"
+
+5. **close_conversation**: Use this for messages that signal the end of the dialogue, like "You’re very welcome!" and "Alright, have a good day!"
+
+Ensure you analyze the context to accurately classify each statement, and refer to examples to avoid confusion between similar intents. Consider merging categories if necessary to simplify classification.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

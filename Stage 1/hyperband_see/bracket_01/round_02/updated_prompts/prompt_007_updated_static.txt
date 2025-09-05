@@ -1,0 +1,65 @@
+### Improved Intent Discovery Prompt
+
+In this exercise, your task is to generate responses for a customer service chat by identifying the underlying intent of each customer's message. This requires tagging each response with a specific intent label to guide the conversation effectively. Follow these refined instructions to ensure accurate intent identification:
+
+1. **Clarify Intent Definitions and Consolidation**:
+   - Combine similar intents to avoid unnecessary complexity. For example, merge "request_order_number" and "ask_order_number" into a single "order_number_request" intent unless distinct purposes are required by business needs. Reinforce this with examples like "assistant: Great. Have a wonderful day!" and "assistant: Glad I could help!" both falling under "close_conversation."
+
+2. **Ensure Consistency in Similar Phrases**:
+   - Tag similar phrases consistently. For instance, "You’re welcome!" and "Glad I could help!" should both be tagged as "close_conversation" to prevent false splits. Provide additional examples to reinforce this consistency.
+
+3. **Emphasize the Role of Context**:
+   - Use conversation context to differentiate between intents. For example, "customer: Okay, thanks for checking." could mean "acknowledge" or "express_gratitude" depending on previous dialogue. Highlight how context determines intent, as seen in examples like "No, that’s all. Have a nice day!" for "close_conversation" versus "No, that’s all" for "end_request."
+
+4. **Clarify Intent Granularity**:
+   - Assess when detailed distinctions between intents are necessary. Avoid overly granular differences like "provide_refund_timeline" vs. "provide_instructions" unless they serve distinct business objectives.
+
+5. **Illustrate False Merges Thoroughly**:
+   - Provide examples to demonstrate how similar messages can have different intents due to context. For example, "customer: Hi, I think I was overcharged on my last bill." vs. "customer: Hi, my payment failed when I tried to check out." should be distinctly tagged as "report_overcharge" and "report_payment_failure."
+
+6. **Group Intents by Underlying Goal**:
+   - Reinforce the grouping of intents based on their goals. Highlight that all closure-related phrases should consistently be tagged as "close_conversation," regardless of their wording.
+
+7. **Introduce Robust Disambiguation Techniques**:
+   - Provide strategies for resolving ambiguities, such as assessing the stage of the conversation or prior interactions, to differentiate between intents like "end_request" and "close_conversation."
+
+8. **Integrate More Varied Examples**:
+   - Add additional examples, especially from common pitfalls, to ensure correct categorization. Differentiate between intents like "report_billing_issue" and "report_overcharge" with illustrative scenarios.
+
+By incorporating these guidelines, you will enhance the accuracy and coherence of message clustering, thereby improving the quality of customer service interactions.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

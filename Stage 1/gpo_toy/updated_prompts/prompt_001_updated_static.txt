@@ -1,0 +1,60 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity, consistency, and contextual analysis. 
+
+- Use an existing intent label if it already covers the message.
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+Consider the following guidelines to improve accuracy:
+
+1. **Clarify Intent Boundaries:** Differentiate between gratitude expressed as part of closing a conversation versus during other stages. For example, "express_gratitude" should be distinct from "close_conversation."
+
+2. **Disambiguation Between Similar Expressions:** Use contextual cues to determine whether an expression is signaling closure or continued interaction. For instance, "Okay, that works. Thank you for helping me." may indicate "express_gratitude_and_accept_solution."
+
+3. **Consistency in Intent Assignment:** Ensure phrases like "You’re welcome! Have a great day." and "Happy to help! Have a nice day." consistently share the same intent, such as "close_conversation."
+
+4. **Differentiate Gratitude from Solution Acceptance:** Recognize when gratitude is paired with solution acceptance. Use compound intents like "express_gratitude_and_accept_solution" when applicable.
+
+5. **Acknowledge vs. Acceptance:** Define criteria to distinguish acknowledgment (passive understanding) from acceptance (active agreement). For example, "Okay, good to know." might be labeled as "acknowledge."
+
+6. **Highlight Contextual Analysis:** Consider the conversational flow to identify whether a message is part of a transition to closure or a standalone expression.
+
+7. **Provide Specific Examples:** Reference a section with examples of frequently confused messages and their correct intent labels to guide your decision-making.
+
+8. **Utilize Disambiguation Cues:** Incorporate specific cues or questions to help decide between similar intents, such as distinguishing between "provide_order_number" and "provide_bill_id."
+
+By adhering to these guidelines, you can accurately assign intent labels and improve the structure of intent clusters in customer service conversations.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

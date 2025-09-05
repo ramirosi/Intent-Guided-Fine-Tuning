@@ -1,0 +1,51 @@
+Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Emphasize the importance of context when grouping expressions that indicate closing a conversation, such as "You’re very welcome!" and "Glad I could help!" Distinguish these from expressions of gratitude like "Thank you for helping me," which should stand alone unless they are part of a closing sequence.
+
+- **Disambiguate Similar Intents:** Provide clear examples that differentiate between similar intents, such as gratitude and confirmation. For instance, "Yes, that worked. Thanks!" should be categorized as both "confirm_solution" and "express_gratitude," while "That’s helpful, thanks!" should primarily be seen as "express_gratitude."
+
+- **Encourage Intent Consistency:** Ensure consistency when grouping acknowledgments. Context should guide whether phrases like "Okay, thanks for checking." and "Okay, let me check." are grouped together or separately. The specific action associated with each acknowledgment should be the deciding factor.
+
+- **Highlight Intent Variability:** Recognize and illustrate when multiple intents exist within a single message. For example, a message like "Of course! Happy to help. Is there anything else I can do for you today?" encompasses both "offer_help" and "inquire_further_assistance," and should be categorized accordingly.
+
+- **Provide More Contextual Cues:** Use the surrounding conversation context to determine intents accurately. For example, both "Yes, it’s 58291." and "It’s 67221." should be classified under "provide_order_number," guided by the preceding request for this information.
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to prevent false merges. Use examples like "That’s helpful, thanks!" and "Yes, that worked. Thanks!" to demonstrate when gratitude should be treated as a distinct intent.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, minimizing instances of false splits and merges.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

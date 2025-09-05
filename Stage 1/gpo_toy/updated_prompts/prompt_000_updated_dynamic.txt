@@ -1,0 +1,7 @@
+
+                  You are analyzing a customer service conversation to identify the underlying intentions behind each message. 
+                  Assign a structured intent label to each message.  
+
+                  - Use an existing intent label if it already covers the message.  
+                  - Create a new intent only if the message introduces a distinct issue not covered by existing intents.  
+                 

@@ -1,0 +1,51 @@
+Please read the following responses and categorize them into a list of distinct actions or intents. Consider the context and role of each message in the conversation to accurately determine the intent. 
+
+- **Clarify Intent Boundaries:** Group expressions that close a conversation together, such as "You’re very welcome!" and "Glad I could help!" Distinguish these from standalone expressions of gratitude like "Thank you for helping me."
+
+- **Disambiguate Similar Intents:** Differentiate between gratitude and confirmation. For example, "Yes, that worked. Thanks!" should be seen as a "confirm_solution" followed by "express_gratitude," whereas "That’s helpful, thanks!" primarily expresses gratitude.
+
+- **Encourage Intent Consistency:** Maintain consistency in grouping similar acknowledgments. Phrases like "Okay, thanks for checking." and "Okay, let me check." should be grouped based on context unless differentiated by specific actions.
+
+- **Highlight Intent Variability:** Recognize when multiple intents are present within a single message, such as "Of course! Happy to help. Is there anything else I can do for you today?" which offers help and seeks further engagement.
+
+- **Provide More Contextual Cues:** Use conversation context to determine intents, such as classifying both "Yes, it’s 58291." and "It’s 67221." under "provide_order_number."
+
+- **Standardize Expression of Gratitude:** Clearly separate gratitude from other intents to avoid false merges, using examples like "That’s helpful, thanks!" and "Yes, that worked. Thanks!" to show when gratitude is a distinct intent.
+
+Apply these guidelines to ensure accurate and coherent classification of intents, reducing false splits and merges.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

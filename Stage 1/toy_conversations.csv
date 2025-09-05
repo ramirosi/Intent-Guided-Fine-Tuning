@@ -1,0 +1,240 @@
+conversation_number,conversation,index,intent
+0,"customer: Hi, I'm having trouble with my loyalty card.",0,report_problem
+0,"assistant: Hello! Sorry to hear that. Can you tell me what exactly is going wrong?",1,ask_clarification
+0,"customer: The card isn't being recognized at checkout.",2,describe_issue
+0,"assistant: I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?",3,suggest_troubleshooting
+0,"customer: Yes, I tried both. Still doesn't work.",4,confirm_attempted_solution
+0,"assistant: Thanks for checking that. It’s possible the card is damaged.",5,diagnose_issue
+0,"assistant: Would you like me to request a replacement card for you?",6,offer_solution
+0,"customer: Yes please, that would be great.",7,accept_solution
+0,"assistant: Perfect, I’ll arrange for a new card to be sent to your address. It usually takes 3–5 business days.",8,confirm_action
+0,"customer: Awesome, thanks for the quick help!",9,express_gratitude
+0,"assistant: You’re very welcome! Have a great day.",10,close_conversation
+1,"customer: Hi, I can’t log in to the app anymore.",0,report_login_issue
+1,"assistant: Sorry to hear that! Are you getting an error message when you try to log in?",1,ask_error_details
+1,"customer: Yes, it says my password is incorrect.",2,describe_error_message
+1,"assistant: Understood. Have you already tried resetting your password?",3,suggest_troubleshooting
+1,"customer: Not yet, I wasn’t sure if that would help.",4,express_uncertainty
+1,"assistant: No worries, resetting usually solves this problem. Would you like me to guide you through it?",5,offer_assistance
+1,"customer: Yes please, that would help.",6,accept_help
+1,"assistant: Great! Open the app, tap “Forgot password”, and follow the steps. You’ll get an email to set a new password.",7,provide_instructions
+1,"customer: Okay, I’ll do that now. Thanks for your support!",8,acknowledge_and_thank
+1,"assistant: You’re very welcome! Let me know if you need more help after resetting.",9,offer_followup
+2,"customer: Hi, I was charged twice for the same order.",0,report_billing_issue
+2,"assistant: I’m really sorry about that! Can you share the order number with me?",1,request_order_number
+2,"customer: Yes, it’s 58291.",2,provide_order_number
+2,"assistant: Thanks for that. I see two payments for the same order indeed.",3,confirm_issue
+2,"assistant: I’ll make sure one of the charges is refunded to your account.",4,offer_solution
+2,"customer: Great, how long will the refund take?",5,ask_refund_timeline
+2,"assistant: Refunds are usually processed within 3–5 business days.",6,provide_refund_timeline
+2,"customer: Okay, that works. Thank you for helping me.",7,express_gratitude
+2,"assistant: Of course! Happy to help. Is there anything else I can do for you today?",8,offer_additional_help
+2,"customer: No, that’s all. Have a nice day!",9,end_request
+2,"assistant: You too! Take care.",10,close_conversation
+3,"customer: Hello, I received the wrong product in my delivery.",0,report_wrong_item
+3,"assistant: I’m sorry to hear that! Could you tell me which product you received instead?",1,ask_wrong_item_details
+3,"customer: I ordered orange juice but got apple juice.",2,provide_wrong_item_details
+3,"assistant: Thanks for clarifying. I can arrange a refund or send the correct product. What would you prefer?",3,offer_resolution_options
+3,"customer: Please send the correct product.",4,request_replacement
+3,"assistant: Done! I’ll schedule a replacement delivery for tomorrow.",5,confirm_replacement
+3,"customer: Perfect, thank you.",6,express_gratitude
+3,"assistant: You’re very welcome. Is there anything else I can support you with today?",7,offer_additional_help
+3,"customer: No, that’s it.",8,end_request
+3,"assistant: Great. Have a wonderful day!",9,close_conversation
+4,"customer: Hi, I can’t find my receipt in the app.",0,report_missing_receipt
+4,"assistant: No problem, I can help. Which order date are you looking for?",1,ask_order_date
+4,"customer: From last Friday.",2,provide_order_date
+4,"assistant: Thanks! It looks like the receipt is still being processed. It should appear within 24 hours.",3,explain_delay
+4,"customer: Okay, good to know.",4,acknowledge
+4,"assistant: Would you like me to email you a copy once it’s ready?",5,offer_solution
+4,"customer: Yes, that would be great.",6,accept_solution
+4,"assistant: Perfect, I’ll make sure you receive it by tomorrow.",7,confirm_action
+4,"customer: Thanks a lot!",8,express_gratitude
+4,"assistant: You’re welcome! Have a nice day.",9,close_conversation
+5,"customer: Hello, I want to update my delivery address.",0,request_update_address
+5,"assistant: Of course. Could you provide me with the new address?",1,ask_new_address
+5,"customer: Sure, it’s 12 Maple Street, Springfield.",2,provide_new_address
+5,"assistant: Got it. Do you want to apply this change just for the next delivery or for all future orders?",3,clarify_scope
+5,"customer: Please for all future orders.",4,request_permanent_change
+5,"assistant: Done, your profile has been updated.",5,confirm_update
+5,"customer: Perfect, thank you for the help.",6,express_gratitude
+5,"assistant: Happy to help! Anything else I can do for you today?",7,offer_additional_help
+5,"customer: No, that’s everything.",8,end_request
+5,"assistant: Great. Have a wonderful day!",9,close_conversation
+6,"customer: Hi, the promo code I tried didn’t work.",0,report_promo_issue
+6,"assistant: Sorry about that. Can you tell me which promo code you used?",1,ask_promo_code
+6,"customer: It was SAVE20.",2,provide_promo_code
+6,"assistant: Thanks. That code expired yesterday, which is why it didn’t apply.",3,explain_reason
+6,"customer: Oh, I didn’t realize.",4,acknowledge
+6,"assistant: No worries. I can give you a new code for 15% off as a goodwill gesture.",5,offer_discount
+6,"customer: That would be great, thanks!",6,accept_solution
+6,"assistant: Here’s the new code: THANKYOU15. You can use it until next week.",7,provide_new_code
+6,"customer: Awesome, I appreciate it.",8,express_gratitude
+6,"assistant: My pleasure! Enjoy your shopping.",9,close_conversation
+7,"customer: Hello, my delivery is late.",0,report_late_delivery
+7,"assistant: I’m really sorry about that. Can you tell me your order number?",1,ask_order_number
+7,"customer: It’s 78342.",2,provide_order_number
+7,"assistant: Thank you. I see your order is delayed due to traffic but should arrive within the next hour.",3,explain_delay
+7,"customer: Okay, thanks for letting me know.",4,acknowledge
+7,"assistant: I’ll also apply a free delivery voucher to your account for the inconvenience.",5,offer_compensation
+7,"customer: That’s very kind, thank you.",6,express_gratitude
+7,"assistant: You’re welcome. I’ll keep tracking your order until it’s delivered.",7,confirm_followup
+7,"customer: Appreciate the help!",8,express_gratitude
+7,"assistant: Happy to assist! Have a good evening.",9,close_conversation
+8,"customer: Hi, I need to cancel my order.",0,request_cancel_order
+8,"assistant: I can help with that. Could you share the order number?",1,ask_order_number
+8,"customer: Yes, it’s 45911.",2,provide_order_number
+8,"assistant: Thanks. The order is still being prepared, so I can cancel it right now.",3,confirm_cancellable
+8,"customer: Please go ahead.",4,confirm_action
+8,"assistant: Done. Your order has been canceled, and the payment will be refunded within 2–3 days.",5,confirm_refund
+8,"customer: Perfect, thanks for the quick help.",6,express_gratitude
+8,"assistant: You’re very welcome. Anything else you’d like me to check?",7,offer_additional_help
+8,"customer: No, that’s it.",8,end_request
+8,"assistant: Alright. Have a nice day!",9,close_conversation
+9,"customer: Hello, the app keeps crashing on my phone.",0,report_app_crash
+9,"assistant: Sorry to hear that. Which phone model are you using?",1,ask_device_info
+9,"customer: It’s an iPhone 12.",2,provide_device_info
+9,"assistant: Thanks. Have you updated to the latest version of the app?",3,ask_update_status
+9,"customer: Not sure, maybe not.",4,express_uncertainty
+9,"assistant: Please try updating the app in the App Store. That usually fixes the issue.",5,suggest_update
+9,"customer: Okay, I’ll do that.",6,agree_to_try
+9,"assistant: If it still crashes after the update, let us know and we’ll investigate further.",7,offer_followup
+9,"customer: Will do, thanks for the help!",8,express_gratitude
+9,"assistant: You’re welcome! Have a great day.",9,close_conversation
+10,"customer: Hi, I’d like to change my payment method.",0,request_change_payment
+10,"assistant: Of course. Which payment method would you like to use instead?",1,ask_new_payment
+10,"customer: I want to switch to PayPal.",2,provide_new_payment
+10,"assistant: Got it. I’ll update your account to use PayPal for future orders.",3,confirm_update
+10,"customer: Great, thanks.",4,express_gratitude
+10,"assistant: You’re welcome. Do you also want me to refund the last order to PayPal instead of your card?",5,clarify_preference
+10,"customer: Yes, that would be better.",6,confirm_preference
+10,"assistant: Okay, refund has been redirected to PayPal. You should see it in 2–3 days.",7,confirm_refund
+10,"customer: Awesome, thank you so much.",8,express_gratitude
+10,"assistant: My pleasure! Anything else I can support you with?",9,offer_additional_help
+10,"customer: No, that’s all.",10,end_request
+10,"assistant: Alright, have a great day!",11,close_conversation
+11,"customer: Hi, I think I was overcharged on my last bill.",0,report_overcharge
+11,"assistant: I’m sorry to hear that. Can you share the bill number or order ID?",1,request_bill_id
+11,"customer: Yes, it’s 99420.",2,provide_bill_id
+11,"assistant: Thanks. I checked and you were indeed charged twice for delivery.",3,confirm_overcharge
+11,"assistant: I’ll refund the extra charge immediately.",4,offer_solution
+11,"customer: Great, when will I see the refund?",5,ask_refund_timeline
+11,"assistant: Refunds usually show within 2–3 business days.",6,provide_refund_timeline
+11,"customer: Okay, thanks for the quick check.",7,express_gratitude
+11,"assistant: Happy to help! Have a nice day.",8,close_conversation
+12,"customer: Hello, my voucher isn’t applying at checkout.",0,report_voucher_issue
+12,"assistant: I see. What voucher code are you trying to use?",1,ask_voucher_code
+12,"customer: It’s FREEDELIVERY.",2,provide_voucher_code
+12,"assistant: Thanks. That code is only valid for orders above $50. Was your order below that amount?",3,explain_restriction
+12,"customer: Yes, my total was $40.",4,confirm_order_amount
+12,"assistant: That’s why it didn’t work. Would you like me to issue you a different voucher?",5,offer_solution
+12,"customer: Yes, please.",6,accept_solution
+12,"assistant: Done! I’ve added a $5 discount voucher to your account instead.",7,confirm_action
+12,"customer: Awesome, appreciate the help!",8,express_gratitude
+12,"assistant: You’re very welcome.",9,close_conversation
+13,"customer: Hi, I need to update my email address.",0,request_update_email
+13,"assistant: Sure thing. What’s the new email you’d like to use?",1,ask_new_email
+13,"customer: john.doe@example.com.",2,provide_new_email
+13,"assistant: Got it. I’ve updated your profile with the new email.",3,confirm_update
+13,"customer: Will I still get my receipts and newsletters there?",4,ask_followup
+13,"assistant: Yes, all communications will now go to the new address.",5,provide_confirmation
+13,"customer: Perfect, thank you.",6,express_gratitude
+13,"assistant: Happy to help. Anything else you’d like today?",7,offer_additional_help
+13,"customer: No, that’s all.",8,end_request
+13,"assistant: Great, enjoy your day!",9,close_conversation
+14,"customer: Hello, one of the items I bought is expired.",0,report_expired_item
+14,"assistant: Oh no, I’m very sorry about that. Can you tell me which item it is?",1,ask_item_details
+14,"customer: A carton of milk.",2,provide_item_details
+14,"assistant: Thank you. I’ll issue a refund right away and also notify the store.",3,offer_solution
+14,"customer: That would be good.",4,accept_solution
+14,"assistant: Refund has been processed. You’ll see it back in your account soon.",5,confirm_refund
+14,"assistant: Would you like a voucher for the inconvenience as well?",6,offer_compensation
+14,"customer: Yes, please.",7,accept_compensation
+14,"assistant: I’ve added a $10 voucher to your account.",8,confirm_voucher
+14,"customer: Much appreciated!",9,express_gratitude
+14,"assistant: You’re welcome! Have a nice day.",10,close_conversation
+15,"customer: Hi, I can’t track my order in the app.",0,report_tracking_issue
+15,"assistant: Sorry about that. Can you give me your order number?",1,ask_order_number
+15,"customer: It’s 67221.",2,provide_order_number
+15,"assistant: Thank you. I see the order is on its way, but the tracking system is delayed.",3,explain_issue
+15,"assistant: Your delivery should still arrive within the scheduled slot.",4,reassure_customer
+15,"customer: Okay, thanks for checking.",5,acknowledge
+15,"assistant: I’ll send you updates by SMS until it arrives.",6,offer_alternative_updates
+15,"customer: That’s helpful, thanks!",7,express_gratitude
+15,"assistant: You’re very welcome!",8,close_conversation
+16,"customer: Hi, my payment failed when I tried to check out.",0,report_payment_failure
+16,"assistant: I see. Did you receive any error message?",1,ask_error_details
+16,"customer: Yes, it said “transaction declined.”",2,describe_error_message
+16,"assistant: Thanks for sharing. Was this with a credit card or PayPal?",3,ask_payment_method
+16,"customer: With a credit card.",4,provide_payment_method
+16,"assistant: Sometimes banks decline transactions for security. Could you try again or use PayPal instead?",5,suggest_alternative
+16,"customer: I’ll try PayPal.",6,agree_to_try
+16,"assistant: Great. If the card still fails later, contact your bank for details.",7,provide_guidance
+16,"customer: Okay, thanks for the advice.",8,express_gratitude
+16,"assistant: You’re welcome!",9,close_conversation
+17,"customer: Hello, I forgot my account password.",0,report_forgot_password
+17,"assistant: No worries. You can reset it by tapping “Forgot password” on the login screen.",1,provide_instructions
+17,"customer: Will I get a reset email?",2,ask_followup
+17,"assistant: Yes, you’ll receive an email with a link to create a new password.",3,confirm_process
+17,"customer: Perfect, I’ll try that now.",4,acknowledge
+17,"assistant: If you don’t see the email, please check your spam folder.",5,give_tip
+17,"customer: Got it, thanks.",6,express_gratitude
+17,"assistant: Glad I could help!",7,close_conversation
+18,"customer: Hi, I want to unsubscribe from the newsletter.",0,request_unsubscribe
+18,"assistant: Sure, I can help. Do you want to unsubscribe from all emails or just promotions?",1,clarify_preference
+18,"customer: Just the promotions please.",2,provide_preference
+18,"assistant: Understood. I’ve updated your email settings so you’ll only receive receipts and account info.",3,confirm_action
+18,"customer: Great, thanks a lot.",4,express_gratitude
+18,"assistant: Anytime! Your preference is saved.",5,close_conversation
+19,"customer: Hello, I didn’t get the points for my last purchase.",0,report_missing_points
+19,"assistant: Sorry about that. Could you share your receipt number?",1,request_receipt_number
+19,"customer: It’s 88234.",2,provide_receipt_number
+19,"assistant: Thanks. I checked and the points didn’t register due to a system glitch.",3,confirm_issue
+19,"assistant: I’ll manually add the points to your account now.",4,offer_solution
+19,"customer: Perfect, thank you.",5,accept_solution
+19,"assistant: Done. The points are now visible in your balance.",6,confirm_action
+19,"customer: Awesome, appreciate the quick fix!",7,express_gratitude
+19,"assistant: Glad to help!",8,close_conversation
+20,"customer: Hi, the app language switched to Dutch, but I want English.",0,report_language_issue
+20,"assistant: Understood. You can change it in Settings → Language → English.",1,provide_instructions
+20,"customer: Okay, let me check.",2,acknowledge
+20,"customer: Yes, that worked. Thanks!",3,confirm_solution
+20,"assistant: Great to hear! Anything else I can help with?",4,offer_additional_help
+20,"customer: No, that’s all.",5,end_request
+20,"assistant: Alright, have a good day!",6,close_conversation
+21,"customer: Hi, I accidentally ordered the wrong size of detergent.",0,report_wrong_order
+21,"assistant: No problem. Do you want to exchange it for the correct size or get a refund?",1,offer_resolution_options
+21,"customer: I’d like to exchange it.",2,request_exchange
+21,"assistant: Sure, I’ll arrange an exchange. The courier will pick up the wrong item and deliver the correct one tomorrow.",3,confirm_exchange
+21,"customer: Perfect, thank you.",4,express_gratitude
+21,"assistant: You’re very welcome!",5,close_conversation
+22,"customer: Hello, I haven’t received my invoice yet.",0,report_missing_invoice
+22,"assistant: Sorry about that. Could you give me your order number?",1,request_order_number
+22,"customer: It’s 10322.",2,provide_order_number
+22,"assistant: Thanks. The invoice is being generated and should arrive in your email within 24 hours.",3,explain_delay
+22,"customer: Okay, I’ll wait for it.",4,acknowledge
+22,"assistant: If it doesn’t arrive by then, let us know and I’ll resend it.",5,offer_followup
+22,"customer: Will do, thanks!",6,express_gratitude
+22,"assistant: Happy to help!",7,close_conversation
+23,"customer: Hi, my discount didn’t apply to the final bill.",0,report_discount_issue
+23,"assistant: I see. Which discount was this for?",1,ask_discount_details
+23,"customer: It was 10% off fresh produce.",2,provide_discount_details
+23,"assistant: Thanks. That discount only applies if you buy at least 3 items. Did you have fewer?",3,explain_condition
+23,"customer: Oh, I only bought 2.",4,confirm_order_amount
+23,"assistant: That explains it. I’ll add a goodwill voucher to your account for next time.",5,offer_compensation
+23,"customer: Great, thanks for understanding.",6,express_gratitude
+23,"assistant: You’re welcome!",7,close_conversation
+24,"customer: Hello, I need to change my delivery time slot.",0,request_change_delivery_time
+24,"assistant: Sure. What new time slot would you like?",1,ask_new_timeslot
+24,"customer: Between 6 and 8 pm.",2,provide_new_timeslot
+24,"assistant: Got it. I’ve updated your delivery slot to 6–8 pm.",3,confirm_update
+24,"customer: Thanks, that works.",4,express_gratitude
+24,"assistant: Happy to help!",5,close_conversation
+25,"customer: Hi, the barcode on my loyalty card won’t scan.",0,report_card_issue
+25,"assistant: Sorry about that. Is the barcode scratched or faded?",1,ask_card_condition
+25,"customer: Yes, it’s very faded.",2,describe_card_condition
+25,"assistant: That would explain it. I’ll send you a replacement card.",3,offer_solution
+25,"customer: Great, thank you.",4,accept_solution
+25,"assistant: The new card will arrive within 5 working days.",5,confirm_action
+25,"customer: Perfect, much appreciated.",6,express_gratitude
+25,"assistant: Anytime! Have a good day.",7,close_conversation

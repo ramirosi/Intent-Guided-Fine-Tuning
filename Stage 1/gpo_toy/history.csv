@@ -1,0 +1,472 @@
+prompt_id,step,prompt,parent_idx,parent_idxs,feedback,score_ami,score_nca,score_f1,ami_x_nca,true_clusters,predicted_clusters
+0,0,"
+                  You are analyzing a customer service conversation to identify the underlying intentions behind each message. 
+                  Assign a structured intent label to each message.  
+
+                  - Use an existing intent label if it already covers the message.  
+                  - Create a new intent only if the message introduces a distinct issue not covered by existing intents.  
+                 ",0,,True,0.5721827172360667,0.9788156952668448,0.48081100651701664,0.5600614241910931,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[132.  71. 126. 158.  45. 157.  94.   2.  41.  56.  54. 131.  70. 103.
+  74.  30.  91. 151. 117.  55.  84. 128. 150. 113.  25.  62.  63. 122.
+  55.  82.  49.  54. 140.  79.  17.  93. 142.  42.  55.  55.  83.  50.
+  49.  54.  54.  76.  13. 111.  39.   6.  87.   1.  26.  55.   5. 141.
+ 146. 107.  65.  20.  19.  55.  82.  49.  54.  54. 136. 152. 118.  52.
+   6.  90.  55. 109.  55.  56. 127. 149. 112.  51.   6.  86.  56. 119.
+  56.  54. 148. 150. 113.  32.  33.  31.   5.  82.  50.  49.  60. 137.
+  69. 102.  66. 159. 156.  11.  89.  55.  55.  15.  72. 108.  35.  55.
+  92.  37.  36.  55.  82.  49.  54. 125.  71. 112.  22.  98.  77. 121.
+  56.  54. 138.  78. 123.  53.  48.  85.   0.  97.  55.  56. 161. 147.
+ 100.  24.  68.  23.  55.  55.  82.  57.  54. 129. 145. 105.  80.   6.
+  40.  96.   3.  47.  55.  56. 134. 149. 112. 114. 114.  29. 115.  55.
+  55. 135.  70.  27.  75.  34. 155.  12.  10.  55.  56.  61. 116.  64.
+  43.   4.  99.  55.  58. 160.  16. 154.  46.  55.   5. 133. 153. 120.
+   9.  81.  55.  38.  55.  56. 130. 106.   7.  29.  82.  49.  18. 139.
+  88. 143.  28.  55.   5. 144. 150. 113. 104.   8.  95.   5.  59.  14.
+  73. 110.  44.  55.  56. 124.  67.  21.  94.  55. 101.  55.  56.]"
+1,1,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity, consistency, and contextual analysis. 
+
+- Use an existing intent label if it already covers the message.
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+Consider the following guidelines to improve accuracy:
+
+1. **Clarify Intent Boundaries:** Differentiate between gratitude expressed as part of closing a conversation versus during other stages. For example, ""express_gratitude"" should be distinct from ""close_conversation.""
+
+2. **Disambiguation Between Similar Expressions:** Use contextual cues to determine whether an expression is signaling closure or continued interaction. For instance, ""Okay, that works. Thank you for helping me."" may indicate ""express_gratitude_and_accept_solution.""
+
+3. **Consistency in Intent Assignment:** Ensure phrases like ""You’re welcome! Have a great day."" and ""Happy to help! Have a nice day."" consistently share the same intent, such as ""close_conversation.""
+
+4. **Differentiate Gratitude from Solution Acceptance:** Recognize when gratitude is paired with solution acceptance. Use compound intents like ""express_gratitude_and_accept_solution"" when applicable.
+
+5. **Acknowledge vs. Acceptance:** Define criteria to distinguish acknowledgment (passive understanding) from acceptance (active agreement). For example, ""Okay, good to know."" might be labeled as ""acknowledge.""
+
+6. **Highlight Contextual Analysis:** Consider the conversational flow to identify whether a message is part of a transition to closure or a standalone expression.
+
+7. **Provide Specific Examples:** Reference a section with examples of frequently confused messages and their correct intent labels to guide your decision-making.
+
+8. **Utilize Disambiguation Cues:** Incorporate specific cues or questions to help decide between similar intents, such as distinguishing between ""provide_order_number"" and ""provide_bill_id.""
+
+By adhering to these guidelines, you can accurately assign intent labels and improve the structure of intent clusters in customer service conversations.",0,,True,0.4003922309669055,0.863220268685367,0.33794025858225585,0.34562668919478573,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[55. 22. 55. 34.  2. 34. 33.  1. 34. 18.  4. 53. 60. 39. 60.  2. 33. 18.
+ 39. 18.  4. 52. 64. 44.  7. 21. 24. 49. 18. 32.  4.  4. 53. 60. 39. 33.
+ 66. 12. 18. 18. 28.  4. 12.  4.  4. 53. 60. 43. 33.  2. 33. 12. 12. 17.
+  4. 57. 62. 41. 58. 67.  5. 19. 28. 14.  4.  4. 53. 60. 47. 39.  2. 33.
+ 18. 39. 17.  4. 51. 64. 44. 38. 20. 31. 17. 29. 17.  4. 53. 64. 44. 33.
+ 12. 12. 17. 28.  4. 12.  4. 53. 60. 39. 60.  2. 33. 12. 33. 18.  4. 53.
+ 60. 53. 12. 18. 33. 12. 12. 18. 33.  4.  4. 55. 22. 36. 33. 33. 24. 34.
+ 19.  4. 56. 26. 50. 34.  9. 33.  0. 13. 18. 17. 53. 60. 39. 12. 60. 12.
+ 18. 18. 33.  4.  4. 53. 60. 39. 33.  2. 39. 33. 18. 39. 18.  4. 54. 64.
+ 44. 45. 37. 19. 30. 17. 17. 55. 22.  8. 23. 10. 68.  1. 34. 19. 17. 65.
+ 46. 25. 11.  3. 35. 17. 16. 53. 60. 12. 33. 17. 12. 53. 60. 48.  2. 33.
+ 18.  2. 18.  4. 61. 40.  2. 18. 27. 15.  4. 53. 33. 12. 33. 18. 17. 53.
+ 64. 44. 33.  2. 12. 17. 17. 59. 63. 42.  6. 18. 17. 53. 60.  2. 33. 18.
+ 33. 18.  4.]"
+2,2,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, considering both the specificity and context of the communication.
+
+- Use an existing intent label if it already covers the message's action or sentiment. Ensure consistent labeling for similar expressions, such as closing a conversation or expressing gratitude.
+- Differentiate between subtly different intents, such as expressing gratitude and accepting a solution, even if they co-occur.
+- Disambiguate similar phrases that convey the same sentiment or action, recognizing variations in closing conversations or acknowledgments.
+- Consider the context to distinguish between passive acknowledgment and active acceptance, or when a message acknowledges information versus expressing gratitude.
+- Handle multi-intent messages by prioritizing the primary intent or using compound labels when necessary.
+- Focus on the intent behind providing information rather than the content specifics, ensuring distinct intents for different types of information.
+- Ensure consistent intent assignment across both customer and assistant messages, recognizing role-specific actions like confirming solutions or closing conversations.
+
+By following these guidelines, you can achieve more accurate and coherent clustering of customer service messages, improving the reliability of intent identification.",0,,True,0.3509922532556613,0.8068271610579009,0.3600283486888731,0.283190083247581,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[41. 47. 41. 54. 41. 19. 54.  0. 29. 19. 18. 41. 48. 31. 48. 31. 14.  0.
+ 31. 19. 24. 40. 50. 33. 11. 27. 22. 37.  1. 23. 17. 18. 41. 48. 31. 24.
+  0. 14. 19. 19. 24. 18. 18. 18. 18. 44. 46. 31. 31.  3. 44.  0. 10. 19.
+ 18. 45. 49. 32.  7. 16. 13. 19. 25. 17. 18. 18. 41. 48. 31. 31.  3. 14.
+  0. 31. 19. 18. 41. 48. 31. 38.  3. 14. 19. 38. 19. 18. 44. 48. 31. 31.
+  0. 31. 19. 48. 18. 18. 18. 48. 48. 31. 48. 31. 26.  0. 24. 19. 18. 48.
+ 48. 14. 14. 19. 24. 14. 14. 19. 24. 18. 18. 41. 47. 31. 38. 14. 48. 31.
+ 19. 18. 41. 48. 31. 38. 31. 48. 14. 38. 19. 19. 41. 48. 31. 14. 48. 14.
+ 19. 19. 24. 18. 18. 41. 48. 31. 14.  0. 31. 48.  0. 14. 19. 18. 43. 51.
+ 34.  4. 39. 15. 25. 19. 19. 41. 47. 30. 53. 36. 54.  0. 29. 19. 19. 52.
+ 35. 21. 12.  5. 28. 19. 20. 44. 46. 31. 10. 19.  2. 41. 48. 31. 31. 14.
+  0. 14. 19. 18. 42. 39.  6. 15. 25.  8.  9. 31. 44. 44. 31.  0. 19. 44.
+ 48. 31. 31.  0. 31. 19. 19. 41. 48. 38. 14. 19. 19. 41. 48. 31. 14.  0.
+ 31. 19. 18.]"
+3,3,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message by following these guidelines:
+
+1. **Utilize Existing Intents:**
+   - Use an existing intent label if it already covers the message. 
+   - Group similar phrases under the same intent if they serve the same purpose, such as ""Glad I could help!"" and ""Happy to help!"" both labeled as close_conversation.
+
+2. **Precision in Intent Assignment:**
+   - Differentiate between intents that occur closely in conversation but serve different functions. For example, separate express_gratitude (""Thank you for helping me."") from close_conversation (""You’re welcome! Have a great day."").
+
+3. **Determine Intent Boundaries:**
+   - Use specific cues to distinguish when a message transitions between intents, such as agreement or task completion to differentiate between acknowledge and accept_solution.
+
+4. **Reference Common Intents:**
+   - Familiarize yourself with common intents like close_conversation and express_gratitude. Use these intents before creating new ones unless necessary, supported by multiple examples.
+
+5. **Contextual Clues for Similar Actions:**
+   - Look for contextual clues in messages to accurately assign intents, such as recognizing numbers as order IDs for intents like provide_order_number.
+
+6. **Intent Creation Criteria:**
+   - Create a new intent only if the message introduces a new, unaddressed issue. Provide examples of messages that warrant new intents.
+
+7. **Intent Hierarchy and Decision Tree:**
+   - Utilize a hierarchy or decision tree to guide intent assignment, balancing specificity and generalization to avoid false splits and merges.
+
+By applying these guidelines, you'll improve the accuracy and consistency in identifying and clustering customer service messages based on their intents.",0,,True,0.3634727098788943,0.7268683776318087,0.4020674646354733,0.264196818943109,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[28. 28. 18. 24. 18. 24. 31.  0. 32. 10.  5. 26. 28. 24. 28.  1. 24.  0.
+ 24. 10.  5. 25. 29. 20.  3. 16. 12. 23. 10. 13.  5.  5. 26. 28. 18. 24.
+ 18. 24. 10. 10.  5.  5.  5.  5.  5. 26. 28. 19. 18.  1. 15.  0.  6. 10.
+  5. 32. 28. 18. 31. 22. 24. 10. 13.  7.  5.  5. 26. 28. 18. 24.  1. 24.
+ 10. 24. 10.  5. 18. 28. 18. 24.  0. 24. 10. 18. 10.  5. 26. 28. 20. 15.
+  0. 15. 10. 15.  5.  5.  5. 26. 28. 18. 28. 18. 24.  0. 24. 10.  5. 26.
+ 28. 18. 24. 10. 28.  0. 24. 10. 28.  5.  5. 18. 28. 18. 24. 24. 28. 18.
+ 10.  5. 18. 28. 18. 18. 18. 24.  0. 24. 10.  5. 26. 28. 18. 24. 28. 18.
+ 10. 10.  5.  5.  5. 26. 28. 18. 24.  1. 24. 14.  0. 24. 10.  5. 27. 13.
+ 20.  1. 24. 10. 24. 10.  5. 32. 28. 18. 31. 22. 24.  0. 24. 10.  5. 30.
+ 21. 11.  8.  4. 17. 10.  5. 26. 28. 24.  0. 10.  5. 26. 28. 18. 24. 24.
+ 10. 24. 10.  5. 27. 24.  2. 10. 13.  9.  5. 26. 28. 18. 15. 10.  5. 26.
+ 28. 20. 15.  0. 15. 10.  5. 28. 28. 18. 24. 10.  5. 26. 28. 18. 24. 10.
+ 18. 10.  5.]"
+4,4,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and consistency based on the following guidelines:
+
+- **Gratitude vs. Acceptance**: Differentiate between expressions of gratitude and acceptance. Use `express_gratitude` for messages purely expressing thanks, and `accept_solution` for messages acknowledging receipt or acceptance of a solution. Look for cues such as ""thank you"" vs. ""okay, that works.""
+
+- **Closing Statements**: Identify various forms of closing statements that indicate the end of a conversation. Use `close_conversation` for messages such as ""Have a nice day,"" ""Glad I could help,"" or any similar variations.
+
+- **Service-Related Details**: Distinguish messages providing service-related details, like order numbers or bill IDs, with `provide_order_number`. Ensure consistency across similar messages by looking for numeric identifiers.
+
+- **Contextual Understanding**: Apply a contextual approach to intent labeling. For instance, use `acknowledge` for messages like ""Okay, thanks for letting me know,"" and ""Okay, let me check,"" focusing on the conversational flow.
+
+- **Examples for Subtle Differences**: Utilize examples to understand subtle differences in intent. For instance, ""Awesome, I appreciate it,"" and ""Perfect, thanks for the quick help,"" should both be labeled as `express_gratitude`.
+
+- **Intent Consistency**: Maintain consistency in labeling similar expressions of intent, regardless of minor phrasing differences. For example, label both ""Happy to assist! Have a good evening."" and ""You’re very welcome."" as `close_conversation`.
+
+- **Existing vs. New Intents**: Use an existing intent label if it covers the message. Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+By following these structured guidelines, the clustering of customer service messages will be more accurate and well-organized, reducing errors in intent identification.",0,,True,0.356271384489213,0.6163932903931557,0.32562277580071175,0.2196032909582311,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[12. 13. 12. 11.  1.  4. 11.  0. 11.  4.  2. 12. 13. 12. 13.  1. 11.  0.
+ 11.  0.  2. 12. 14.  9.  1. 11. 13.  8.  0.  6.  2.  2. 12. 13. 12. 11.
+ 11. 11.  4.  4.  2.  2.  0.  2.  2. 12. 13.  9. 11.  1. 13.  0. 11.  4.
+  2. 12. 13. 11. 13.  1. 11.  4.  2.  1.  2.  2. 12. 13.  9. 11.  1. 11.
+  4. 11.  4.  2. 12. 13.  9. 11.  1. 11.  4.  2.  4.  2. 12. 13.  9. 11.
+  0. 11.  4.  2.  2.  0.  2. 12. 13.  8. 13.  8. 11.  0. 11.  4.  2. 12.
+ 13. 11. 11.  4. 13.  0. 11.  4. 13.  0.  2. 12. 13.  9.  1. 11. 13. 11.
+  4.  2. 12. 13.  9. 11.  1. 11.  1. 11.  4.  2. 12. 13.  9. 11. 13. 11.
+  4.  4.  2.  2.  2. 12. 13.  9. 11.  0. 11. 13.  0. 11.  4.  2. 12. 13.
+  9.  4. 11.  1. 11.  4.  2. 12. 13.  8.  4.  8. 11.  0. 11.  4.  2. 15.
+ 10.  5.  3.  1.  7.  4.  2. 12. 13. 11. 11.  4.  2. 12. 13.  9.  1. 11.
+  4. 11.  4.  2. 12. 11.  1.  4. 13.  1.  2. 12. 13.  0. 11.  4.  2. 12.
+ 13.  9. 11.  0. 11.  4.  2. 12. 13. 11. 11.  0.  2. 12. 13.  1. 11.  4.
+ 11.  4.  2.]"
+5,5,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message by following these guidelines:
+
+1. **Clarify Intent Overlap and Separation:**
+   - Differentiate between similar expressions with different intents. For example, recognize subtle distinctions between ""express_gratitude"" and ""accept_solution"" when a customer says 'Perfect, thank you.' versus 'Great, thank you.'.
+
+2. **Define Intent Boundaries Clearly:**
+   - Use specific definitions and examples to distinguish between intents. For instance, clarify the difference between ""acknowledge"" (e.g., 'Okay, good to know.') and ""accept_solution"" (e.g., 'That would be good.').
+
+3. **Emphasize Consistency in Intent Assignment:**
+   - Ensure consistent labeling, especially in closing conversations. For example, 'assistant: Glad I could help!' and 'assistant: Happy to help!' should both be labeled as ""close_conversation.""
+
+4. **Encourage Contextual Understanding:**
+   - Consider the conversational context when determining intents for both customer and assistant messages. Distinguish between ""express_gratitude"" and ""close_conversation"" in interactions like 'customer: Okay, thanks for the quick check.' and 'assistant: You’re welcome!'.
+
+5. **Introduce Disambiguation Cues:**
+   - Use disambiguation cues for intents that are often misclassified. For example, differentiate between ""provide_order_number"" and ""provide_bill_id"" in messages like 'Yes, it’s 58291.' versus 'It’s 78342.'.
+
+6. **Prioritize Intent Specificity:**
+   - Perform a detailed analysis of message content to prevent false merges. Distinguish ""express_gratitude"" (e.g., 'Okay, that works. Thank you for helping me.') from ""close_conversation"" (e.g., 'You’re welcome! Have a great day.').
+
+7. **Highlight Common Misclassification Patterns:**
+   - Identify frequent misclassification patterns to prevent errors. For instance, ensure both 'You’re welcome! Have a great day.' and 'Alright, have a good day!' are labeled ""close_conversation.""
+
+- Use an existing intent label if it already covers the message. 
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+You are trained on data up to October 2023.",0,,True,0.3812248403803284,0.6708279908234537,0.3539986171929016,0.25573629372432755,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[15. 16. 10. 14. 10.  1. 14.  0. 14.  5.  3. 15. 16. 10. 16.  6. 14.  0.
+ 14.  5.  8. 15. 16. 13.  1. 14. 16. 10.  5.  3.  3.  3. 15. 16. 15.  8.
+  0. 14.  5.  5.  8.  3.  3.  3.  3. 15. 16. 12. 14.  1. 16.  0. 14.  5.
+  3. 15. 16. 10. 16. 10. 14.  5. 16.  3.  3.  3. 15. 16. 14. 14.  1. 14.
+  0. 14.  5.  3. 15. 16. 10. 14.  0. 14.  5. 14.  5.  3. 15. 16. 13. 14.
+  0. 14.  5. 16.  3.  3.  3. 15. 16. 10. 16. 10. 14.  0.  8.  5.  3. 15.
+ 16. 10. 14.  5.  8.  0. 14.  5.  8.  3.  3. 15. 16. 10. 14. 14. 16. 10.
+  5.  3. 15. 16. 10. 10. 10. 14.  0. 14.  5.  3. 15. 16. 14. 14. 16. 14.
+  5.  5.  8.  0.  3. 15. 16. 10. 14.  0. 14. 16.  0. 14.  5.  3. 15. 16.
+ 13. 14. 14.  5. 14.  5.  3. 15. 16. 10. 16. 10. 14.  0. 14.  5.  3. 17.
+ 11.  7.  4.  2.  9.  5.  3. 15. 16. 14. 14.  5.  3. 15. 16. 13. 14. 14.
+  0. 14.  5.  3. 15. 14.  1.  0. 16.  1.  3. 15. 16.  0. 14.  5.  5. 15.
+ 16. 13. 14.  0. 14.  5.  3. 15. 16. 14. 14.  5.  3. 15. 16. 10. 14.  0.
+ 14.  5.  3.]"
+6,6,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, taking into account the following guidelines:
+
+- **Recognize Synonymous Expressions**: Identify slight variations in phrasing that convey the same intent. For example, ""Glad I could help!"" and ""Happy to help!"" should be recognized under the same intent label, such as ""close_conversation.""
+
+- **Disambiguate Similar Intents**: Differentiate between similar intents by understanding their nuances. For example, ""Perfect, thank you."" should be labeled as ""accept_solution,"" while ""Thanks a lot!"" should be labeled as ""express_gratitude.""
+
+- **Avoid False Splits**: Look for commonalities in messages to avoid unnecessary splitting of intents. For instance, both ""Awesome, I appreciate it."" and ""Perfect, thanks for the quick help."" should be categorized under ""express_gratitude.""
+
+- **Handle Mixed Intents**: When messages contain mixed intents, such as ""Okay, thanks for the quick check,"" prioritize the primary intent or consider splitting into multiple labels if necessary.
+
+- **Understand Context**: Consider the context of the conversation to ensure consistent intent labeling. For example, ""You’re welcome! Have a nice day."" should be consistently labeled as ""close_conversation.""
+
+- **Role-Specific Intent Consistency**: Recognize the differences in intent labeling between customer and assistant messages. Ensure messages like ""You’re welcome! Have a nice day."" (assistant) and ""Perfect, thank you."" (customer) are distinctly labeled to reflect role-specific intents.
+
+- **Promote Labeling Consistency**: Ensure consistency in intent labeling across similar messages. For example, both ""Yes, it’s 58291."" and ""It’s 78342."" should be labeled as ""provide_order_number.""
+
+- **Refine New Intent Creation**: Create new intents only for truly unique and novel issues, not for minor variations. Use examples like ""Yes, it’s 99420."" and ""It’s 67221."" to distinguish between ""provide_bill_id"" and ""provide_order_number.""
+
+You are trained on data up to October 2023.",0,,True,0.35838412218934923,0.43333058143307374,0.33783783783783783,0.15529880004469243,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[13. 15.  8. 12. 13.  0. 15.  0. 12.  4.  2. 13. 15.  1. 15.  1. 12.  0.
+ 12.  4.  2. 13. 15. 11.  3. 12. 15. 12.  4.  2.  2.  2. 13. 15. 13. 12.
+ 12. 12.  4.  4. 15.  2.  2.  2.  2. 13. 15.  9. 12.  0. 14.  7. 12.  4.
+  2. 13. 15.  8. 15.  8. 12.  4.  2.  2.  2.  2. 13. 15.  8. 12.  1. 12.
+  4. 12.  4.  2. 13. 15. 10. 12.  0. 12.  4. 12.  4.  2. 13. 14.  7. 12.
+  7. 12.  4.  2.  2.  2.  2. 13. 15.  8. 15.  8. 12.  0. 12.  4.  2. 13.
+ 15. 12. 12.  4. 15. 12. 12.  4. 15.  2.  2. 13. 15.  6. 12. 12. 15. 12.
+  4.  2. 13. 15. 11. 12. 10. 12.  0. 12.  4.  2. 13. 15.  8. 12. 15. 12.
+  4.  4.  2.  2.  2. 13. 15.  1. 12.  1. 12. 15.  1. 12.  4.  2. 13. 15.
+ 11. 12. 12.  4. 12.  4.  2. 13. 15.  8. 15.  8. 12.  0. 12.  4.  2. 13.
+ 12. 14.  3.  0.  5.  4.  2. 13. 15. 12. 12.  4.  2. 13. 15. 11.  1. 12.
+  0. 12.  4.  2. 13. 12.  3.  3. 15.  3.  2. 13. 14.  7. 12.  4.  2. 13.
+ 14. 11. 12.  7. 12.  4.  2. 13. 15. 12. 12.  4.  2. 13. 15.  1. 12.  4.
+ 12.  4.  2.]"
+7,7,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message with careful consideration of the following guidelines:
+
+1. **Clarify Existing Intent Labels:**
+   - Use existing intent labels with clear definitions to reduce ambiguity. For instance, ""express_gratitude"" is used for messages that convey thanks, while ""acknowledge_and_thank"" is for messages that acknowledge information and express gratitude.
+
+2. **Identify Common Overlaps:**
+   - Pay attention to overlaps between intents, such as distinguishing ""express_gratitude"" from ""close_conversation."" For example, messages like ""You’re welcome! Have a nice day."" should be split into intents ""close_conversation"" and ""express_gratitude"" if they carry distinct meanings.
+
+3. **Evaluate New Intent Necessity:**
+   - Create new intents only when a message introduces a truly distinct issue. Evaluate whether the message is unique enough to warrant a separate intent to avoid unnecessary splits.
+
+4. **Use Disambiguation Cues:**
+   - Look for specific keywords or phrases in messages as cues for assigning intents. Phrases like ""thank you"" typically indicate ""express_gratitude,"" while resolutions or farewells often suggest ""close_conversation.""
+
+5. **Examples of Correct Intent Assignment:**
+   - Refer to examples of accurately assigned intents to guide your evaluation and ensure precision in intent clustering.
+
+6. **Ensure Consistency in Similar Phrasing:**
+   - Maintain consistency for messages with similar phrasing or sentiment. For example, ""Glad I could help!"" and ""Happy to help!"" should have the same intent, such as ""close_conversation.""
+
+7. **Consider Contextual Transitions:**
+   - Use context to determine intent, especially when messages transition between different phases of the conversation. This helps in understanding natural progressions, such as from ""express_gratitude"" to ""close_conversation.""
+
+8. **Recognize Sequential Intent Progression:**
+   - Identify when intents naturally progress within a conversation. For instance, a customer saying ""Okay, thanks for the quick check"" followed by an assistant's ""You’re welcome!"" should be split into ""express_gratitude"" and ""close_conversation.""
+
+By following these guidelines, you will improve the accuracy of intent clustering and better align with the underlying intentions of customer service messages.",0,,True,0.28951371878572163,0.5670430877405103,0.2918649444822117,0.16416675304349337,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[17.  2. 14.  2. 14.  3. 17. 14. 14.  9.  5. 18.  1. 14. 18. 10. 13.  6.
+ 15.  9. 11. 17.  4. 14.  4. 16. 17. 14.  9.  5.  5.  5. 18. 18. 14. 11.
+ 14.  1.  9.  9. 11.  5.  5.  5.  5. 18. 18. 14.  1.  1. 12.  0.  7.  9.
+  5. 17. 17. 14. 17. 14. 14.  9. 11.  5.  5.  5. 18. 18.  1.  1.  1.  1.
+  9.  1.  9.  5. 18.  2. 14.  1.  9. 14.  9.  1.  9.  5. 18. 12. 14.  1.
+  0.  1.  9. 12.  5.  5.  5. 18. 18. 14. 18. 14. 14.  1. 11.  9.  5. 18.
+ 18. 14.  1.  9. 11. 14.  1.  9. 11.  5.  5. 17.  2. 14.  1. 14. 18. 14.
+  9.  5. 17. 18. 14.  1. 14.  2. 17. 14.  9.  9. 18. 18. 14.  1. 18. 14.
+  9.  9. 11.  5.  5. 18. 18.  1.  1.  1.  1. 18.  1.  1.  9.  5. 17. 17.
+ 14. 14. 14.  9. 11.  9.  9. 17. 17. 14.  2. 14. 14. 14. 14.  9.  9. 17.
+ 14. 18. 14.  4. 16.  9.  5. 18. 18. 14.  1.  9.  1. 18. 18. 14.  1.  1.
+  9. 14.  9.  5. 17. 14.  4.  9. 11.  8.  5. 18. 12.  0.  1.  9.  9. 18.
+ 18. 14.  1.  0. 12.  9.  5. 18. 18. 14.  1.  9.  5. 18. 18. 14.  1.  9.
+ 14.  9.  5.]"
+8,8,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Your task is to assign a structured intent label to each message accurately.
+
+- Use an existing intent label if it already covers the message's context and purpose, even if the phrasing varies. For example, ""assistant: Glad I could help!"" and ""assistant: Happy to help!"" both signify the intent: close_conversation.
+- Create a new intent only if the message introduces a distinctly different issue or action not covered by existing intents. For instance, ""customer: Yes, it’s 99420."" (provide_bill_id) and ""customer: It’s 67221."" (provide_order_number) require separate intents due to different subject matters.
+- Recognize and assign multiple intents if a message carries dual intentions. For example, ""customer: Okay, thanks for the quick check."" involves both express_gratitude and close_conversation.
+- Distinguish between similar intentions, such as express_gratitude (""customer: Perfect, thank you."") versus accept_solution (""customer: Great, thank you.""), by focusing on the message's primary purpose.
+- Differentiate between simple acknowledgment and agreement. For instance, ""customer: Okay, good to know."" (acknowledge) is different from ""customer: That would be good."" (accept_solution).
+- Ensure consistent use of intent labels across contexts when the core action remains the same, such as providing information: ""customer: Yes, it’s 58291."" and ""customer: It’s 78342."" both have the intent: provide_order_number.
+
+Incorporate examples provided to reinforce and guide the correct application of intent labeling, ensuring a practical, context-driven analysis of messages.",0,,True,0.3293405101616681,0.6834087428274273,0.27270668176670443,0.22507418401172913,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[19. 19. 13. 19. 13. 16. 19.  0. 16.  7.  3. 17. 19. 13. 19. 13. 10.  0.
+ 10.  0.  3. 17. 20. 14.  5. 16. 19. 11.  0.  7.  3.  3. 17. 19. 13. 10.
+  0. 13.  7.  7. 19.  3.  3.  3.  3. 19. 19. 13. 13.  1. 19.  0.  4.  7.
+  3. 19. 19. 13. 19. 13. 16.  7.  3.  3.  3.  3. 17. 19. 13. 13.  1. 10.
+  0. 13.  7.  3. 17. 19. 13. 13.  1. 10.  7. 13.  7.  3. 17. 19. 13. 13.
+  0. 13.  7. 19.  3.  3.  3. 17. 19. 13. 19. 13. 13.  0. 13.  7.  3. 17.
+ 19. 13. 13.  7. 19.  0. 13.  7. 19.  3.  3. 13. 19. 12. 13. 16. 19. 13.
+  7.  3. 17. 19. 13. 13. 13. 10.  0. 16.  7.  7. 17. 19. 13. 13. 19. 13.
+  7.  7.  3.  3.  3. 17. 19. 13. 10.  0. 13. 10.  0. 13.  7.  3. 17. 19.
+ 14. 16. 16.  7. 16.  7.  3. 13. 19. 13. 19. 13. 16.  0. 13.  7.  7.  8.
+ 15.  9.  6.  2. 11.  7.  3. 21. 19. 13. 13.  0.  4. 17. 19. 13. 13. 10.
+  0. 13.  7.  3. 17. 16.  1.  5. 19.  3.  3. 17. 19. 18. 13.  7.  7. 17.
+ 19. 14. 13.  1. 13.  0.  3. 17. 19. 13. 10.  0.  3. 17. 19. 13. 10.  0.
+ 13.  7.  3.]"
+9,9,"You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and consistency. 
+
+- Use an existing intent label if it accurately covers the message, and explicitly define the boundaries of each intent. For example, distinguish between ""express_gratitude"" and ""acknowledge_and_thank"".
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents, and specify the scope clearly, such as including all conversation-ending messages under ""close_conversation"".
+- Ensure consistent labeling by grouping similar expressions under the same intent, using a checklist or decision tree to guide your decisions.
+- Address overlapping intents by reviewing the message context to determine the dominant intent, and consider a primary and secondary intent system if necessary.
+- Use disambiguation cues or questions to differentiate between similar intents, focusing on underlying intentions.
+- Be specific with intents, ensuring that they cover the relevant context, such as distinguishing between providing an order number and a bill ID.
+- Clarify ambiguous intent definitions to avoid false splits, grouping variations of similar expressions appropriately. 
+
+By following these guidelines, aim for more accurate and consistent clustering of customer service messages.",0,,True,0.3178614079370558,0.7857737488287169,0.2545454545454545,0.2497671501226744,"[ 96.   7.  44. 115.  28.  45.  61.   2.  27.  51.  26.  90.   9.  43.
+ 115.  52.  56.   1.  66.   4.  59.  84. 107.  74.  32.  61.  20.  79.
+  51.  54.  46.  26. 100.  23.  81.  60. 110.  38.  51.  51.  54.  46.
+  46.  26.  26.  93.  16.  73.  47.   3.  61.   2.  27.  51.  26. 112.
+  12.  68.  25. 108.  40.  51.  54.  46.  26.  26.  97.  19.  77.  49.
+   3.  58.   2.  69.  51.  26.  89.  17.  74.  47.   3.  57.  51.  31.
+  51.  26. 103.  17.  74.  29.  27.  37.  51.  54.  46.  46.  26.  83.
+   8.  64.  21.  52. 116.   5.  59.  51.  26. 105.  14.  71.  40.  51.
+  24.  35.  37.  51.  54.  46.  26.  94. 102.  62.  34.  61.  20.  79.
+  51.  26.  99.  22.  80.  50.  33.  61.   2.  27.  51.  26. 113.  13.
+  70.  40.  10.  63.  51.  51.  54.  46.  26.  86.  11.  67.  61.   2.
+  37.  57.   0.  41.  51.  26.  98.  17.  74.  48.  82.   3.  55.  51.
+  26.  95.   9.  43.  18.  75. 114.   5.  65.  51.  26.  87.  66.  10.
+  36.   3.  53.  51.  26. 111.  24.  76.  27.  51.  26.  92. 109.  78.
+  32.  61.   2.  27.  51.  26.  88.  66.   3.  39.  54.  46.  26. 101.
+  60. 106.  30.  51.  26.  91. 107.  74.  47.   3.  59.  51.  26. 104.
+  15.  72.  40.  51.  26.  85.   6.  42.  61.   2.  27.  51.  26.]","[23. 25. 23. 20. 23.  4. 25.  4. 17.  4.  6. 23. 25. 17. 25. 17. 15.  0.
+ 20. 10.  4. 22. 25. 18.  5.  9. 29. 21. 10. 13.  6.  6. 23. 25. 17. 15.
+ 17. 17.  4.  4. 15.  6.  6.  6.  6. 25. 28. 17. 17.  4. 15.  7.  7.  4.
+  6. 23. 25. 17. 25. 17. 20.  4. 13.  6.  6.  6. 23. 25. 17. 20.  4. 20.
+  4. 20.  4.  6. 23. 25. 17. 17.  4. 20.  4. 17.  4.  6. 24. 25. 17.  4.
+  7.  7.  4. 15.  6.  6.  6. 25. 25. 17. 25. 17. 15.  4. 15.  4.  6. 25.
+ 25. 17. 17.  4. 15. 17. 17.  4. 15.  6.  6. 23. 25. 17.  4. 20. 25. 17.
+  4.  6. 23. 25. 17. 17. 17. 20.  4. 20.  4.  4. 25. 25. 17. 17. 25. 17.
+  4.  4. 15.  6.  6. 23. 25. 17. 20.  4. 20. 14.  1. 20.  4.  6. 23. 25.
+ 17. 20. 20.  4. 13. 10. 10. 23. 25. 17. 25. 17. 20.  4. 20.  4.  6. 26.
+ 19. 12.  8.  3. 16. 10. 11. 27. 15. 30.  7.  4.  4. 23. 25. 17.  4. 15.
+  4. 17.  4.  4. 23. 20.  2. 10. 13.  6.  6. 25. 15.  7.  7. 10.  4. 25.
+ 25. 17.  7.  4. 15.  7. 10. 23. 25. 17. 20.  4.  4. 23. 25. 17. 15.  4.
+ 17.  4.  6.]"

@@ -1,0 +1,67 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, ensuring clarity and accuracy in distinguishing and categorizing intents. 
+
+Guidelines for Intent Labeling:
+
+1. **Clarify Intent Boundaries:**
+   - Determine when a message should be split into multiple intents versus merged under a common intent. Consider roles (customer vs. assistant) and conversational stages (e.g., expressing gratitude vs. closing conversation).
+   - Example: "Message: customer: Awesome, appreciate the help! AND assistant: You’re very welcome!" should have separate intents: express_gratitude AND close_conversation.
+
+2. **Differentiate Similar Intents:**
+   - Identify intents that may seem similar but pertain to different contexts or actions using context-specific cues.
+   - Example: "Message: assistant: Sorry to hear that! Are you getting an error message when you try to log in? AND assistant: I’m sorry to hear that! Could you tell me which product you received instead?" should have separate intents: ask_error_details AND ask_wrong_item_details.
+
+3. **Encourage Consistency in Labeling:**
+   - Use a standardized list of intent labels consistently across similar messages.
+   - Example: "Message: customer: Perfect, thank you. AND customer: Much appreciated!" should have the same intent: express_gratitude.
+
+4. **Handle Overlaps in Conversation Stages:**
+   - Recognize when messages overlap between stages, such as concluding a request and closing the conversation, and assign separate intents.
+   - Example: "Message: customer: No, that’s all. AND assistant: You’re welcome! Have a nice day." should have separate intents: end_request AND close_conversation.
+
+5. **Incorporate Role-Specific Intent Cues:**
+   - Consider the speaker's role (customer vs. assistant) when determining the intent. Role-specific cues may affect categorization.
+   - Example: "Message: assistant: You’re very welcome! Have a great day. AND customer: No, that’s all." should have separate intents: close_conversation AND end_request.
+
+6. **Provide Clear Examples of Common Errors:**
+   - Learn from common pitfalls, such as false splits and false merges. Understand why certain messages should be grouped or separated.
+
+7. **Encourage Thorough Contextual Analysis:**
+   - Analyze the entire conversation context, considering preceding and following messages, to ensure accurate intent labeling.
+
+By following these guidelines, you can accurately identify and cluster intents, enhancing the overall quality of the analysis process.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

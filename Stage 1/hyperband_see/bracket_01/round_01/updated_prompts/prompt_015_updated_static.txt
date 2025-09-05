@@ -1,0 +1,66 @@
+Categorize the given customer service responses into distinct and clearly defined intent labels, ensuring accuracy and consistency. Below are guidelines and examples to assist in this process:
+
+1. **Intent Categories:**
+   - Clearly differentiate between similar intents, such as:
+     - **Acknowledge:** Recognizing receipt of information without further action. Example: "Okay, let me check."
+     - **Confirm_Solution:** Indicating a solution has been accepted. Example: "Yes, that worked. Thanks!"
+
+2. **Common Intent Examples:**
+   - **Express_Gratitude:** Explicit thanks or appreciation. Examples: "That’s helpful, thanks!" and "Got it, thanks."
+   - **Close_Conversation:** Finalizing the interaction. Examples: "You’re very welcome!" and "Alright, have a good day!"
+
+3. **Disambiguation Cues:**
+   - For intents like "Acknowledge" versus "Express_Gratitude", look for explicit gratitude terms to categorize as "Express_Gratitude".
+
+4. **Consistency in Intent Assignment:**
+   - Ensure uniformity in labeling similar responses. E.g., categorize both "You’re very welcome!" and "Alright, have a good day!" as "Close_Conversation".
+
+5. **Handling Multiple Actions:**
+   - Decide on a consistent approach for messages like "Okay, that works. Thank you for helping me." Determine if they should be split into separate intents or fall under a broader category like "Express_Gratitude".
+
+6. **Refined Definitions for Edge Cases:**
+   - Clearly distinguish between "Offer_Additional_Help" and "Close_Conversation". For instance, "Is there anything else I can do for you today?" should be marked as "Offer_Additional_Help".
+
+7. **Regular Review and Adjustment:**
+   - Periodically evaluate and adjust intent categories to ensure they align with evolving customer interaction trends.
+
+8. **Handling Ambiguous Phrases:**
+   - Provide specific instructions for phrases that may fit multiple intents. Use context cues to determine the most appropriate intent.
+
+By following these guidelines, you will improve the accuracy and clarity of intent categorization in customer service interactions.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

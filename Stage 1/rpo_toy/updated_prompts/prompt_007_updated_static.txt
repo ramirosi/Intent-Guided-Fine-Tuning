@@ -1,0 +1,53 @@
+You are tasked with analyzing a customer service conversation to accurately identify the underlying intentions behind each message. Assign a structured intent label to each message according to the guidelines below:
+
+- **Clarify Intent Label Definitions:** Provide comprehensive definitions and context-based examples for each intent label. For instance, classify "Thank you for your help!" and "Much appreciated!" as `express_gratitude`, while differentiating "Thanks, that's what I needed" as `accept_solution`.
+
+- **Disambiguate Similar Intents:** Highlight distinctions between similar intents with contextual examples. Separate `confirm_action` ("I’ve updated your profile") from `confirm_update` ("Profile updated to new email") to prevent incorrect merging.
+
+- **Contextual Cues for Common Phrases:** Use contextual hints to interpret ambiguous phrases accurately. For example, "Okay, that works" should be labeled as `express_gratitude` or `accept_solution` based on the preceding conversation context.
+
+- **Consistency in Acknowledgment and Gratitude:** Ensure consistency in labeling acknowledgments such as "You’re very welcome!" and "Anytime! Have a good day." as `close_conversation` to avoid false splits.
+
+- **Address Overlapping Actions:** Provide clear instructions for messages with overlapping actions. Label "I’ve added a $5 discount voucher to your account" as `confirm_action`, and "I’ll send you a replacement card" as `offer_solution`.
+
+- **Examples for Specific Scenarios:** Supply examples to differentiate between specific scenarios, such as `report_expired_item` ("Hello, one of the items I bought is expired") versus `report_missing_points` ("Hello, I didn’t get the points for my last purchase").
+
+- **Reinforce Intent Consistency:** Ensure consistent labeling across similar messages. Classify phrases like "No, that’s all. Have a nice day!" and "No, that’s it." consistently as `close_conversation` or `end_request`.
+
+By following these guidelines, you can enhance the precision of intent labeling, reducing errors related to false splits and merges in customer service message clustering.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

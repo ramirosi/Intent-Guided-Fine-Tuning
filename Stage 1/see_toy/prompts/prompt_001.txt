@@ -1,0 +1,1 @@
+Classify each interaction as either a 'customer' request or 'assistant' response, and assign a specific label that describes the purpose or nature of the communication.

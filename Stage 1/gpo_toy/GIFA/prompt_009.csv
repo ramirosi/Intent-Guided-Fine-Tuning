@@ -1,0 +1,232 @@
+index,intent,count,messages
+0,request_password_reset_assistance,0,"customer: Hello, I forgot my account password."
+1,provide_password_reset_instructions,1,assistant: No worries. You can reset it by tapping “Forgot password” on the login screen.
+2,inquire_about_reset_email,2,customer: Will I get a reset email?
+3,confirm_reset_email_procedure,3,"assistant: Yes, you’ll receive an email with a link to create a new password."
+4,acknowledge_and_initiate_process,4,"customer: Perfect, I’ll try that now."
+5,provide_additional_guidance,5,"assistant: If you don’t see the email, please check your spam folder."
+6,express_gratitude,6,"customer: Got it, thanks."
+7,express_satisfaction_with_assistance,7,assistant: Glad I could help!
+0,report_billing_issue,0,"customer: Hi, I was charged twice for the same order."
+1,request_information,1,assistant: I’m really sorry about that! Can you share the order number with me?
+2,provide_order_number,2,"customer: Yes, it’s 58291."
+3,acknowledge_issue,3,assistant: Thanks for that. I see two payments for the same order indeed.
+4,confirm_resolution_action,4,assistant: I’ll make sure one of the charges is refunded to your account.
+5,request_timeframe_information,5,"customer: Great, how long will the refund take?"
+6,provide_timeframe_information,6,assistant: Refunds are usually processed within 3–5 business days.
+7,express_gratitude,7,"customer: Okay, that works. Thank you for helping me."
+8,offer_additional_assistance,8,assistant: Of course! Happy to help. Is there anything else I can do for you today?
+9,close_conversation,9,"customer: No, that’s all. Have a nice day!"
+10,close_conversation,10,assistant: You too! Take care.
+0,report_issue,0,"customer: Hi, the app language switched to Dutch, but I want English."
+1,provide_resolution_instruction,1,assistant: Understood. You can change it in Settings → Language → English.
+2,acknowledge_action,2,"customer: Okay, let me check."
+3,express_gratitude,3,"customer: Yes, that worked. Thanks!"
+4,offer_additional_assistance,4,assistant: Great to hear! Anything else I can help with?
+5,close_conversation,5,"customer: No, that’s all."
+6,close_conversation,6,"assistant: Alright, have a good day!"
+0,report_issue,0,"customer: Hi, I can’t track my order in the app."
+1,request_information,1,assistant: Sorry about that. Can you give me your order number?
+2,provide_information,2,customer: It’s 67221.
+3,provide_resolution_instruction,3,"assistant: Thank you. I see the order is on its way, but the tracking system is delayed."
+4,provide_resolution_instruction,4,assistant: Your delivery should still arrive within the scheduled slot.
+5,acknowledge_and_thank,5,"customer: Okay, thanks for checking."
+6,offer_additional_assistance,6,assistant: I’ll send you updates by SMS until it arrives.
+7,express_gratitude,7,"customer: That’s helpful, thanks!"
+8,express_gratitude,8,assistant: You’re very welcome!
+0,report_issue,0,"customer: Hello, I want to update my delivery address."
+1,request_information,1,assistant: Of course. Could you provide me with the new address?
+2,provide_information,2,"customer: Sure, it’s 12 Maple Street, Springfield."
+3,request_information,3,assistant: Got it. Do you want to apply this change just for the next delivery or for all future orders?
+4,provide_information,4,customer: Please for all future orders.
+5,provide_resolution_instruction,5,"assistant: Done, your profile has been updated."
+6,acknowledge_and_thank,6,"customer: Perfect, thank you for the help."
+7,offer_additional_assistance,7,assistant: Happy to help! Anything else I can do for you today?
+8,close_conversation,8,"customer: No, that’s everything."
+9,close_conversation,9,assistant: Great. Have a wonderful day!
+0,report_issue,0,"customer: Hi, my payment failed when I tried to check out."
+1,request_information,1,assistant: I see. Did you receive any error message?
+2,provide_information,2,"customer: Yes, it said “transaction declined.”"
+3,request_information,3,assistant: Thanks for sharing. Was this with a credit card or PayPal?
+4,provide_information,4,customer: With a credit card.
+5,provide_resolution_instruction,5,assistant: Sometimes banks decline transactions for security. Could you try again or use PayPal instead?
+6,acknowledge_and_thank,6,customer: I’ll try PayPal.
+7,provide_resolution_instruction,7,"assistant: Great. If the card still fails later, contact your bank for details."
+8,acknowledge_and_thank,8,"customer: Okay, thanks for the advice."
+9,close_conversation,9,assistant: You’re welcome!
+0,report_issue,0,"customer: Hi, I'm having trouble with my loyalty card."
+1,request_information,1,assistant: Hello! Sorry to hear that. Can you tell me what exactly is going wrong?
+2,report_issue,2,customer: The card isn't being recognized at checkout.
+3,provide_resolution_instruction,3,"assistant: I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?"
+4,report_issue,4,"customer: Yes, I tried both. Still doesn't work."
+5,acknowledge_and_thank,5,assistant: Thanks for checking that. It’s possible the card is damaged.
+6,request_information,6,assistant: Would you like me to request a replacement card for you?
+7,acknowledge_and_thank,7,"customer: Yes please, that would be great."
+8,provide_information,8,"assistant: Perfect, I’ll arrange for a new card to be sent to your address. It usually takes 3–5 business days."
+9,acknowledge_and_thank,9,"customer: Awesome, thanks for the quick help!"
+10,close_conversation,10,assistant: You’re very welcome! Have a great day.
+0,report_issue,0,"customer: Hi, I think I was overcharged on my last bill."
+1,request_information,1,assistant: I’m sorry to hear that. Can you share the bill number or order ID?
+2,provide_information,2,"customer: Yes, it’s 99420."
+3,acknowledge_and_thank,3,assistant: Thanks. I checked and you were indeed charged twice for delivery.
+4,provide_resolution_instruction,4,assistant: I’ll refund the extra charge immediately.
+5,request_information,5,"customer: Great, when will I see the refund?"
+6,provide_information,6,assistant: Refunds usually show within 2–3 business days.
+7,acknowledge_and_thank,7,"customer: Okay, thanks for the quick check."
+8,close_conversation,8,assistant: Happy to help! Have a nice day.
+0,report_issue,0,"customer: Hello, my voucher isn’t applying at checkout."
+1,request_information,1,assistant: I see. What voucher code are you trying to use?
+2,provide_information,2,customer: It’s FREEDELIVERY.
+3,provide_information,3,assistant: Thanks. That code is only valid for orders above $50. Was your order below that amount?
+4,provide_information,4,"customer: Yes, my total was $40."
+5,provide_resolution_instruction,5,assistant: That’s why it didn’t work. Would you like me to issue you a different voucher?
+6,acknowledge_and_thank,6,"customer: Yes, please."
+7,provide_resolution_instruction,7,assistant: Done! I’ve added a $5 discount voucher to your account instead.
+8,acknowledge_and_thank,8,"customer: Awesome, appreciate the help!"
+9,acknowledge_and_thank,9,assistant: You’re very welcome.
+0,report_issue,0,"customer: Hello, my delivery is late."
+1,request_information,1,assistant: I’m really sorry about that. Can you tell me your order number?
+2,provide_information,2,customer: It’s 78342.
+3,provide_information,3,assistant: Thank you. I see your order is delayed due to traffic but should arrive within the next hour.
+4,acknowledge_and_thank,4,"customer: Okay, thanks for letting me know."
+5,provide_resolution_instruction,5,assistant: I’ll also apply a free delivery voucher to your account for the inconvenience.
+6,acknowledge_and_thank,6,"customer: That’s very kind, thank you."
+7,provide_information,7,assistant: You’re welcome. I’ll keep tracking your order until it’s delivered.
+8,acknowledge_and_thank,8,customer: Appreciate the help!
+9,close_conversation,9,assistant: Happy to assist! Have a good evening.
+0,report_issue,0,"customer: Hello, I need to change my delivery time slot."
+1,request_information,1,assistant: Sure. What new time slot would you like?
+2,provide_information,2,customer: Between 6 and 8 pm.
+3,provide_resolution_instruction,3,assistant: Got it. I’ve updated your delivery slot to 6–8 pm.
+4,acknowledge_and_thank,4,"customer: Thanks, that works."
+5,acknowledge_and_thank,5,assistant: Happy to help!
+0,report_issue,0,"customer: Hi, the promo code I tried didn’t work."
+1,request_information,1,assistant: Sorry about that. Can you tell me which promo code you used?
+2,provide_information,2,customer: It was SAVE20.
+3,provide_resolution_instruction,3,"assistant: Thanks. That code expired yesterday, which is why it didn’t apply."
+4,acknowledge_and_thank,4,"customer: Oh, I didn’t realize."
+5,provide_resolution_instruction,5,assistant: No worries. I can give you a new code for 15% off as a goodwill gesture.
+6,acknowledge_and_thank,6,"customer: That would be great, thanks!"
+7,provide_resolution_instruction,7,assistant: Here’s the new code: THANKYOU15. You can use it until next week.
+8,acknowledge_and_thank,8,"customer: Awesome, I appreciate it."
+9,close_conversation,9,assistant: My pleasure! Enjoy your shopping.
+0,report_issue,0,"customer: Hello, one of the items I bought is expired."
+1,request_information,1,"assistant: Oh no, I’m very sorry about that. Can you tell me which item it is?"
+2,provide_information,2,customer: A carton of milk.
+3,provide_resolution_instruction,3,assistant: Thank you. I’ll issue a refund right away and also notify the store.
+4,acknowledge_and_thank,4,customer: That would be good.
+5,provide_resolution_instruction,5,assistant: Refund has been processed. You’ll see it back in your account soon.
+6,offer_additional_compensation,6,assistant: Would you like a voucher for the inconvenience as well?
+7,accept_offer,7,"customer: Yes, please."
+8,provide_resolution_instruction,8,assistant: I’ve added a $10 voucher to your account.
+9,acknowledge_and_thank,9,customer: Much appreciated!
+10,close_conversation,10,assistant: You’re welcome! Have a nice day.
+0,report_issue,0,"customer: Hi, I can’t log in to the app anymore."
+1,request_information,1,assistant: Sorry to hear that! Are you getting an error message when you try to log in?
+2,provide_information,2,"customer: Yes, it says my password is incorrect."
+3,request_information,3,assistant: Understood. Have you already tried resetting your password?
+4,provide_information,4,"customer: Not yet, I wasn’t sure if that would help."
+5,offer_guidance,5,"assistant: No worries, resetting usually solves this problem. Would you like me to guide you through it?"
+6,accept_guidance,6,"customer: Yes please, that would help."
+7,provide_resolution_instruction,7,"assistant: Great! Open the app, tap “Forgot password”, and follow the steps. You’ll get an email to set a new password."
+8,express_gratitude,8,"customer: Okay, I’ll do that now. Thanks for your support!"
+9,acknowledge_and_thank,9,assistant: You’re very welcome! Let me know if you need more help after resetting.
+0,report_issue,0,"customer: Hello, I didn’t get the points for my last purchase."
+1,request_information,1,assistant: Sorry about that. Could you share your receipt number?
+2,provide_information,2,customer: It’s 88234.
+3,acknowledge_and_thank,3,assistant: Thanks. I checked and the points didn’t register due to a system glitch.
+4,offer_guidance,4,assistant: I’ll manually add the points to your account now.
+5,acknowledge_and_thank,5,"customer: Perfect, thank you."
+6,provide_information,6,assistant: Done. The points are now visible in your balance.
+7,acknowledge_and_thank,7,"customer: Awesome, appreciate the quick fix!"
+8,acknowledge_and_thank,8,assistant: Glad to help!
+0,report_issue,0,"customer: Hi, the barcode on my loyalty card won’t scan."
+1,request_information,1,assistant: Sorry about that. Is the barcode scratched or faded?
+2,provide_information,2,"customer: Yes, it’s very faded."
+3,offer_guidance,3,assistant: That would explain it. I’ll send you a replacement card.
+4,acknowledge_and_thank,4,"customer: Great, thank you."
+5,provide_information,5,assistant: The new card will arrive within 5 working days.
+6,acknowledge_and_thank,6,"customer: Perfect, much appreciated."
+7,close_conversation,7,assistant: Anytime! Have a good day.
+0,report_issue,0,"customer: Hello, I received the wrong product in my delivery."
+1,request_information,1,assistant: I’m sorry to hear that! Could you tell me which product you received instead?
+2,provide_information,2,customer: I ordered orange juice but got apple juice.
+3,offer_guidance,3,assistant: Thanks for clarifying. I can arrange a refund or send the correct product. What would you prefer?
+4,provide_information,4,customer: Please send the correct product.
+5,provide_information,5,assistant: Done! I’ll schedule a replacement delivery for tomorrow.
+6,acknowledge_and_thank,6,"customer: Perfect, thank you."
+7,offer_guidance,7,assistant: You’re very welcome. Is there anything else I can support you with today?
+8,close_conversation,8,"customer: No, that’s it."
+9,close_conversation,9,assistant: Great. Have a wonderful day!
+0,request_information,0,"customer: Hi, I need to update my email address."
+1,request_information,1,assistant: Sure thing. What’s the new email you’d like to use?
+2,provide_information,2,customer: john.doe@example.com.
+3,provide_information,3,assistant: Got it. I’ve updated your profile with the new email.
+4,request_information,4,customer: Will I still get my receipts and newsletters there?
+5,provide_information,5,"assistant: Yes, all communications will now go to the new address."
+6,acknowledge_and_thank,6,"customer: Perfect, thank you."
+7,offer_guidance,7,assistant: Happy to help. Anything else you’d like today?
+8,close_conversation,8,"customer: No, that’s all."
+9,close_conversation,9,"assistant: Great, enjoy your day!"
+0,request_information,0,"customer: Hi, I’d like to change my payment method."
+1,request_information,1,assistant: Of course. Which payment method would you like to use instead?
+2,provide_information,2,customer: I want to switch to PayPal.
+3,provide_information,3,assistant: Got it. I’ll update your account to use PayPal for future orders.
+4,acknowledge_and_thank,4,"customer: Great, thanks."
+5,offer_guidance,5,assistant: You’re welcome. Do you also want me to refund the last order to PayPal instead of your card?
+6,provide_information,6,"customer: Yes, that would be better."
+7,provide_information,7,"assistant: Okay, refund has been redirected to PayPal. You should see it in 2–3 days."
+8,acknowledge_and_thank,8,"customer: Awesome, thank you so much."
+9,offer_guidance,9,assistant: My pleasure! Anything else I can support you with?
+10,close_conversation,10,"customer: No, that’s all."
+11,close_conversation,11,"assistant: Alright, have a great day!"
+0,request_information,0,"customer: Hello, the app keeps crashing on my phone."
+1,request_information,1,assistant: Sorry to hear that. Which phone model are you using?
+2,provide_information,2,customer: It’s an iPhone 12.
+3,request_information,3,assistant: Thanks. Have you updated to the latest version of the app?
+4,provide_information,4,"customer: Not sure, maybe not."
+5,offer_guidance,5,assistant: Please try updating the app in the App Store. That usually fixes the issue.
+6,acknowledge_and_thank,6,"customer: Okay, I’ll do that."
+7,offer_guidance,7,"assistant: If it still crashes after the update, let us know and we’ll investigate further."
+8,acknowledge_and_thank,8,"customer: Will do, thanks for the help!"
+9,close_conversation,9,assistant: You’re welcome! Have a great day.
+0,request_service_cancellation,0,"customer: Hi, I want to unsubscribe from the newsletter."
+1,offer_guidance,1,"assistant: Sure, I can help. Do you want to unsubscribe from all emails or just promotions?"
+2,specify_preference,2,customer: Just the promotions please.
+3,confirm_action,3,assistant: Understood. I’ve updated your email settings so you’ll only receive receipts and account info.
+4,acknowledge_and_thank,4,"customer: Great, thanks a lot."
+5,acknowledge_and_thank,5,assistant: Anytime! Your preference is saved.
+0,request_information,0,"customer: Hi, I can’t find my receipt in the app."
+1,request_specification,1,"assistant: No problem, I can help. Which order date are you looking for?"
+2,provide_information,2,customer: From last Friday.
+3,provide_information,3,assistant: Thanks! It looks like the receipt is still being processed. It should appear within 24 hours.
+4,acknowledge_and_thank,4,"customer: Okay, good to know."
+5,offer_guidance,5,assistant: Would you like me to email you a copy once it’s ready?
+6,confirm_action,6,"customer: Yes, that would be great."
+7,confirm_action,7,"assistant: Perfect, I’ll make sure you receive it by tomorrow."
+8,acknowledge_and_thank,8,customer: Thanks a lot!
+9,close_conversation,9,assistant: You’re welcome! Have a nice day.
+0,request_information,0,"customer: Hi, I accidentally ordered the wrong size of detergent."
+1,offer_guidance,1,assistant: No problem. Do you want to exchange it for the correct size or get a refund?
+2,confirm_action,2,customer: I’d like to exchange it.
+3,confirm_action,3,"assistant: Sure, I’ll arrange an exchange. The courier will pick up the wrong item and deliver the correct one tomorrow."
+4,express_gratitude,4,"customer: Perfect, thank you."
+5,acknowledge_and_thank,5,assistant: You’re very welcome!
+0,request_information,0,"customer: Hello, I haven’t received my invoice yet."
+1,request_information,1,assistant: Sorry about that. Could you give me your order number?
+2,provide_information,2,customer: It’s 10322.
+3,confirm_action,3,assistant: Thanks. The invoice is being generated and should arrive in your email within 24 hours.
+4,acknowledge_and_thank,4,"customer: Okay, I’ll wait for it."
+5,offer_guidance,5,"assistant: If it doesn’t arrive by then, let us know and I’ll resend it."
+6,confirm_action,6,"customer: Will do, thanks!"
+7,express_gratitude,7,assistant: Happy to help!
+0,request_action,0,"customer: Hi, I need to cancel my order."
+1,request_information,1,assistant: I can help with that. Could you share the order number?
+2,provide_information,2,"customer: Yes, it’s 45911."
+3,acknowledge_and_thank,3,"assistant: Thanks. The order is still being prepared, so I can cancel it right now."
+4,confirm_action,4,customer: Please go ahead.
+5,confirm_action,5,"assistant: Done. Your order has been canceled, and the payment will be refunded within 2–3 days."
+6,acknowledge_and_thank,6,"customer: Perfect, thanks for the quick help."
+7,offer_guidance,7,assistant: You’re very welcome. Anything else you’d like me to check?
+8,close_conversation,8,"customer: No, that’s it."
+9,close_conversation,9,assistant: Alright. Have a nice day!

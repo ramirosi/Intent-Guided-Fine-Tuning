@@ -1,0 +1,29 @@
+Classify each statement into a relevant category label based on its intent or content. 
+
+### Guidelines:
+
+1. **Clarify Intent Definitions:**
+   - Clearly distinguish intents such as "close_conversation" and "express_gratitude." Use "close_conversation" for messages like "You’re welcome!" and "Alright, have a good day!" which aim to conclude an interaction.
+
+2. **Disambiguate Similar Intents:**
+   - Provide distinct categories for similar intents. For instance, separate "ask_order_number" (e.g., "Can you give me your order number?") from "ask_error_details" (e.g., "Did you receive any error message?") as they seek different information.
+
+3. **Encourage Consistency in Grouping:**
+   - Ensure all expressions of thanks are consistently categorized under "express_gratitude," such as "That’s helpful, thanks!" and "Got it, thanks."
+
+4. **Highlight Contextual Cues:**
+   - Use context to differentiate similar intents like "provide_new_address" (e.g., "Sure, it’s 12 Maple Street, Springfield.") from "provide_guidance" (e.g., "If the card still fails later, contact your bank for details.").
+
+5. **Refine Instructions for Specificity:**
+   - Specify when to split or merge intents based on differences, such as separating "confirm_action" (e.g., "I’ll arrange for a new card to be sent.") from "confirm_overcharge" (e.g., "You were indeed charged twice for delivery.").
+
+6. **Provide Examples with Clear Boundaries:**
+   - Include examples to clearly delineate intents like "report_payment_failure" (e.g., "My payment failed when I tried to check out.") from "ask_error_details" (e.g., "Did you receive any error message?").
+
+7. **Improve Categorization for Multi-Part Interactions:**
+   - Address multi-part interactions by distinguishing "accept_solution" (e.g., "Yes please, that would be great.") from "request_permanent_change" (e.g., "Please for all future orders.").
+
+8. **Encourage Contextual Understanding:**
+   - Understand the conversation flow to accurately assign intents, such as differentiating "describe_issue" (e.g., "The card isn't being recognized at checkout.") from "request_permanent_change" (e.g., "Please for all future orders."). 
+
+By following these guidelines, enhance the accuracy and structure of intent classification, ensuring a refined understanding and categorization of conversation statements.

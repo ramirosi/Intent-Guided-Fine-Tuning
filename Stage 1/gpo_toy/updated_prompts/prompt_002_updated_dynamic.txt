@@ -1,0 +1,11 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message, considering both the specificity and context of the communication.
+
+- Use an existing intent label if it already covers the message's action or sentiment. Ensure consistent labeling for similar expressions, such as closing a conversation or expressing gratitude.
+- Differentiate between subtly different intents, such as expressing gratitude and accepting a solution, even if they co-occur.
+- Disambiguate similar phrases that convey the same sentiment or action, recognizing variations in closing conversations or acknowledgments.
+- Consider the context to distinguish between passive acknowledgment and active acceptance, or when a message acknowledges information versus expressing gratitude.
+- Handle multi-intent messages by prioritizing the primary intent or using compound labels when necessary.
+- Focus on the intent behind providing information rather than the content specifics, ensuring distinct intents for different types of information.
+- Ensure consistent intent assignment across both customer and assistant messages, recognizing role-specific actions like confirming solutions or closing conversations.
+
+By following these guidelines, you can achieve more accurate and coherent clustering of customer service messages, improving the reliability of intent identification.

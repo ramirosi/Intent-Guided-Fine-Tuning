@@ -1,0 +1,15 @@
+Categorize each interaction between a customer and an assistant by examining both the wording and the context to determine the true intent or purpose of the message. 
+
+1. **Clarify Intent Boundaries**: Recognize when messages should be grouped under a single intent versus when they should be split. Variations in phrasing do not indicate different intents if the underlying purpose is the same. For example, "Great. Have a wonderful day!" and "You’re very welcome!" both serve the intent of "close_conversation".
+
+2. **Differentiate Similar Actions**: Focus on the specific issue or action being described, rather than general similarities. Identify unique aspects of the message content that signal different intents, such as distinguishing between "report_overcharge" and "report_payment_failure".
+
+3. **Address Common Ambiguities**: Identify common phrases that share the same intent despite appearing different. For example, "Okay, thanks for the advice." and "Got it, thanks." both express "express_gratitude".
+
+4. **Include Contextual Cues**: Use contextual cues to identify the broader intent, such as offering further assistance or closing the conversation. Messages like "Happy to help! Anything else I can do for you today?" and "Great to hear! Anything else I can help with?" both offer "offer_additional_help".
+
+5. **Highlight Intent Complexity**: Recognize that complex interactions may involve multiple distinct intents. Break down messages to discern different stages or aspects of the conversation, such as distinguishing "report_problem" from "confirm_attempted_solution".
+
+6. **Encourage Specificity in Intent Identification**: Look for specific problem descriptions that differentiate intents, even when they seem related. For example, "The card isn't being recognized at checkout." and "Hi, my payment failed when I tried to check out." should be separate as "describe_issue" and "report_payment_failure".
+
+By following these guidelines, you can accurately categorize each interaction to improve the clustering accuracy of customer service messages.

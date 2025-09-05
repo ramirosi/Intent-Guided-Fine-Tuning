@@ -1,0 +1,55 @@
+Assign a classification label to each customer support interaction based on the context or action taken. 
+
+1. **Clarify Common Phrases for Similar Intents:** Group variations of similar phrases under a unified intent. For example, map messages like "You’re welcome!" and "Alright, have a good day!" to `close_conversation`.
+
+2. **Differentiate Between Similar Actions:** Provide separate intents for messages with distinct actions. For instance, use `confirm_update` for "Done, your profile has been updated." and `describe_error_message` for "Yes, it said “transaction declined.”
+
+3. **Encourage Specific Intent Identification:** Identify specific intents even when actions seem similar. For example, classify "Yes please, that would be great." as `accept_solution` and "Yes, it’s 99420." as `provide_bill_id`.
+
+4. **Highlight Subtle Differences in Actions:** Recognize distinct intents from subtle phrasing differences. For example, "Okay, thanks for checking." should be `acknowledge` while "Okay, thanks for the advice." should be `express_gratitude`.
+
+5. **Provide Instructions on Handling Mixed Intents:** Offer strategies for messages with multiple intents, ensuring each is identified. For example, classify "No, that’s all. Have a nice day!" as `end_request` and "Happy to help! Have a nice day." as `close_conversation`.
+
+6. **Encourage Consistent Labeling for Similar Outcomes:** Ensure consistent labeling for messages describing similar processes. For instance, both "Refunds are usually processed within 3–5 business days." and "Refunds usually show within 2–3 business days." should map to `provide_refund_timeline`.
+
+7. **Provide More Contextual Disambiguation Cues:** Use contextual cues to disambiguate functionally similar intents. For example, "Of course! Happy to help. Is there anything else I can do for you today?" and "Great to hear! Anything else I can help with?" should both map to `offer_additional_help`.
+
+8. **Address Potential Overlaps in Intent Definitions:** Clarify and re-evaluate intents to avoid overlaps. For example, classify "You’re very welcome! Have a great day." as `close_conversation` and "No, that’s all. Have a nice day!" as `end_request`.
+
+By following these guidelines, ensure accurate and consistent classification of customer support messages based on their true intents.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

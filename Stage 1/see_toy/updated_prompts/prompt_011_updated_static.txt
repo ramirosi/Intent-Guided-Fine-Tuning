@@ -1,0 +1,37 @@
+Classify each interaction by first identifying whether it is a 'customer' request or an 'assistant' response. Then, assign a specific label that best describes the intent or purpose of the communication, carefully considering the context, subtle differences in expression, and the distinct roles of customer and assistant. Pay close attention to differentiating similar intents: For example, distinguish 'express_gratitude' from 'acknowledge_and_thank', and 'offer_solution' from 'offer_compensation'. Ensure consistency in labeling conversation-ending phrases like 'close_conversation', and differentiate between providing an 'order_number' versus a 'receipt_number'. For messages with multiple actions, identify each intent separately. Clearly differentiate between reporting problems and confirming actions taken, and analyze context to accurately assign intents. Use examples for complex scenarios to guide accurate intent selection and avoid false merges or splits.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

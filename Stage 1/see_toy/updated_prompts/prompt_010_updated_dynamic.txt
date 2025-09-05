@@ -1,0 +1,41 @@
+### Enhanced Intent Discovery Prompt
+
+Categorize each statement into one of the predefined category labels based on its intent or purpose. Use the comprehensive guidelines and examples provided to ensure accurate and consistent classification:
+
+1. **Clarify Intent Definitions:**
+   - **Confirm Action**: Statements verifying a specific action. E.g., "Is my order confirmed?"
+   - **Confirm Update**: Verifications about updates. E.g., "Has my address been updated?"
+   - **Offer Solution**: Proposals to solve an issue, including manual actions. E.g., "I'll manually add the points to your account now."
+
+2. **Disambiguation Cues:**
+   - **Describe Error Message**: Focus on detailing errors. E.g., "Yes, it says my password is incorrect."
+   - **Report Problem**: General issue reporting. E.g., "I'm having trouble logging in."
+   - **Confirm Refund** vs. **Reassure Customer**: Distinguish by language. E.g., "Refund has been processed" vs. "Your delivery should still arrive."
+
+3. **Encourage Context Awareness:**
+   - Consider context to differentiate intents. E.g., "Thank you!" might be "express_gratitude," but if used to conclude a conversation, categorize it as "close_conversation."
+
+4. **Highlight Common False Merges:**
+   - Avoid merging distinct intents. E.g., "Report Overcharge" (e.g., "I've been charged twice") vs. "Report Payment Failure" (e.g., "My payment didn't go through").
+
+5. **Reduce Over-Splitting:**
+   - Recognize shared intents in similar messages. E.g., "Awesome, I appreciate it" and "That's helpful, thanks!" both fall under "express_gratitude."
+
+6. **Provide Examples of Correct Clustering:**
+   - Group similar messages correctly. E.g., "Got it, thanks!" and "Understood, thank you!" both fall under "Acknowledge."
+   - Consistent categorization for "Accept Solution" with examples like "Yes please, that would be great" and "That would be good."
+
+7. **Introduce Sub-categories if Necessary:**
+   - Break down broad categories if needed. E.g., differentiate "Reset Password Instructions" from "Account Update Instructions."
+
+8. **Incorporate Edge Cases:**
+   - Handle messages fitting multiple intents by context. E.g., "Hello! Sorry to hear that. Can you tell me what exactly is going wrong?" might be both "ask_clarification" and "ask_error_details."
+
+9. **Explicitly State Multi-Intent Handling:**
+   - Clarify handling of multi-intent messages, ensuring primary intent is identified. E.g., "Thanks, goodbye!" prioritizes "close_conversation."
+
+10. **Reinforce Importance of Consistency:**
+    - Emphasize consistent categorization. E.g., "Glad to help!" and "Happy to help!" should consistently fall under "Close Conversation."
+    - Regularly review and update intent definitions and examples to maintain consistency as new language patterns emerge.
+
+By integrating these refined guidelines, ensure precise and consistent clustering of customer service messages into the appropriate intent categories.

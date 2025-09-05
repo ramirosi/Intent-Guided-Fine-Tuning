@@ -1,0 +1,33 @@
+Categorize the given customer service responses into distinct and clearly defined intent labels, ensuring accuracy and consistency. Follow these refined guidelines and examples to assist in this process:
+
+1. **Intent Categories:**
+   - Provide clear definitions to differentiate similar intents:
+     - **Acknowledge:** Recognizing receipt of information without explicit gratitude. Example: "Okay, let me check."
+     - **Express_Gratitude:** Explicit thanks or appreciation. Example: "That’s helpful, thanks!"
+
+2. **Common Intent Examples:**
+   - **Confirm_Solution:** Indicating a solution has been accepted. Example: "Yes, that worked. Thanks!"
+   - **Close_Conversation:** Finalizing the interaction. Examples: "You’re very welcome!" and "Alright, have a good day!"
+
+3. **Disambiguation Cues:**
+   - Strengthen differentiation cues for intents like "Acknowledge" versus "Express_Gratitude". Explicit gratitude terms such as "thanks" or "appreciate" should be categorized as "Express_Gratitude".
+
+4. **Consistency in Intent Assignment:**
+   - Maintain uniformity in labeling similar responses. For instance, both "You’re very welcome!" and "Glad I could help!" should be labeled as "Close_Conversation".
+
+5. **Handling Multiple Actions:**
+   - Provide clear instructions for messages with multiple intents. Decide whether to split into separate intents or choose a primary one, e.g., "Okay, that works. Thank you for helping me." could be split into "Acknowledge" and "Express_Gratitude".
+
+6. **Refined Definitions for Edge Cases:**
+   - Clearly distinguish between overlapping intents like "Offer_Additional_Help" and "Close_Conversation". For example, "Is there anything else I can do for you today?" should be categorized as "Offer_Additional_Help".
+
+7. **Handling Ambiguous Phrases:**
+   - Use context to interpret ambiguous phrases, ensuring specificity. For instance, differentiate "offer_alternative_updates" from "explain_issue" by context in messages like "I’ll send you updates by SMS until it arrives."
+
+8. **Regular Review and Adjustment:**
+   - Emphasize the importance of regularly updating intent categories to reflect changes in customer interaction patterns, minimizing errors like "false_merge" and "false_split".
+
+9. **Illustrate with Error Examples:**
+   - Use specific examples to illustrate common mistakes and corrections. For instance, separate "Great, how long will the refund take?" from "ask_order_number" to clarify distinct intents.
+
+By implementing these guidelines, you will enhance the accuracy and consistency of intent categorization in customer service interactions.

@@ -1,0 +1,37 @@
+Categorize each statement based on its intent or purpose.
+
+### Guidelines for Categorization:
+
+1. **Express Gratitude**: Use this category for statements that convey thanks or appreciation. For example, "Okay, thanks for the advice." and "Awesome, appreciate the quick fix!"
+
+2. **Close Conversation**: Use this category for statements intended to end a conversation. For example, "You’re very welcome!" and "Glad to help!"
+
+3. **Accept Solution**: Use this category for customer statements indicating acceptance or agreement with a proposed solution. For example, "Yes please, that would be great." and "That would be good."
+
+4. **Offer Solution**: Use this category for assistant statements proposing a solution. For example, "Would you like me to request a replacement card for you?" and "I’ll refund the extra charge immediately."
+
+5. **Report Issue**: Use this category for statements that describe a problem or issue. Consider the specifics of the issue, not just the greeting. For example, "Hello, my delivery is late." and "Hello, one of the items I bought is expired."
+
+6. **Acknowledge**: Use this category for statements that show understanding or recognition of information. For example, "Oh, I didn’t realize." and "Okay, thanks for letting me know."
+
+7. **Confirm Refund**: Use this category specifically for statements confirming a refund. For example, "Refund has been processed."
+
+8. **Confirm Action**: Use this category for statements that confirm any action has been completed. For example, "Done. The points are now visible in your balance."
+
+9. **Offer Compensation**: Use this category for assistant statements offering compensation. For example, "Would you like a voucher for the inconvenience as well?"
+
+10. **Provide Information**: Use this category for statements offering informational responses. For example, "Refunds are usually processed within 3–5 business days."
+
+11. **Provide Promo Code**: Use this category for statements providing a promotional code. For example, "It’s FREEDELIVERY."
+
+12. **Provide Order Number**: Use this category for statements providing an order number. For example, "Your order number is 12345."
+
+### Disambiguation Cues:
+
+- **Speaker Role**: Differentiate between customer and assistant statements to determine the intent. For example, categorize a customer's "Yes, please" as "Accept Compensation" and an assistant's "I’ll issue a refund right away" as "Offer Solution."
+
+- **Contextual Understanding**: Pay attention to the context to accurately determine intent. For example, distinguish between an assistant confirming a refund timeline and acknowledging a system glitch.
+
+- **Multi-intent Scenarios**: Identify the primary intent in complex statements. For example, "I’ll issue a refund right away and also notify the store" should be categorized primarily under "Offer Solution."
+
+Apply these guidelines to ensure accurate and contextually relevant intent categorization.

@@ -1,0 +1,60 @@
+When labeling each message, focus on identifying the underlying intent by carefully examining both subtle differences and similarities in phrasing. Here are key guidelines to assist in accurate intent discovery:
+
+1. **Clarify Intent Identification**:
+   - Identify messages that convey the same intent despite different expressions (e.g., "Yes please, that would be great." and "Perfect, thank you." should both be labeled as 'accept_solution'). Emphasize recognizing varied phrasing for similar intents.
+
+2. **Enhance Differentiation of Actions**:
+   - Clearly distinguish between messages with different actions or outcomes (e.g., "Hi, I'm having trouble with my loyalty card." should be labeled 'report_problem', while "Yes, I tried both. Still doesn't work." should be 'confirm_attempted_solution').
+
+3. **Highlight the Need for Granularity**:
+   - Focus on specific actions or outcomes in messages (e.g., "You’re very welcome! Let me know if you need more help after resetting." should be 'offer_followup' and "No, that’s all. Have a nice day!" should be 'end_request').
+
+4. **Encourage Contextual Analysis**:
+   - Use context and conversation flow to determine intent (e.g., "I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?" should be 'suggest_troubleshooting', and "Thanks. That code is only valid for orders above $50." should be 'explain_restriction').
+
+5. **Improve Label Specificity**:
+   - Create labels that encapsulate both the action and context (e.g., "Done, your profile has been updated." should have a distinct label from "Got it. I’ve updated your delivery slot to 6–8 pm." by considering the specific updates being confirmed).
+
+6. **Balance Specificity and Generalization**:
+   - Find a balance between broad and specific categories (e.g., "Okay, that works. Thank you for helping me." and "Thanks, that works." should consistently be labeled as 'express_gratitude' to avoid false splits).
+
+7. **Distinguish Function in Similar Responses**:
+   - Differentiate responses with similar wording but different functions (e.g., "That would be great, thanks!" should be labeled 'accept_solution', while "That’s helpful, thanks!" should be 'express_gratitude', based on their contextual function).
+
+By integrating these guidelines, you'll enhance your ability to accurately and contextually label messages, improving the effectiveness of intent clustering.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

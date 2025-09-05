@@ -1,0 +1,58 @@
+Classify each input according to the following refined list of intents, taking into account the context and the role of the speaker (customer vs. assistant). Pay special attention to distinguishing between closely related intents and understanding the nuances of each category:
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern. Note that acknowledgment may coexist with gratitude but should be identified as distinct when acknowledging an action or solution.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation. Differentiate from accepting solutions or closing conversations when gratitude is the primary intent.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction. Identify when this overlaps with gratitude or other intents and determine which is predominant.
+11. **accept_solution**: Agreeing to a proposed resolution. Distinguish from mere expressions of satisfaction or gratitude.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed. Differentiate from offering solutions or confirming follow-ups.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions. Differentiate from confirming immediate actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+18. **provide_guidance**: Giving instructions or advice on how to proceed. Differentiate when both suggesting alternatives and providing guidance are involved.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification, highlight common pitfalls, and provide corrective examples to avoid errors such as false splits and merges in intent classification.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,63 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message with careful consideration of the following guidelines:
+
+1. **Clarify Existing Intent Labels:**
+   - Use existing intent labels with clear definitions to reduce ambiguity. For instance, "express_gratitude" is used for messages that convey thanks, while "acknowledge_and_thank" is for messages that acknowledge information and express gratitude.
+
+2. **Identify Common Overlaps:**
+   - Pay attention to overlaps between intents, such as distinguishing "express_gratitude" from "close_conversation." For example, messages like "You’re welcome! Have a nice day." should be split into intents "close_conversation" and "express_gratitude" if they carry distinct meanings.
+
+3. **Evaluate New Intent Necessity:**
+   - Create new intents only when a message introduces a truly distinct issue. Evaluate whether the message is unique enough to warrant a separate intent to avoid unnecessary splits.
+
+4. **Use Disambiguation Cues:**
+   - Look for specific keywords or phrases in messages as cues for assigning intents. Phrases like "thank you" typically indicate "express_gratitude," while resolutions or farewells often suggest "close_conversation."
+
+5. **Examples of Correct Intent Assignment:**
+   - Refer to examples of accurately assigned intents to guide your evaluation and ensure precision in intent clustering.
+
+6. **Ensure Consistency in Similar Phrasing:**
+   - Maintain consistency for messages with similar phrasing or sentiment. For example, "Glad I could help!" and "Happy to help!" should have the same intent, such as "close_conversation."
+
+7. **Consider Contextual Transitions:**
+   - Use context to determine intent, especially when messages transition between different phases of the conversation. This helps in understanding natural progressions, such as from "express_gratitude" to "close_conversation."
+
+8. **Recognize Sequential Intent Progression:**
+   - Identify when intents naturally progress within a conversation. For instance, a customer saying "Okay, thanks for the quick check" followed by an assistant's "You’re welcome!" should be split into "express_gratitude" and "close_conversation."
+
+By following these guidelines, you will improve the accuracy of intent clustering and better align with the underlying intentions of customer service messages.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

@@ -1,0 +1,21 @@
+Classify each input according to the following expanded list of intents, taking into account the context and the role of the speaker (customer vs. assistant): 
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction.
+11. **accept_solution**: Agreeing to a proposed resolution.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification and avoid common pitfalls in distinguishing overlapping actions.

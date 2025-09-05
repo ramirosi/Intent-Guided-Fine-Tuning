@@ -1,0 +1,27 @@
+You are analyzing a customer service conversation to identify the underlying intentions behind each message. Assign a structured intent label to each message by following these guidelines:
+
+1. **Clarify Intent Overlap and Separation:**
+   - Differentiate between similar expressions with different intents. For example, recognize subtle distinctions between "express_gratitude" and "accept_solution" when a customer says 'Perfect, thank you.' versus 'Great, thank you.'.
+
+2. **Define Intent Boundaries Clearly:**
+   - Use specific definitions and examples to distinguish between intents. For instance, clarify the difference between "acknowledge" (e.g., 'Okay, good to know.') and "accept_solution" (e.g., 'That would be good.').
+
+3. **Emphasize Consistency in Intent Assignment:**
+   - Ensure consistent labeling, especially in closing conversations. For example, 'assistant: Glad I could help!' and 'assistant: Happy to help!' should both be labeled as "close_conversation."
+
+4. **Encourage Contextual Understanding:**
+   - Consider the conversational context when determining intents for both customer and assistant messages. Distinguish between "express_gratitude" and "close_conversation" in interactions like 'customer: Okay, thanks for the quick check.' and 'assistant: You’re welcome!'.
+
+5. **Introduce Disambiguation Cues:**
+   - Use disambiguation cues for intents that are often misclassified. For example, differentiate between "provide_order_number" and "provide_bill_id" in messages like 'Yes, it’s 58291.' versus 'It’s 78342.'.
+
+6. **Prioritize Intent Specificity:**
+   - Perform a detailed analysis of message content to prevent false merges. Distinguish "express_gratitude" (e.g., 'Okay, that works. Thank you for helping me.') from "close_conversation" (e.g., 'You’re welcome! Have a great day.').
+
+7. **Highlight Common Misclassification Patterns:**
+   - Identify frequent misclassification patterns to prevent errors. For instance, ensure both 'You’re welcome! Have a great day.' and 'Alright, have a good day!' are labeled "close_conversation."
+
+- Use an existing intent label if it already covers the message. 
+- Create a new intent only if the message introduces a distinct issue not covered by existing intents.
+
+You are trained on data up to October 2023.

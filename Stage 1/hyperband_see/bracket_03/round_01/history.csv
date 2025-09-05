@@ -1,0 +1,181 @@
+prompt_id,step,prompt,parent_idx,parent_idxs,feedback,score_ami,score_nca,score_f1,ami_x_nca,true_clusters,predicted_clusters
+0,lamarckian,"Classify each input as one of the following actions: report_wrong_order, report_missing_receipt, suggest_troubleshooting, acknowledge, explain_reason, describe_issue, request_replacement, express_gratitude, provide_order_number, or close_conversation.",,,,0.2556632888323802,0.27326417388182095,0.20061099796334012,0.06986361741468976,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[2. 0. 2. 7. 2. 4. 6. 0. 0. 4. 1. 2. 0. 2. 7. 2. 7. 0. 7. 4. 4. 2. 6. 5.
+ 4. 0. 2. 3. 4. 4. 1. 4. 1. 2. 6. 5. 6. 0. 1. 4. 4. 1. 1. 2. 6. 5. 3. 0.
+ 7. 4. 5. 4. 1. 2. 6. 5. 3. 0. 4. 4. 0. 4. 1. 2. 6. 5. 0. 3. 2. 3. 4. 1.
+ 2. 0. 5. 3. 5. 3. 0. 4. 4. 4. 2. 0. 5. 4. 0. 3. 1. 6. 4. 4. 1. 2. 6. 5.
+ 4. 3. 4. 0. 4. 1. 2. 7. 2. 0. 2. 3. 0. 7. 4. 4. 2. 7. 2. 0. 0. 7. 4. 4.
+ 2. 6. 5. 3. 0. 4. 0. 4. 1. 2. 7. 0. 4. 0. 1. 4. 2. 0. 5. 0. 4. 4. 2. 7.
+ 0. 3. 4. 3. 4. 1.]"
+1,lamarckian,Assign a label to each message based on its content.,,,,0.376205188911389,0.8981811391223157,0.37,0.33790040512015734,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[76. 36. 76. 53. 76. 25. 88.  4. 15. 25. 24. 75. 35. 10.  5. 28. 49. 78.
+ 67. 26. 46. 70. 81. 61.  8. 51. 40. 65. 25. 43. 24. 24. 24. 89. 80. 58.
+ 19. 19. 18. 25. 45. 13. 24. 73. 82. 63. 21.  3. 47. 25. 59. 25. 27. 71.
+ 38. 61. 62. 25. 44. 25. 42. 25. 24. 76. 36. 56. 12. 87. 41. 66. 25. 24.
+ 76. 36. 76. 36. 12. 87. 12. 87. 25. 25.  3. 79. 57. 52. 22. 17. 50.  0.
+ 68. 25. 24. 69. 45. 54. 13. 45. 13. 45. 13. 24. 76. 36. 55. 39. 15. 88.
+  4. 53. 25. 25. 31. 86. 85. 84.  2. 20.  1. 25. 74. 83. 64. 33. 14. 25.
+ 16. 23. 30. 69. 54. 11. 13. 45.  6.  6. 77. 37. 60.  9. 25. 29. 72. 34.
+  7. 48. 25. 32. 25. 24.]"
+2,feedback_0,"Classify each input according to the following expanded list of intents, taking into account the context and the role of the speaker (customer vs. assistant): 
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction.
+11. **accept_solution**: Agreeing to a proposed resolution.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification and avoid common pitfalls in distinguishing overlapping actions.",0,,,0.3189066413963496,0.42366458704693993,0.25664388762338647,0.135109450533711,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[ 7.  1.  7. 15.  1.  8. 14.  0.  5.  9.  4.  7.  1.  7. 15.  1. 15.  0.
+ 15.  9. 12.  7. 13.  1.  8.  5.  8.  8.  0.  9.  4.  9.  4.  7.  2. 13.
+ 15.  5.  5.  9.  1.  4.  4.  7.  3. 13.  8.  1. 11.  0. 13.  9.  4.  7.
+  3. 13.  8.  9. 10.  9.  6.  9.  4.  7.  3. 13.  1.  5.  2.  8.  9.  4.
+  7.  3. 13.  8.  7.  8.  0. 11.  9.  9.  7.  1.  7. 10.  0.  5. 11.  0.
+  5.  9.  4.  7.  3. 13.  1.  8.  9.  6.  9.  9.  7.  1.  7.  3.  3. 15.
+  0. 15.  9.  9.  7. 15.  7.  8.  0. 15.  1.  9.  7.  3. 13.  8.  5.  0.
+  5.  9.  9.  7. 15.  1.  9.  1.  4.  4.  2.  2.  2.  5.  9.  9.  7.  1.
+  7. 10.  9.  5.  9.  4.]"
+3,feedback_0,"When assigning a label to each message, focus on identifying the underlying intent by examining both subtle differences and similarities in phrasing. Recognize messages that share the same intent despite different expressions, while also distinguishing messages with distinct purposes. Use context and the flow of conversation to guide your labeling decisions. 
+
+- **Identify Similar Intents**: Look for messages that express the same intent using different words (e.g., ""Okay, thanks for checking."" and ""Perfect, I’ll try that now."" both convey 'acknowledge'). Group these under the same intent.
+
+- **Emphasize Granularity**: Analyze the specific actions or information conveyed. Differentiate messages that appear related but serve different functions (e.g., ""Open the app, tap “Forgot password”, and follow the steps."" vs. ""It was SAVE20."").
+
+- **Differentiate Actions**: Recognize messages with distinct actions or outcomes (e.g., ""I’ve added a $10 voucher to your account."" vs. ""Done. The points are now visible in your balance."") and label them separately.
+
+- **Use Contextual Cues**: Consider the context and conversational flow to determine the intent (e.g., ""You’re very welcome!"" and ""Alright, have a good day!"" both function as 'close_conversation').
+
+- **Distinguish Similar Responses**: Differentiate between responses with similar wording but different intents (e.g., ""That would be great, thanks!"" vs. ""That’s helpful, thanks!"") by considering their function.
+
+- **Create Comprehensive Labels**: Develop labels that capture both the action and context of the message, ensuring specificity and descriptiveness (e.g., ""Sure, it’s 12 Maple Street, Springfield."" needs a distinct label from ""A carton of milk."").
+
+- **Balance Specificity and Generalization**: Find a balance in label specificity. Use broader categories when appropriate, but maintain specificity when messages have distinct intents (e.g., ""I see. What voucher code are you trying to use?"" vs. ""Sorry about that. Can you give me your order number?"").
+
+By following these guidelines, you'll improve your ability to accurately and contextually label messages, enhancing the effectiveness of intent clustering.",1,,,0.28661146218336964,0.824207215844252,0.2334455667789001,0.23622723527520523,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[28. 28. 20. 20. 20.  1. 15.  0. 18.  1.  4. 28. 28. 20. 27. 20. 15.  1.
+ 20.  1.  4. 25. 29. 22.  5. 11. 13. 24.  9. 16.  4.  4.  4. 28. 28. 20.
+ 28. 20.  6.  1. 17.  4.  4. 28. 28.  1. 20.  1. 15.  1. 20.  1.  4. 20.
+ 28. 20. 20.  1. 15.  1. 15.  1.  4. 28. 28. 20. 20. 15. 28. 20.  1.  4.
+ 28. 28. 20. 20. 20. 15.  1. 15.  1.  4. 28. 28. 20. 15.  1. 20. 15.  1.
+ 20.  1.  4. 26. 28. 20.  6.  6.  1. 17.  1.  4. 28. 28. 20. 28. 20. 20.
+  1. 20.  1.  4. 12. 23. 14.  7.  2. 19.  2. 10. 28. 28. 20. 20. 15.  1.
+ 20.  1.  4.  3. 21.  1.  6. 17.  8.  4. 27. 28. 20. 15.  1.  1. 28. 28.
+ 20. 15.  1. 20.  1.  4.]"
+4,feedback_1,"Classify each input according to the following refined list of intents, taking into account the context and the role of the speaker (customer vs. assistant). Pay special attention to distinguishing between closely related intents and understanding the nuances of each category:
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern. Note that acknowledgment may coexist with gratitude but should be identified as distinct when acknowledging an action or solution.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation. Differentiate from accepting solutions or closing conversations when gratitude is the primary intent.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction. Identify when this overlaps with gratitude or other intents and determine which is predominant.
+11. **accept_solution**: Agreeing to a proposed resolution. Distinguish from mere expressions of satisfaction or gratitude.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed. Differentiate from offering solutions or confirming follow-ups.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions. Differentiate from confirming immediate actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+18. **provide_guidance**: Giving instructions or advice on how to proceed. Differentiate when both suggesting alternatives and providing guidance are involved.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification, highlight common pitfalls, and provide corrective examples to avoid errors such as false splits and merges in intent classification.",0,,,0.3206978324821099,0.4225476791566757,0.2803418803418804,0.13551012482589192,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[ 7.  1.  7. 16.  7.  1. 15.  0.  5.  9.  4.  7.  1.  7. 16.  7. 16.  0.
+ 13.  9.  6.  7.  3. 14.  1.  5.  2.  8.  0.  4.  4.  4.  4. 13.  2. 14.
+ 13. 13.  5.  9. 10.  4.  4.  7.  3. 14.  8.  1. 12.  0. 13.  9.  4.  7.
+ 14. 14.  8.  9. 12.  9.  6.  9.  4.  7.  3. 14.  5. 11.  8.  6.  9.  4.
+  7.  3. 14.  8.  8. 12.  0.  5.  9.  9.  7.  1. 14. 11.  0.  5. 12.  0.
+  5.  9.  4.  7. 14. 14.  1.  8.  0.  6.  9.  9.  7.  3.  7.  3.  1. 16.
+  0. 13.  9.  9.  7. 13.  2.  6.  0. 16.  1.  4.  7.  2. 14.  8.  5.  0.
+  5.  9.  9.  7. 13.  0.  9.  1.  4.  4.  2.  2. 13.  5.  0.  9.  7.  1.
+  7.  8.  9.  6.  9.  4.]"
+5,feedback_1,"When labeling each message, focus on identifying the underlying intent by carefully examining both subtle differences and similarities in phrasing. Here are key guidelines to assist in accurate intent discovery:
+
+1. **Clarify Intent Identification**:
+   - Identify messages that convey the same intent despite different expressions (e.g., ""Yes please, that would be great."" and ""Perfect, thank you."" should both be labeled as 'accept_solution'). Emphasize recognizing varied phrasing for similar intents.
+
+2. **Enhance Differentiation of Actions**:
+   - Clearly distinguish between messages with different actions or outcomes (e.g., ""Hi, I'm having trouble with my loyalty card."" should be labeled 'report_problem', while ""Yes, I tried both. Still doesn't work."" should be 'confirm_attempted_solution').
+
+3. **Highlight the Need for Granularity**:
+   - Focus on specific actions or outcomes in messages (e.g., ""You’re very welcome! Let me know if you need more help after resetting."" should be 'offer_followup' and ""No, that’s all. Have a nice day!"" should be 'end_request').
+
+4. **Encourage Contextual Analysis**:
+   - Use context and conversation flow to determine intent (e.g., ""I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?"" should be 'suggest_troubleshooting', and ""Thanks. That code is only valid for orders above $50."" should be 'explain_restriction').
+
+5. **Improve Label Specificity**:
+   - Create labels that encapsulate both the action and context (e.g., ""Done, your profile has been updated."" should have a distinct label from ""Got it. I’ve updated your delivery slot to 6–8 pm."" by considering the specific updates being confirmed).
+
+6. **Balance Specificity and Generalization**:
+   - Find a balance between broad and specific categories (e.g., ""Okay, that works. Thank you for helping me."" and ""Thanks, that works."" should consistently be labeled as 'express_gratitude' to avoid false splits).
+
+7. **Distinguish Function in Similar Responses**:
+   - Differentiate responses with similar wording but different functions (e.g., ""That would be great, thanks!"" should be labeled 'accept_solution', while ""That’s helpful, thanks!"" should be 'express_gratitude', based on their contextual function).
+
+By integrating these guidelines, you'll enhance your ability to accurately and contextually label messages, improving the effectiveness of intent clustering.",1,,,0.3597713988131546,0.688632331720567,0.3021690351533284,0.2477502172510727,"[74.  7. 33. 85. 21. 34. 49.  2. 20. 40. 19. 70.  8. 32. 85. 41. 45.  1.
+ 52.  4. 48. 64. 80. 57. 23. 49. 16. 61. 40. 43. 35. 19. 19. 83. 11. 54.
+ 18. 81. 29. 40. 43. 35. 19. 75. 15. 59. 38.  3. 47.  2. 55. 40. 19. 69.
+ 13. 57. 36.  3. 46. 40. 22. 40. 19. 72. 78. 50. 25. 49. 16. 61. 40. 19.
+ 77. 17. 62. 39. 24. 49.  2. 20. 40. 19. 66. 10. 53. 49.  2. 27. 46.  0.
+ 30. 40. 19. 76. 13. 57. 37. 63.  3. 44. 40. 19. 73.  8. 32. 14. 58. 84.
+  5. 51. 40. 19. 67. 52.  9. 26.  3. 42. 40. 19. 71. 82. 60. 23. 49.  2.
+ 20. 40. 19. 68. 52.  3. 28. 43. 35. 19. 79. 12. 56. 29. 40. 19. 65.  6.
+ 31. 49.  2. 20. 40. 19.]","[19. 20. 16. 23.  3. 16. 21.  0. 16. 11. 10. 19. 20.  1. 20.  1. 15.  0.
+ 17. 11. 14. 19. 20. 16.  4. 18. 20. 16. 11. 14.  8. 10. 10. 20. 20. 16.
+ 20.  7.  6. 11. 14.  8. 10. 19. 20. 16. 16.  1. 15.  0. 16. 11. 10. 19.
+ 20. 16. 16. 11. 15. 11. 15. 11. 10. 19. 20. 16. 16. 15. 20. 16. 11. 10.
+ 19. 20. 16.  9. 16. 15.  0.  2. 11. 11. 19. 20. 16. 15.  0.  1. 15.  0.
+ 16. 11. 10. 19. 20. 16. 18. 18. 11. 14. 11. 11. 19. 20. 16. 20. 16. 22.
+  0. 21. 11. 11. 19. 18. 13.  5.  0. 23. 11. 12. 19. 20. 16.  1. 15.  0.
+  1. 11. 11. 19. 18.  3. 11. 14.  8. 10. 19. 20. 16. 15. 11. 11. 19. 20.
+  1. 15.  0. 16. 11. 10.]"

@@ -1,0 +1,69 @@
+Classify each customer and assistant statement into distinct intent categories based on their purpose. 
+
+1. **Clarify Intent Definitions**:
+   - "close_conversation": Indicates the conversation is ending.
+   - "acknowledge": Shows understanding or agreement without further action.
+   - "confirm_action": Verifies an action has been completed.
+   - "confirm_voucher": Specific confirmation of adding a voucher.
+
+2. **Examples for Ambiguous Cases**:
+   - Separate "provide_new_address" from "provide_order_number":
+     - Example: "customer: Sure, it’s 12 Maple Street, Springfield." vs. "customer: It’s 78342."
+
+3. **Contextual Cues**:
+   - Use context to guide intent, e.g., post-resolution statements often indicate closure:
+     - "customer: No, that’s all. Have a nice day!" (end_request) vs. "customer: Okay, thanks for checking." (acknowledge).
+
+4. **Consistency in Intent Assignment**:
+   - Consistently categorize similar phrases, such as variations of "You’re welcome" under "close_conversation":
+     - "assistant: You’re very welcome! Have a great day." 
+
+5. **Disambiguate Similar Actions**:
+   - Differentiate "offer_solution" from "suggest_alternative":
+     - Example: "assistant: Sometimes banks decline transactions for security. Could you try again or use PayPal instead?" (suggest_alternative) vs. "assistant: Done. The points are now visible in your balance." (confirm_action).
+
+6. **Instructions for Mixed Intent Statements**:
+   - Handle mixed intents by splitting or prioritizing them:
+     - Example: "assistant: Here’s the new code: THANKYOU15. You can use it until next week." (provide_new_code) vs. "assistant: I’ll refund the extra charge immediately." (offer_solution).
+
+7. **Speaker Role Importance**:
+   - Distinguish between customer and assistant roles:
+     - Example: "customer: Yes please, that would help." (accept_help) vs. "assistant: Happy to help!" (close_conversation).
+
+By following these guidelines, improve accuracy in classifying and clustering intents, reducing errors like false splits and merges.
+
+
+        ### Instructions for Identifying Intents
+
+        **Goal:** assign an intent to *every* new message.
+        For each message, either reuse an intent from the existing intent list or create a new one if no suitable intent exists.
+
+        
+        Rules
+        -----
+        - Messages start with “assistant:” or “customer:”.
+        - **Do NOT skip messages.**
+        - Exactly **one** intent per line.
+        - Use underscores, no capitals, no spaces.
+        - Newly created intents must not duplicate an existing one.
+        - Afterwards the new intents become part of the growing intent list.
+        - **In this case {message_count} messages have to be assigned** in coupled intents.
+
+        
+ Return the output in EXACT format as specified below:
+                                
+        ### EXACT Output Format (only return the coupled intents list):
+
+        Coupled intents:
+        1. [intent_name]
+        2. [intent_name]
+        3. [intent_name]
+        ...
+
+        ### Starting Point
+        Existing intents: {intent_list}
+
+        ---
+        ### Conversation for Analysis
+        {trunc}
+        

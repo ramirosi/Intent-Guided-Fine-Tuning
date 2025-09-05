@@ -1,0 +1,87 @@
+prompt_id,hash,prompt
+0,cc6dff8f9ca8945f,"Classify each input as one of the following actions: report_wrong_order, report_missing_receipt, suggest_troubleshooting, acknowledge, explain_reason, describe_issue, request_replacement, express_gratitude, provide_order_number, or close_conversation."
+1,095d036c8a04170f,Assign a label to each message based on its content.
+2,a95eaa020ea3540e,"Classify each input according to the following expanded list of intents, taking into account the context and the role of the speaker (customer vs. assistant): 
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction.
+11. **accept_solution**: Agreeing to a proposed resolution.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification and avoid common pitfalls in distinguishing overlapping actions."
+3,44c5d09870a89338,"When assigning a label to each message, focus on identifying the underlying intent by examining both subtle differences and similarities in phrasing. Recognize messages that share the same intent despite different expressions, while also distinguishing messages with distinct purposes. Use context and the flow of conversation to guide your labeling decisions. 
+
+- **Identify Similar Intents**: Look for messages that express the same intent using different words (e.g., ""Okay, thanks for checking."" and ""Perfect, I’ll try that now."" both convey 'acknowledge'). Group these under the same intent.
+
+- **Emphasize Granularity**: Analyze the specific actions or information conveyed. Differentiate messages that appear related but serve different functions (e.g., ""Open the app, tap “Forgot password”, and follow the steps."" vs. ""It was SAVE20."").
+
+- **Differentiate Actions**: Recognize messages with distinct actions or outcomes (e.g., ""I’ve added a $10 voucher to your account."" vs. ""Done. The points are now visible in your balance."") and label them separately.
+
+- **Use Contextual Cues**: Consider the context and conversational flow to determine the intent (e.g., ""You’re very welcome!"" and ""Alright, have a good day!"" both function as 'close_conversation').
+
+- **Distinguish Similar Responses**: Differentiate between responses with similar wording but different intents (e.g., ""That would be great, thanks!"" vs. ""That’s helpful, thanks!"") by considering their function.
+
+- **Create Comprehensive Labels**: Develop labels that capture both the action and context of the message, ensuring specificity and descriptiveness (e.g., ""Sure, it’s 12 Maple Street, Springfield."" needs a distinct label from ""A carton of milk."").
+
+- **Balance Specificity and Generalization**: Find a balance in label specificity. Use broader categories when appropriate, but maintain specificity when messages have distinct intents (e.g., ""I see. What voucher code are you trying to use?"" vs. ""Sorry about that. Can you give me your order number?"").
+
+By following these guidelines, you'll improve your ability to accurately and contextually label messages, enhancing the effectiveness of intent clustering."
+4,6df485cc7e4f07c3,"Classify each input according to the following refined list of intents, taking into account the context and the role of the speaker (customer vs. assistant). Pay special attention to distinguishing between closely related intents and understanding the nuances of each category:
+
+1. **report_wrong_order**: Identifying issues with a received order.
+2. **report_missing_receipt**: Notifying about the absence of a receipt.
+3. **suggest_troubleshooting**: Offering solutions to resolve an issue.
+4. **acknowledge**: Recognizing or validating a statement or concern. Note that acknowledgment may coexist with gratitude but should be identified as distinct when acknowledging an action or solution.
+5. **explain_reason**: Providing explanations for a situation or decision.
+6. **describe_issue**: Detailing a specific problem or concern.
+7. **request_replacement**: Asking for a new item in place of a faulty one.
+8. **express_gratitude**: Thanking or showing appreciation. Differentiate from accepting solutions or closing conversations when gratitude is the primary intent.
+9. **provide_order_number**: Supplying a reference or order number.
+10. **close_conversation**: Ending the interaction. Identify when this overlaps with gratitude or other intents and determine which is predominant.
+11. **accept_solution**: Agreeing to a proposed resolution. Distinguish from mere expressions of satisfaction or gratitude.
+12. **offer_compensation**: Proposing a benefit as reparation.
+13. **confirm_action**: Verifying that a task has been completed. Differentiate from offering solutions or confirming follow-ups.
+14. **offer_discount**: Providing a price reduction as a goodwill gesture.
+15. **confirm_followup**: Assuring ongoing tracking or future actions. Differentiate from confirming immediate actions.
+16. **ask_payment_method**: Inquiring about the payment type used.
+17. **ask_new_timeslot**: Requesting a preferred time for scheduling.
+18. **provide_guidance**: Giving instructions or advice on how to proceed. Differentiate when both suggesting alternatives and providing guidance are involved.
+
+Consider the intent's predominant purpose, context, and speaker role, ensuring that similar intents are grouped and differentiated accurately. Use examples to guide the classification, highlight common pitfalls, and provide corrective examples to avoid errors such as false splits and merges in intent classification."
+5,671b434cb1746216,"When labeling each message, focus on identifying the underlying intent by carefully examining both subtle differences and similarities in phrasing. Here are key guidelines to assist in accurate intent discovery:
+
+1. **Clarify Intent Identification**:
+   - Identify messages that convey the same intent despite different expressions (e.g., ""Yes please, that would be great."" and ""Perfect, thank you."" should both be labeled as 'accept_solution'). Emphasize recognizing varied phrasing for similar intents.
+
+2. **Enhance Differentiation of Actions**:
+   - Clearly distinguish between messages with different actions or outcomes (e.g., ""Hi, I'm having trouble with my loyalty card."" should be labeled 'report_problem', while ""Yes, I tried both. Still doesn't work."" should be 'confirm_attempted_solution').
+
+3. **Highlight the Need for Granularity**:
+   - Focus on specific actions or outcomes in messages (e.g., ""You’re very welcome! Let me know if you need more help after resetting."" should be 'offer_followup' and ""No, that’s all. Have a nice day!"" should be 'end_request').
+
+4. **Encourage Contextual Analysis**:
+   - Use context and conversation flow to determine intent (e.g., ""I understand, that must be frustrating. Have you tried rescanning it or adding it to the app?"" should be 'suggest_troubleshooting', and ""Thanks. That code is only valid for orders above $50."" should be 'explain_restriction').
+
+5. **Improve Label Specificity**:
+   - Create labels that encapsulate both the action and context (e.g., ""Done, your profile has been updated."" should have a distinct label from ""Got it. I’ve updated your delivery slot to 6–8 pm."" by considering the specific updates being confirmed).
+
+6. **Balance Specificity and Generalization**:
+   - Find a balance between broad and specific categories (e.g., ""Okay, that works. Thank you for helping me."" and ""Thanks, that works."" should consistently be labeled as 'express_gratitude' to avoid false splits).
+
+7. **Distinguish Function in Similar Responses**:
+   - Differentiate responses with similar wording but different functions (e.g., ""That would be great, thanks!"" should be labeled 'accept_solution', while ""That’s helpful, thanks!"" should be 'express_gratitude', based on their contextual function).
+
+By integrating these guidelines, you'll enhance your ability to accurately and contextually label messages, improving the effectiveness of intent clustering."
