@@ -19,9 +19,7 @@ Each optimization has been run using GPT-4o and the results were saved in the fo
 
 Finally we provide a notebook for stage 2 (Step2_finetuning.ipynb) to imitate the CoT or response-only fine-tuning, using the intent-labeled conversations.
 
-NOTE: If you want to use your own LLM and embeddings models: change the function inside GIFA -> gpt_api.py and GIFA -> retrieval -> ada_fast.py
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs_at_your_service.ipynb)
+The combination of stage 1 and stage 2 can be found in LLMs_at_your_service.ipynb
 
 ---
 
@@ -54,4 +52,4 @@ Update the API calls in
 - GIFA/retrieval/ada_fast.py (for embeddings)
 Provide your OpenAI API key or a custom model endpoint.
 
-Run LLMs_at_your_service.ipynb with your own dataset, and turn **dummy_mode=False**
+Run LLMs_at_your_service.ipynb with your own dataset (look at dummy data for required format), and turn **dummy_mode=False**
