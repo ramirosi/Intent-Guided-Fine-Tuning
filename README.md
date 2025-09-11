@@ -23,4 +23,35 @@ NOTE: If you want to use your own LLM and embeddings models: change the function
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs_at_your_service.ipynb)
 
+---
 
+## How to Run
+
+### Option 1: Run in Google Colab (Recommended)
+The easiest way to try our pipeline is via the Colab notebook:  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs_at_your_service.ipynb)  
+
+Simply open the notebook, run all cells, and you will see the simulated pipeline running on dummy data.  
+- **Stage 1:** GIFA + backbone algorithms on toy conversations  
+- **Stage 2:** Fine-tuning on labeled conversations  
+
+No API keys are required for the simulated run.  
+
+---
+
+### Option 2: Run Dummy Locally
+
+   ```bash
+   git clone https://github.com/ramirosi/Intent-Guided-Fine-Tuning.git
+   cd Intent-Guided-Fine-Tuning
+   jupyter notebook LLMs_at_your_service.ipynb 
+   ```
+
+### Option 3: Run with Your Own LLMs and Data
+
+Update the API calls in
+- GIFA/gpt_api.py (for the LLM)
+- GIFA/retrieval/ada_fast.py (for embeddings)
+Provide your OpenAI API key or a custom model endpoint.
+
+Run LLMs_at_your_service.ipynb with your own dataset, and turn **dummy_mode=False**
