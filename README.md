@@ -26,7 +26,7 @@ The combination of stage 1 and stage 2 can be found in LLMs_at_your_service.ipyn
 ## How to Run
 
 ### Option 1: Run in Google Colab (Recommended)
-The easiest way to try our pipeline is via the Colab notebook:  
+The easiest way to try our pipeline is via the Colab notebook (Examples for every function/class and additional information can be found here):  
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ramirosi/Intent-Guided-Fine-Tuning/blob/main/LLMs_at_your_service.ipynb)  
 
 Simply open the notebook, run all cells, and you will see the simulated pipeline running on dummy data.  
